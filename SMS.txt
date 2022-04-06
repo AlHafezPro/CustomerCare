@@ -1,0 +1,1 @@
+http://newline-me.net/sms/sms.php?user=ammar.j&password=1111111111&mobile=963933297561&sender=963944622905&lang=en&message=test

@@ -1,0 +1,620 @@
+VERSION 5.00
+Object = "{D76D7128-4A96-11D3-BD95-D296DC2DD072}#1.0#0"; "Vsflex7.ocx"
+Object = "{831FDD16-0C5C-11D2-A9FC-0000F8754DA1}#2.0#0"; "mscomctl.ocx"
+Object = "{F0D2F211-CCB0-11D0-A316-00AA00688B10}#1.0#0"; "MSDATLST.OCX"
+Object = "{C932BA88-4374-101B-A56C-00AA003668DC}#1.1#0"; "msmask32.ocx"
+Object = "{00025600-0000-0000-C000-000000000046}#5.2#0"; "Crystl32.OCX"
+Begin VB.Form FrmPrintByans 
+   BorderStyle     =   1  'Fixed Single
+   Caption         =   "ØÈÇÚÉ ÇáÈíÇäÇÊ"
+   ClientHeight    =   7425
+   ClientLeft      =   45
+   ClientTop       =   330
+   ClientWidth     =   5325
+   KeyPreview      =   -1  'True
+   LinkTopic       =   "Form1"
+   MaxButton       =   0   'False
+   MinButton       =   0   'False
+   RightToLeft     =   -1  'True
+   ScaleHeight     =   7425
+   ScaleWidth      =   5325
+   StartUpPosition =   2  'CenterScreen
+   Begin MSDataListLib.DataCombo ComboByanType 
+      Height          =   315
+      Left            =   600
+      TabIndex        =   3
+      Top             =   1530
+      Width           =   3735
+      _ExtentX        =   6588
+      _ExtentY        =   556
+      _Version        =   393216
+      Text            =   ""
+      RightToLeft     =   -1  'True
+   End
+   Begin VSFlex7Ctl.VSFlexGrid FlexGrid 
+      Height          =   5085
+      Left            =   0
+      TabIndex        =   5
+      TabStop         =   0   'False
+      Top             =   2310
+      Width           =   5295
+      _cx             =   9340
+      _cy             =   8969
+      _ConvInfo       =   1
+      Appearance      =   1
+      BorderStyle     =   1
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   178
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      MousePointer    =   0
+      BackColor       =   -2147483643
+      ForeColor       =   -2147483640
+      BackColorFixed  =   -2147483633
+      ForeColorFixed  =   -2147483630
+      BackColorSel    =   -2147483635
+      ForeColorSel    =   -2147483634
+      BackColorBkg    =   -2147483636
+      BackColorAlternate=   -2147483643
+      GridColor       =   -2147483633
+      GridColorFixed  =   -2147483632
+      TreeColor       =   -2147483632
+      FloodColor      =   192
+      SheetBorder     =   -2147483642
+      FocusRect       =   1
+      HighLight       =   1
+      AllowSelection  =   -1  'True
+      AllowBigSelection=   -1  'True
+      AllowUserResizing=   0
+      SelectionMode   =   0
+      GridLines       =   1
+      GridLinesFixed  =   2
+      GridLineWidth   =   1
+      Rows            =   50
+      Cols            =   10
+      FixedRows       =   1
+      FixedCols       =   1
+      RowHeightMin    =   0
+      RowHeightMax    =   0
+      ColWidthMin     =   0
+      ColWidthMax     =   0
+      ExtendLastCol   =   0   'False
+      FormatString    =   ""
+      ScrollTrack     =   -1  'True
+      ScrollBars      =   3
+      ScrollTips      =   0   'False
+      MergeCells      =   0
+      MergeCompare    =   0
+      AutoResize      =   -1  'True
+      AutoSizeMode    =   0
+      AutoSearch      =   0
+      AutoSearchDelay =   2
+      MultiTotals     =   -1  'True
+      SubtotalPosition=   1
+      OutlineBar      =   0
+      OutlineCol      =   0
+      Ellipsis        =   0
+      ExplorerBar     =   5
+      PicturesOver    =   0   'False
+      FillStyle       =   0
+      RightToLeft     =   -1  'True
+      PictureType     =   0
+      TabBehavior     =   0
+      OwnerDraw       =   0
+      Editable        =   0
+      ShowComboButton =   -1  'True
+      WordWrap        =   0   'False
+      TextStyle       =   0
+      TextStyleFixed  =   0
+      OleDragMode     =   0
+      OleDropMode     =   0
+      DataMode        =   0
+      VirtualData     =   -1  'True
+      DataMember      =   ""
+      ComboSearch     =   3
+      AutoSizeMouse   =   -1  'True
+      FrozenRows      =   0
+      FrozenCols      =   0
+      AllowUserFreezing=   0
+      BackColorFrozen =   0
+      ForeColorFrozen =   0
+      WallPaperAlignment=   9
+   End
+   Begin VB.TextBox TxtByanNo 
+      Alignment       =   1  'Right Justify
+      Height          =   315
+      Left            =   2760
+      RightToLeft     =   -1  'True
+      TabIndex        =   4
+      Top             =   1920
+      Width           =   1575
+   End
+   Begin Crystal.CrystalReport cr1 
+      Left            =   3960
+      Top             =   150
+      _ExtentX        =   741
+      _ExtentY        =   741
+      _Version        =   348160
+      WindowControlBox=   -1  'True
+      WindowMaxButton =   -1  'True
+      WindowMinButton =   -1  'True
+      PrintFileLinesPerPage=   60
+   End
+   Begin MSComctlLib.ImageList ImageList1 
+      Left            =   2700
+      Top             =   60
+      _ExtentX        =   1005
+      _ExtentY        =   1005
+      BackColor       =   -2147483643
+      ImageWidth      =   38
+      ImageHeight     =   38
+      MaskColor       =   12632256
+      _Version        =   393216
+      BeginProperty Images {2C247F25-8591-11D1-B16A-00C0F0283628} 
+         NumListImages   =   38
+         BeginProperty ListImage1 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "FrmPrintByans.frx":0000
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage2 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "FrmPrintByans.frx":26D6
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage3 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "FrmPrintByans.frx":5533
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage4 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "FrmPrintByans.frx":7CD8
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage5 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "FrmPrintByans.frx":A5D4
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage6 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "FrmPrintByans.frx":CAF9
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage7 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "FrmPrintByans.frx":F2B1
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage8 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "FrmPrintByans.frx":11CC5
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage9 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "FrmPrintByans.frx":14617
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage10 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "FrmPrintByans.frx":1738B
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage11 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "FrmPrintByans.frx":19BDA
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage12 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "FrmPrintByans.frx":1CA81
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage13 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "FrmPrintByans.frx":1F7DB
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage14 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "FrmPrintByans.frx":2217B
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage15 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "FrmPrintByans.frx":250DD
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage16 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "FrmPrintByans.frx":27B05
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage17 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "FrmPrintByans.frx":2A4BF
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage18 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "FrmPrintByans.frx":2CDF0
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage19 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "FrmPrintByans.frx":2F6F6
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage20 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "FrmPrintByans.frx":3215E
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage21 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "FrmPrintByans.frx":3510F
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage22 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "FrmPrintByans.frx":37A38
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage23 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "FrmPrintByans.frx":3A36D
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage24 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "FrmPrintByans.frx":3CAAD
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage25 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "FrmPrintByans.frx":3F41C
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage26 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "FrmPrintByans.frx":41CA4
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage27 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "FrmPrintByans.frx":43EB3
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage28 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "FrmPrintByans.frx":46810
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage29 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "FrmPrintByans.frx":4903A
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage30 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "FrmPrintByans.frx":4BAEE
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage31 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "FrmPrintByans.frx":4E52A
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage32 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "FrmPrintByans.frx":51040
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage33 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "FrmPrintByans.frx":53FDA
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage34 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "FrmPrintByans.frx":56DA6
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage35 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "FrmPrintByans.frx":59A20
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage36 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "FrmPrintByans.frx":5C8B2
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage37 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "FrmPrintByans.frx":5F4F0
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage38 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "FrmPrintByans.frx":6209F
+            Key             =   ""
+         EndProperty
+      EndProperty
+   End
+   Begin MSComctlLib.Toolbar Toolbar1 
+      Align           =   1  'Align Top
+      Height          =   690
+      Left            =   0
+      TabIndex        =   6
+      Top             =   0
+      Width           =   5325
+      _ExtentX        =   9393
+      _ExtentY        =   1217
+      ButtonWidth     =   1191
+      ButtonHeight    =   1164
+      Appearance      =   1
+      Style           =   1
+      ImageList       =   "ImageList1"
+      _Version        =   393216
+      BeginProperty Buttons {66833FE8-8583-11D1-B16A-00C0F0283628} 
+         NumButtons      =   5
+         BeginProperty Button1 {66833FEA-8583-11D1-B16A-00C0F0283628} 
+            ImageIndex      =   37
+         EndProperty
+         BeginProperty Button2 {66833FEA-8583-11D1-B16A-00C0F0283628} 
+            Style           =   3
+         EndProperty
+         BeginProperty Button3 {66833FEA-8583-11D1-B16A-00C0F0283628} 
+            ImageIndex      =   15
+         EndProperty
+         BeginProperty Button4 {66833FEA-8583-11D1-B16A-00C0F0283628} 
+            Style           =   3
+         EndProperty
+         BeginProperty Button5 {66833FEA-8583-11D1-B16A-00C0F0283628} 
+            ImageIndex      =   2
+         EndProperty
+      EndProperty
+   End
+   Begin MSDataListLib.DataCombo ComboStr 
+      Height          =   315
+      Left            =   600
+      TabIndex        =   2
+      Top             =   1140
+      Width           =   3735
+      _ExtentX        =   6588
+      _ExtentY        =   556
+      _Version        =   393216
+      Text            =   ""
+      RightToLeft     =   -1  'True
+   End
+   Begin MSMask.MaskEdBox TxtFromDate 
+      Height          =   315
+      Left            =   3240
+      TabIndex        =   0
+      Top             =   720
+      Width           =   1095
+      _ExtentX        =   1931
+      _ExtentY        =   556
+      _Version        =   393216
+      MaxLength       =   10
+      Mask            =   "99/99/9999"
+      PromptChar      =   "_"
+   End
+   Begin MSMask.MaskEdBox TxtToDate 
+      Height          =   315
+      Left            =   630
+      TabIndex        =   1
+      Top             =   720
+      Width           =   1095
+      _ExtentX        =   1931
+      _ExtentY        =   556
+      _Version        =   393216
+      MaxLength       =   10
+      Mask            =   "99/99/9999"
+      PromptChar      =   "_"
+   End
+   Begin VB.Label Label2 
+      Alignment       =   1  'Right Justify
+      AutoSize        =   -1  'True
+      Caption         =   "Åáì ÊÇÑíÎ"
+      Height          =   195
+      Index           =   4
+      Left            =   1920
+      RightToLeft     =   -1  'True
+      TabIndex        =   11
+      Top             =   750
+      Width           =   675
+   End
+   Begin VB.Label Label2 
+      Alignment       =   1  'Right Justify
+      AutoSize        =   -1  'True
+      Caption         =   "ÑÞã ÇáÈíÇä"
+      Height          =   195
+      Index           =   3
+      Left            =   4590
+      RightToLeft     =   -1  'True
+      TabIndex        =   10
+      Top             =   2010
+      Width           =   660
+   End
+   Begin VB.Label Label2 
+      Alignment       =   1  'Right Justify
+      AutoSize        =   -1  'True
+      Caption         =   "äæÚ ÇáÍÑßÉ"
+      Height          =   195
+      Index           =   2
+      Left            =   4500
+      RightToLeft     =   -1  'True
+      TabIndex        =   9
+      Top             =   1590
+      Width           =   750
+   End
+   Begin VB.Label Label2 
+      Alignment       =   1  'Right Justify
+      AutoSize        =   -1  'True
+      Caption         =   "ÇáãÓÊæÏÚ"
+      Height          =   195
+      Index           =   1
+      Left            =   4620
+      RightToLeft     =   -1  'True
+      TabIndex        =   8
+      Top             =   1170
+      Width           =   630
+   End
+   Begin VB.Label Label2 
+      Alignment       =   1  'Right Justify
+      AutoSize        =   -1  'True
+      Caption         =   " ãä ÊÇÑíÎ "
+      Height          =   195
+      Index           =   0
+      Left            =   4560
+      RightToLeft     =   -1  'True
+      TabIndex        =   7
+      Top             =   750
+      Width           =   690
+   End
+End
+Attribute VB_Name = "FrmPrintByans"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = True
+Attribute VB_Exposed = False
+Const ColChk = 1
+Const ColByanId = 2
+Const ColDocNum = 3
+Const ColByanDate = 4
+Const ColDocCount = 5
+
+Sub FillCombos()
+Dim RSStr As New ADODB.Recordset
+Sqltext = "Select Id , StrNo , StrName From NameStr where id in(" & Strids & ") order by strno "
+Set RSStr = Dstock.Con.Execute(Sqltext)
+If RSStr.RecordCount > 0 Then
+    Set ComboStr.RowSource = RSStr
+    ComboStr.ListField = "StrName"
+    ComboStr.BoundColumn = "Id"
+    ComboStr.BoundText = SelectedStr
+End If
+Dim RsByanType As New ADODB.Recordset
+Sqltext = "Select TypeId , TypeName  From CoByanType  Order BY TypeId "
+Set RsByanType = Dstock.Con.Execute(Sqltext)
+    Set ComboByanType.RowSource = RsByanType
+    ComboByanType.ListField = "TypeName"
+    ComboByanType.BoundColumn = "TypeId"
+    ComboByanType.BoundText = GByanType
+'    ComboByanType.BoundText = RsByanType!TypeId
+End Sub
+
+Sub FillFormatString()
+    Fs = "|>" + "Ê"
+    Fs = Fs + "|>" + "ÑÞã ÇáÈíÇä"
+    Fs = Fs + "|>" + "ÑÞã ÇáÍÑßÉ"
+    Fs = Fs + "|>" + "ÊÇÑíÎ ÇáÈíÇä"
+    Fs = Fs + "|>" + "ÚÏÏ ÇáÍÑßÇÊ"
+    With FlexGrid
+        .FormatString = Fs
+        .Cols = 6
+        .ColWidth(ColChk) = 300
+        SetColWidths ColByanId, FlexGrid
+        SetColWidths ColDocNum, FlexGrid
+        SetColWidths ColByanDate, FlexGrid
+        SetColWidths ColDocCount, FlexGrid
+
+   End With
+End Sub
+
+Sub SetColWidths(ColNo As Integer, FlexGrid As VSFlexGrid)
+    Dim i, J, s, w
+    With FlexGrid
+            s = 0
+            For i = 0 To .Rows - 1
+                w = TextWidth(.TextMatrix(i, ColNo))
+                If w > s Then s = w
+            Next i
+            .ColWidth(ColNo) = s + 100
+    End With
+End Sub
+
+
+Sub init()
+    FillCombos
+    Top = (Screen.Width / 2) - Me.Width
+    Left = (Screen.Height / 2)
+    TxtFromDate.Text = Format(Date, "dd/mm/yyyy")
+    FlexGrid.Editable = flexEDKbdMouse
+    SearchRec
+    FillFormatString
+End Sub
+Sub SearchRec()
+Dim RsSearch As New ADODB.Recordset
+Sqltext = "select 0 Chk , ByanId , DocNum , Convert(Varchar(10),MovDate,103)MovDate , Count(*) from Stmov Where ByanId <> 0 "
+If IsDate(TxtFromDate.Text) Then
+    Sqltext = Sqltext & " and Convert(Varchar(10),movdate,101) >='" & Format(TxtFromDate.Text, "mm/dd/yyyy") & "'"
+End If
+If IsDate(TxtToDate.Text) Then
+    Sqltext = Sqltext & " and Convert(Varchar(10),movdate,101) <='" & Format(TxtToDate.Text, "mm/dd/yyyy") & "'"
+End If
+If ComboStr.BoundText <> "" Then
+    Sqltext = Sqltext & " And StrId=" & ComboStr.BoundText
+Else
+    Sqltext = Sqltext & " And StrId IN ( " & Strids & ")"
+End If
+If ComboByanType.BoundText <> "" Then
+    Sqltext = Sqltext & " and DocType=" & ComboByanType.BoundText
+End If
+If IsNumeric(TxtByanNo.Text) Then
+    Sqltext = Sqltext & " and ByanId =" & TxtByanNo.Text
+End If
+Sqltext = Sqltext & " Group By ByanId ,DocNum , MovDate Order by MovDate"
+Set RsSearch = Dstock.Con.Execute(Sqltext)
+Set FlexGrid.DataSource = RsSearch
+FillFormatString
+FlexGrid.ColDataType(ColChk) = flexDTBoolean
+End Sub
+
+Private Sub FlexGrid_BeforeEdit(ByVal Row As Long, ByVal Col As Long, Cancel As Boolean)
+If Col <> ColChk Then Cancel = True
+End Sub
+
+Private Sub FlexGrid_DblClick()
+If FormOk Then
+    With FlexGrid
+        GByanId = .TextMatrix(.Row, ColByanId)
+        Unload Me
+    End With
+End If
+End Sub
+
+Private Sub Form_KeyDown(KeyCode As Integer, Shift As Integer)
+If KeyCode = vbKeyEscape Then
+    GByanId = 0
+    Unload Me
+End If
+End Sub
+
+Private Sub Form_KeyPress(KeyAscii As Integer)
+If KeyAscii = 13 Then
+    SendKeys "{tab}"
+    SendKeys "{home}+{End}"
+End If
+End Sub
+
+Private Sub Form_Load()
+init
+End Sub
+Function ByansSelect() As String
+Dim ByanStr As String
+ByanStr = ""
+With FlexGrid
+    For i = 1 To .Rows - 1
+        If .TextMatrix(i, ColChk) = -1 Then
+            ByanStr = ByanStr & "," & .TextMatrix(i, ColByanId)
+        End If
+    Next
+End With
+If ByanStr = "" Then
+    ByansSelect = "0"
+Else
+    ByansSelect = Mid(ByanStr, 2)
+End If
+End Function
+Sub PrintData()
+On Error GoTo ErrorHandler
+With cr1
+    .Connect = ConnectName
+    .ReportFileName = App.Path + "\reports\ByanRep.rpt"
+    .SQLQuery = "Select StmovQry.Id , StmovQry.ByanId , StmovQry.Stkid , StmovQry.StkidType , StmovQry.StkNo , StmovQry.StkName , StmovQry.StrId , StmovQry.StrNo , StmovQry.StrName , StmovQry.MovDate , StmovQry.DocType , StmovQry.Qty , StmovQry.QtyType , StmovQry.FnlQnt   From StmovQry Where StmovQry.ByanId in  (" & ByansSelect & ")  Order by StmovQry.Byanid , StmovQry.StrNo , ltrim(rtrim(StkNo))"
+    .DiscardSavedData = True
+    .WindowState = crptMaximized
+    .Action = 1
+End With
+Exit Sub
+ErrorHandler:
+MsgBox Err.Description
+End Sub
+
+Private Sub Toolbar1_ButtonClick(ByVal Button As MSComctlLib.Button)
+Select Case Button.Index
+    Case 1
+        PrintData
+    Case 3
+        SearchRec
+    Case 5
+        Unload Me
+End Select
+End Sub
+
+Private Sub TxtFromDate_Change()
+TxtToDate.Text = TxtFromDate.Text
+End Sub

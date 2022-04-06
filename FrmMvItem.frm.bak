@@ -1,0 +1,845 @@
+VERSION 5.00
+Object = "{D76D7128-4A96-11D3-BD95-D296DC2DD072}#1.0#0"; "Vsflex7.ocx"
+Object = "{831FDD16-0C5C-11D2-A9FC-0000F8754DA1}#2.0#0"; "mscomctl.ocx"
+Object = "{0BA686C6-F7D3-101A-993E-0000C0EF6F5E}#2.0#0"; "THREED20.OCX"
+Object = "{F0D2F211-CCB0-11D0-A316-00AA00688B10}#1.0#0"; "MSDATLST.OCX"
+Object = "{00025600-0000-0000-C000-000000000046}#5.2#0"; "Crystl32.OCX"
+Begin VB.Form FrmMvItem 
+   BorderStyle     =   1  'Fixed Single
+   Caption         =   "Õ—ﬂ… „«œ…"
+   ClientHeight    =   6780
+   ClientLeft      =   45
+   ClientTop       =   435
+   ClientWidth     =   11430
+   KeyPreview      =   -1  'True
+   LinkTopic       =   "Form1"
+   MaxButton       =   0   'False
+   MDIChild        =   -1  'True
+   MinButton       =   0   'False
+   RightToLeft     =   -1  'True
+   ScaleHeight     =   6780
+   ScaleWidth      =   11430
+   Begin Crystal.CrystalReport cr1 
+      Left            =   1860
+      Top             =   1050
+      _ExtentX        =   741
+      _ExtentY        =   741
+      _Version        =   348160
+      PrintFileLinesPerPage=   60
+   End
+   Begin VSFlex7Ctl.VSFlexGrid Grid 
+      Height          =   5175
+      Left            =   0
+      TabIndex        =   8
+      TabStop         =   0   'False
+      Top             =   1590
+      Visible         =   0   'False
+      Width           =   5715
+      _cx             =   10081
+      _cy             =   9128
+      _ConvInfo       =   1
+      Appearance      =   1
+      BorderStyle     =   1
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   178
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      MousePointer    =   0
+      BackColor       =   16777215
+      ForeColor       =   -2147483640
+      BackColorFixed  =   -2147483633
+      ForeColorFixed  =   -2147483630
+      BackColorSel    =   -2147483635
+      ForeColorSel    =   -2147483634
+      BackColorBkg    =   -2147483636
+      BackColorAlternate=   16777215
+      GridColor       =   -2147483633
+      GridColorFixed  =   -2147483632
+      TreeColor       =   -2147483632
+      FloodColor      =   192
+      SheetBorder     =   -2147483642
+      FocusRect       =   1
+      HighLight       =   1
+      AllowSelection  =   -1  'True
+      AllowBigSelection=   -1  'True
+      AllowUserResizing=   0
+      SelectionMode   =   0
+      GridLines       =   1
+      GridLinesFixed  =   2
+      GridLineWidth   =   1
+      Rows            =   50
+      Cols            =   10
+      FixedRows       =   1
+      FixedCols       =   1
+      RowHeightMin    =   0
+      RowHeightMax    =   0
+      ColWidthMin     =   0
+      ColWidthMax     =   0
+      ExtendLastCol   =   0   'False
+      FormatString    =   ""
+      ScrollTrack     =   0   'False
+      ScrollBars      =   3
+      ScrollTips      =   0   'False
+      MergeCells      =   0
+      MergeCompare    =   0
+      AutoResize      =   -1  'True
+      AutoSizeMode    =   0
+      AutoSearch      =   0
+      AutoSearchDelay =   2
+      MultiTotals     =   -1  'True
+      SubtotalPosition=   1
+      OutlineBar      =   0
+      OutlineCol      =   0
+      Ellipsis        =   0
+      ExplorerBar     =   0
+      PicturesOver    =   0   'False
+      FillStyle       =   0
+      RightToLeft     =   -1  'True
+      PictureType     =   0
+      TabBehavior     =   0
+      OwnerDraw       =   0
+      Editable        =   0
+      ShowComboButton =   -1  'True
+      WordWrap        =   0   'False
+      TextStyle       =   0
+      TextStyleFixed  =   0
+      OleDragMode     =   0
+      OleDropMode     =   0
+      DataMode        =   0
+      VirtualData     =   -1  'True
+      DataMember      =   ""
+      ComboSearch     =   3
+      AutoSizeMouse   =   -1  'True
+      FrozenRows      =   0
+      FrozenCols      =   0
+      AllowUserFreezing=   0
+      BackColorFrozen =   0
+      ForeColorFrozen =   0
+      WallPaperAlignment=   9
+   End
+   Begin VSFlex7Ctl.VSFlexGrid FlexGrid 
+      Height          =   5175
+      Left            =   0
+      TabIndex        =   4
+      TabStop         =   0   'False
+      Top             =   1590
+      Width           =   11415
+      _cx             =   20135
+      _cy             =   9128
+      _ConvInfo       =   1
+      Appearance      =   1
+      BorderStyle     =   1
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   178
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      MousePointer    =   0
+      BackColor       =   -2147483643
+      ForeColor       =   -2147483640
+      BackColorFixed  =   -2147483633
+      ForeColorFixed  =   -2147483630
+      BackColorSel    =   -2147483635
+      ForeColorSel    =   -2147483634
+      BackColorBkg    =   -2147483636
+      BackColorAlternate=   -2147483643
+      GridColor       =   -2147483633
+      GridColorFixed  =   -2147483632
+      TreeColor       =   -2147483632
+      FloodColor      =   192
+      SheetBorder     =   -2147483642
+      FocusRect       =   1
+      HighLight       =   1
+      AllowSelection  =   -1  'True
+      AllowBigSelection=   -1  'True
+      AllowUserResizing=   0
+      SelectionMode   =   0
+      GridLines       =   1
+      GridLinesFixed  =   2
+      GridLineWidth   =   1
+      Rows            =   50
+      Cols            =   10
+      FixedRows       =   1
+      FixedCols       =   1
+      RowHeightMin    =   0
+      RowHeightMax    =   0
+      ColWidthMin     =   0
+      ColWidthMax     =   0
+      ExtendLastCol   =   0   'False
+      FormatString    =   ""
+      ScrollTrack     =   -1  'True
+      ScrollBars      =   3
+      ScrollTips      =   0   'False
+      MergeCells      =   0
+      MergeCompare    =   0
+      AutoResize      =   -1  'True
+      AutoSizeMode    =   0
+      AutoSearch      =   0
+      AutoSearchDelay =   2
+      MultiTotals     =   -1  'True
+      SubtotalPosition=   1
+      OutlineBar      =   0
+      OutlineCol      =   0
+      Ellipsis        =   0
+      ExplorerBar     =   5
+      PicturesOver    =   0   'False
+      FillStyle       =   0
+      RightToLeft     =   -1  'True
+      PictureType     =   0
+      TabBehavior     =   0
+      OwnerDraw       =   0
+      Editable        =   0
+      ShowComboButton =   -1  'True
+      WordWrap        =   0   'False
+      TextStyle       =   0
+      TextStyleFixed  =   0
+      OleDragMode     =   0
+      OleDropMode     =   0
+      DataMode        =   0
+      VirtualData     =   -1  'True
+      DataMember      =   ""
+      ComboSearch     =   3
+      AutoSizeMouse   =   -1  'True
+      FrozenRows      =   0
+      FrozenCols      =   0
+      AllowUserFreezing=   0
+      BackColorFrozen =   0
+      ForeColorFrozen =   0
+      WallPaperAlignment=   9
+   End
+   Begin Threed.SSFrame SSFrame1 
+      Height          =   885
+      Left            =   0
+      TabIndex        =   5
+      Top             =   690
+      Width           =   11415
+      _ExtentX        =   20135
+      _ExtentY        =   1561
+      _Version        =   131074
+      Begin VB.CheckBox ChkMod_Stk 
+         Alignment       =   1  'Right Justify
+         Caption         =   "—ﬁ„ „Œ“‰Ì"
+         Height          =   345
+         Left            =   10350
+         RightToLeft     =   -1  'True
+         Style           =   1  'Graphical
+         TabIndex        =   1
+         Top             =   480
+         Width           =   975
+      End
+      Begin VB.TextBox TxtStkNo 
+         Alignment       =   1  'Right Justify
+         Height          =   315
+         Left            =   8550
+         RightToLeft     =   -1  'True
+         TabIndex        =   2
+         Top             =   480
+         Width           =   1725
+      End
+      Begin MSDataListLib.DataCombo ComboStr 
+         Height          =   315
+         Left            =   5310
+         TabIndex        =   0
+         Top             =   90
+         Width           =   4965
+         _ExtentX        =   8758
+         _ExtentY        =   556
+         _Version        =   393216
+         MatchEntry      =   -1  'True
+         Text            =   ""
+         RightToLeft     =   -1  'True
+      End
+      Begin VB.Label LStkName 
+         Alignment       =   2  'Center
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   9.75
+            Charset         =   178
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   &H00800000&
+         Height          =   285
+         Left            =   4230
+         RightToLeft     =   -1  'True
+         TabIndex        =   9
+         Top             =   480
+         Width           =   4305
+      End
+      Begin Threed.SSCheck chkChoose 
+         Height          =   315
+         Left            =   2520
+         TabIndex        =   3
+         Top             =   450
+         Width           =   1635
+         _ExtentX        =   2884
+         _ExtentY        =   556
+         _Version        =   131074
+         ForeColor       =   8388608
+         Caption         =   " ÕœÌœ √—ﬁ«„ „Œ“‰Ì…"
+         Alignment       =   1
+      End
+      Begin VB.Label Label5 
+         Alignment       =   1  'Right Justify
+         AutoSize        =   -1  'True
+         Caption         =   "«·„” Êœ⁄"
+         Height          =   195
+         Left            =   10680
+         RightToLeft     =   -1  'True
+         TabIndex        =   6
+         Top             =   60
+         Width           =   630
+      End
+   End
+   Begin MSComctlLib.ImageList ImageList1 
+      Left            =   3600
+      Top             =   90
+      _ExtentX        =   1005
+      _ExtentY        =   1005
+      BackColor       =   -2147483643
+      ImageWidth      =   38
+      ImageHeight     =   38
+      MaskColor       =   12632256
+      _Version        =   393216
+      BeginProperty Images {2C247F25-8591-11D1-B16A-00C0F0283628} 
+         NumListImages   =   38
+         BeginProperty ListImage1 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "FrmMvItem.frx":0000
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage2 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "FrmMvItem.frx":26D6
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage3 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "FrmMvItem.frx":5533
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage4 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "FrmMvItem.frx":7CD8
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage5 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "FrmMvItem.frx":A5D4
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage6 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "FrmMvItem.frx":CAF9
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage7 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "FrmMvItem.frx":F2B1
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage8 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "FrmMvItem.frx":11CC5
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage9 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "FrmMvItem.frx":14617
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage10 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "FrmMvItem.frx":1738B
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage11 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "FrmMvItem.frx":19BDA
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage12 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "FrmMvItem.frx":1CA81
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage13 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "FrmMvItem.frx":1F7DB
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage14 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "FrmMvItem.frx":2217B
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage15 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "FrmMvItem.frx":250DD
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage16 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "FrmMvItem.frx":27B05
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage17 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "FrmMvItem.frx":2A4BF
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage18 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "FrmMvItem.frx":2CDF0
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage19 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "FrmMvItem.frx":2F6F6
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage20 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "FrmMvItem.frx":3215E
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage21 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "FrmMvItem.frx":3510F
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage22 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "FrmMvItem.frx":37A38
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage23 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "FrmMvItem.frx":3A36D
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage24 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "FrmMvItem.frx":3CAAD
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage25 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "FrmMvItem.frx":3F41C
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage26 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "FrmMvItem.frx":41CA4
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage27 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "FrmMvItem.frx":43EB3
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage28 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "FrmMvItem.frx":46810
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage29 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "FrmMvItem.frx":4903A
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage30 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "FrmMvItem.frx":4BAEE
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage31 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "FrmMvItem.frx":4E52A
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage32 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "FrmMvItem.frx":51040
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage33 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "FrmMvItem.frx":53FDA
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage34 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "FrmMvItem.frx":56DA6
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage35 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "FrmMvItem.frx":59A20
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage36 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "FrmMvItem.frx":5C8B2
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage37 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "FrmMvItem.frx":5F4F0
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage38 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "FrmMvItem.frx":6209F
+            Key             =   ""
+         EndProperty
+      EndProperty
+   End
+   Begin MSComctlLib.Toolbar Toolbar1 
+      Align           =   1  'Align Top
+      Height          =   690
+      Left            =   0
+      TabIndex        =   7
+      Top             =   0
+      Width           =   11430
+      _ExtentX        =   20161
+      _ExtentY        =   1217
+      ButtonWidth     =   1191
+      ButtonHeight    =   1164
+      Appearance      =   1
+      Style           =   1
+      ImageList       =   "ImageList1"
+      _Version        =   393216
+      BeginProperty Buttons {66833FE8-8583-11D1-B16A-00C0F0283628} 
+         NumButtons      =   5
+         BeginProperty Button1 {66833FEA-8583-11D1-B16A-00C0F0283628} 
+            ImageIndex      =   37
+         EndProperty
+         BeginProperty Button2 {66833FEA-8583-11D1-B16A-00C0F0283628} 
+            Style           =   3
+         EndProperty
+         BeginProperty Button3 {66833FEA-8583-11D1-B16A-00C0F0283628} 
+            ImageIndex      =   15
+         EndProperty
+         BeginProperty Button4 {66833FEA-8583-11D1-B16A-00C0F0283628} 
+            Style           =   3
+         EndProperty
+         BeginProperty Button5 {66833FEA-8583-11D1-B16A-00C0F0283628} 
+            ImageIndex      =   2
+         EndProperty
+      EndProperty
+   End
+End
+Attribute VB_Name = "FrmMvItem"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = True
+Attribute VB_Exposed = False
+Const ColStkId = 1
+Const ColStkNo = 2
+Const ColStkName = 3
+Const ColStrid = 4
+Const ColStrNo = 5
+Const ColStrName = 6
+Const ColQtyIn = 7
+Const ColQtyOut = 8
+Const ColMovDate = 9
+
+Const ColStkId_1 = 1
+Const ColStkno_1 = 2
+Const ColStkname_1 = 3
+
+Const ColModNo = 1
+Const ColModSymbol = 2
+Const ColModName = 3
+
+Dim Flag As Boolean
+Sub PrintData()
+With cr1
+    .Connect = ConnectName
+    .ReportFileName = App.Path + "\Reports\RepCoItemsMov.Rpt"
+    .SQLQuery = FillSqltext
+    .DiscardSavedData = True
+    .WindowState = crptMaximized
+    .Action = 1
+End With
+End Sub
+
+Sub FillList(Sqltext As String, Field1 As String, Field2 As String, List As VSFlexGrid, ByVal Switch As Boolean)
+    Set Rs = Dstock.Con.Execute(Sqltext)
+    If Rs.RecordCount > 0 Then
+        Set List.DataSource = Rs
+        FillFormatVSFlex List, Switch
+        List.Row = 1
+        List.Col = 1
+        List.ColSel = List.Cols - 1
+        List.Visible = True
+        txtStkNo.SetFocus
+    Else
+        List.Text = ""
+        List.Visible = False
+        txtStkNo.SetFocus
+    End If
+End Sub
+
+Sub FillFormatVSFlex(FlexGrid As VSFlexGrid, ByVal Switch As Boolean)
+If Switch Then
+    Fs = "|ModNo"
+    Fs = Fs + "|<" + "—„“ «·„ÊœÌ·"
+    Fs = Fs + "|<" + "≈”„ «·„ÊœÌ·"
+    With FlexGrid
+        .Visible = False
+        .FormatString = Fs
+            .ColWidth(ColModNo) = 0
+            SetColWidths ColModSymbol, FlexGrid
+            SetColWidths ColModName, FlexGrid
+            .Visible = True
+    End With
+Else
+    Fs = "|ID"
+    Fs = Fs + "|<" + "«·—ﬁ„ «·„Œ“‰Ì"
+    Fs = Fs + "|<" + "«·≈”„"
+    With FlexGrid
+        .Visible = False
+        .FormatString = Fs
+            .ColWidth(ColStkId) = 0
+            SetColWidths ColStkno_1, FlexGrid
+            SetColWidths ColStkname_1, FlexGrid
+            .Visible = True
+    End With
+End If
+
+ End Sub
+
+Sub FillActiveControl(List As VSFlexGrid)
+    With List
+        If ActiveControl.Text <> "" Then
+            If Not ActiveControl.DataChanged Then Exit Sub
+            Flag = False
+            ActiveControl.Text = IIf(.Visible = False, "", .TextMatrix(.Row, ColStkno_1))
+            LStkName.Caption = IIf(.Visible = False, "", .TextMatrix(.Row, ColStkname_1))
+            Flag = True
+            ActiveControl.Tag = IIf(.Visible = False, "", .TextMatrix(.Row, ColStkId_1))
+        Else
+            ActiveControl.Text = ""
+            ActiveControl.Tag = ""
+            LStkName.Caption = ""
+        End If
+        List.Visible = False
+        ActiveControl.DataChanged = False
+    End With
+End Sub
+Sub MoveCursor(KeyCode As Integer)
+On Error Resume Next
+With Grid
+    If KeyCode = vbKeyDown Then
+        .Row = .Row + 1
+    ElseIf KeyCode = vbKeyUp Then
+        .Row = .Row - 1
+    End If
+If Not .RowIsVisible(.Row) Then
+    .TopRow = .Row
+End If
+.Col = 0
+.ColSel = .Cols - 1
+End With
+End Sub
+
+Sub FillFormatString()
+    Fs = "|>" + "StkId"
+    Fs = Fs + "|>" + "«·—ﬁ„"
+    Fs = Fs + "|>" + "«·≈”„"
+    Fs = Fs + "|>" + "StrId"
+    Fs = Fs + "|>" + "«·„” Êœ⁄"
+    Fs = Fs + "|>" + "«·≈”„"
+    Fs = Fs + "|>" + "«·œ«Œ·"
+    Fs = Fs + "|>" + "«·Œ«—Ã"
+    Fs = Fs + "|>" + "«· «—ÌŒ"
+    With FlexGrid
+        .Cols = 10
+        .FormatString = Fs
+        .ColWidth(ColStkId) = 0
+        .ColWidth(ColStrid) = 0
+        SetColWidths ColStkNo, FlexGrid
+        SetColWidths ColStkName, FlexGrid
+        SetColWidths ColStrNo, FlexGrid
+        SetColWidths ColStrName, FlexGrid
+        SetColWidths ColQtyIn, FlexGrid
+        SetColWidths ColQtyOut, FlexGrid
+        SetColWidths ColMovDate, FlexGrid
+   End With
+End Sub
+Sub SetColWidths(ColNo As Integer, FlexGrid As VSFlexGrid)
+    Dim i, J, s, w
+    With FlexGrid
+            s = 0
+            For i = 0 To .Rows - 1
+                w = TextWidth(.TextMatrix(i, ColNo))
+                If w > s Then s = w
+            Next i
+            .ColWidth(ColNo) = s + 100
+    End With
+End Sub
+
+Function Fillitems() As String
+Dim Str As String
+Str = ""
+With FrmChooseItems.Grid
+    For i = 0 To .Rows - 1
+        Str = Str + ",'" + .TextMatrix(i, 1) & "'"
+    Next
+End With
+Fillitems = Mid(Str, 2)
+End Function
+
+Function FillSqltext() As String
+Dim Sqltext As String
+Sqltext = "Select StkId , StkNo , StkName , StrId , StrNo , StrName , Case When QtyType=0 then Qty else 0 end QtyIn , Case When QtyType=1 then Qty else 0 end QtyOut , Convert(Varchar(10),MovDate,101) Movdate From StmovQry Where ByanId <> -1"
+If ComboStr.BoundText <> "" Then
+    Sqltext = Sqltext & " And StrId=" & ComboStr.BoundText
+End If
+If txtStkNo.Text <> "" Then
+    Sqltext = Sqltext & " And StkId =" & txtStkNo.Tag
+End If
+If chkChoose.Value Then
+    sTRItems = Fillitems
+    If LTrim(RTrim(sTRItems)) <> "" Then
+        Sqltext = Sqltext & " And StkNo in(" & sTRItems & ")"
+    End If
+End If
+Sqltext = Sqltext & " Order by StkNo , StrNo , MovDate"
+FillSqltext = Sqltext
+End Function
+
+Sub SearchRec()
+Dim Rs As New ADODB.Recordset
+Dim Sqltext As String
+Sqltext = FillSqltext
+Set Rs = Dstock.Con.Execute(Sqltext)
+Set FlexGrid.DataSource = Rs
+FillFormatString
+End Sub
+Sub init()
+    Dim RSStr As New ADODB.Recordset
+    Sqltext = "Select Id , StrNo , StrName From NameStr where id in(" & Strids & ") Order By StrNo"
+    Set RSStr = Dstock.Con.Execute(Sqltext)
+    If RSStr.RecordCount > 0 Then
+        Set ComboStr.RowSource = RSStr
+        ComboStr.ListField = "StrName"
+        ComboStr.BoundColumn = "Id"
+        RSStr.MoveFirst
+        ComboStr.BoundText = RSStr!Id
+    End If
+    FillFormatString
+    FlexGrid.Rows = 1
+    Top = 0
+    Left = 0
+End Sub
+
+Private Sub chkChoose_Click(Value As Integer)
+If chkChoose.Value Then
+    FrmChooseItems.Show 1
+End If
+End Sub
+
+Private Sub ChkMod_Stk_Click()
+If ChkMod_Stk.Value Then
+    ChkMod_Stk.Caption = "„ÊœÌ·"
+Else
+    ChkMod_Stk.Caption = "—ﬁ„ „Œ“‰Ì"
+End If
+End Sub
+
+Private Sub Form_KeyPress(KeyAscii As Integer)
+If KeyAscii = 13 Then
+    SendKeys "{Tab}"
+    SendKeys "{Home}+{End}"
+End If
+End Sub
+
+Private Sub Form_Load()
+init
+End Sub
+
+Private Sub Label1_Click()
+
+End Sub
+
+Private Sub Toolbar1_ButtonClick(ByVal Button As MSComctlLib.Button)
+Select Case Button.Index
+    Case 1
+        PrintData
+    Case 3
+        SearchRec
+    Case 5
+       Unload Me
+End Select
+End Sub
+
+Private Sub TxtStkNo_Change()
+If Flag Then
+    Dim Sqltext As String
+    If Trim(txtStkNo.Text) = "" Then
+        txtStkNo.Tag = ""
+        Grid.Visible = False
+        Exit Sub
+    End If
+    If ChkMod_Stk.Value Then
+        Sqltext = "select Top 15 ModNo Id , Symbol StkNo , Name  StkName from dbo.models where Symbol like " & LikeExpression(txtStkNo.Text) & " Or Name Like " & LikeExpression(txtStkNo.Text)
+    Else
+        Sqltext = "Select top 15 Id , StkNo , StkName From CoStock  where StkNo like " & LikeExpression(txtStkNo.Text) & " Order By len(ltrim(rtrim(StkNo))) , ltrim(rtrim(StkNo))"
+    End If
+    FillList Sqltext, "Id", "StkNo", Grid, ChkMod_Stk.Value
+End If
+End Sub
+
+Private Sub TxtStkNo_KeyDown(KeyCode As Integer, Shift As Integer)
+    Flag = False
+    If KeyCode = vbKeyDown Or KeyCode = vbKeyUp Or KeyCode = vbKeyPageUp Or KeyCode = vbKeyPageDown Then MoveCursor KeyCode
+    Flag = True
+End Sub
+Function DataOk(StkNo As String) As Boolean
+Dim RsFind As New ADODB.Recordset
+Sqltext = "Select StkNo From CoStock Where StkNo ='" & StkNo & "'"
+Set RsFind = Dstock.Con.Execute(Sqltext)
+If RsFind.RecordCount > 0 Then
+   DataOk = True
+Else
+    DataOk = False
+End If
+End Function
+Function getStkid(StkNo As String, Strid As Integer) As Double
+    Dim Rs As New ADODB.Recordset
+If Strid <> 0 Then
+    Sqltext = "Select c1.Id From CoStock c1 inner join Stkinf s1 on c1.Id = s1.StkId  And StrId=" & Strid & " Where c1.StkNo ='" & StkNo & "'"
+Else
+    Sqltext = "Select c1.Id From CoStock c1 inner join Stkinf s1 on c1.Id = s1.StkId Where c1.StkNo ='" & StkNo & "'"
+End If
+    Set Rs = Dstock.Con.Execute(Sqltext)
+    If Rs.RecordCount > 0 Then
+        getStkid = Rs!Id
+    Else
+        getStkid = 0
+    End If
+End Function
+Function GetStkName(Stkid As Double) As String
+Dim RsStkName As New ADODB.Recordset
+    Sqltext = "Select StkName From CoStock Where Id=" & Stkid
+    Set RsStkName = Dstock.Con.Execute(Sqltext)
+    If RsStkName.RecordCount > 0 Then
+        GetStkName = RsStkName!StkName
+    Else
+        GetStkName = ""
+    End If
+End Function
+Function GetBalance(Stkid As Double, Strid As Double) As Double
+Dim RsBalance As New ADODB.Recordset
+    Sqltext = "Select FnlQnt From Stkinf Where Stkid=" & Stkid & " And StrId=" & Strid
+    Set RsBalance = Dstock.Con.Execute(Sqltext)
+    If RsBalance.RecordCount > 0 Then GetBalance = IIf(IsNull(RsBalance!FnlQnt), 0, RsBalance!FnlQnt)
+End Function
+Private Sub txtStkNo_KeyPress(KeyAscii As Integer)
+'    If KeyAscii = 13 Then
+'            FillActiveControl Grid
+'            SendKeys "{home}+{end}"
+'    End If
+On Error GoTo ErrorHandler
+If KeyAscii = 13 Then
+        Grid.Visible = False
+        If DataOk(txtStkNo.Text) Then
+            txtStkNo.Tag = getStkid(txtStkNo.Text, Val(ComboStr.BoundText))
+            If txtStkNo.Tag <> 0 Then
+                LStkName.Caption = GetStkName(txtStkNo.Tag)
+            Else
+                LStkName.Caption = ""
+                MsgBox "«·„«œ… €Ì— „⁄—›… ›Ì «·„” Êœ⁄", vbInformation, " ‰»ÌÂ"
+                SendKeys "{home}+{end}"
+                Exit Sub
+            End If
+        Else
+            LStkName.Caption = ""
+            SendKeys "{home}+{end}"
+            MsgBox "«·„«œ… €Ì— „ÊÃÊœ… ÷„‰ ﬁ«∆„… «·√—ﬁ«„ «·„Œ“‰Ì…", vbExclamation, " ‰»ÌÂ"
+            Exit Sub
+        End If
+    End If
+Exit Sub
+ErrorHandler:
+Grid.Visible = False
+MsgBox Err.Description
+End Sub

@@ -1,0 +1,6 @@
+Line 132: Property TabPicture(0) in SSTab1 had an invalid file reference.
+Line 196: Property TabPicture(1) in SSTab1 had an invalid file reference.
+Line 1720: Property Picture in CmdFirst had an invalid file reference.
+Line 1731: Property Picture in CmdPrevious had an invalid file reference.
+Line 1742: Property Picture in CmdNext had an invalid file reference.
+Line 1753: Property Picture in CmdLast had an invalid file reference.
