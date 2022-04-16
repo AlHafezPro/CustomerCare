@@ -924,14 +924,14 @@ item: Include Script
   Pathname=%_WISE_%\INCLUDE\uninstal.wse
 end
 item: Install File
-  Source=e:\Programs\2022\CustomerCare2022\PrjMaintCall.exe
-  Destination=%MAINDIR%\CustomerCare2022\PrjMaintCall.exe
-  Flags=0000000010000011
-end
-item: Install File
   Source=e:\Programs\2022\CustomerCare2022\init.xml
   Destination=%MAINDIR%\CustomerCare2022\init.xml
   Flags=0000000010000010
+end
+item: Install File
+  Source=e:\Programs\2022\CustomerCare2022\PrjMaintCall.exe
+  Destination=%MAINDIR%\CustomerCare2022\PrjMaintCall.exe
+  Flags=0000000010000011
 end
 item: Install File
   Source=e:\Programs\2022\CustomerCare2022\Reports\RepMaintCall.rpt
