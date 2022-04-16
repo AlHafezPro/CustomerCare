@@ -337,7 +337,7 @@ Begin VB.MDIForm FrmMain
       ImageList       =   "ImageList1"
       _Version        =   393216
       BeginProperty Buttons {66833FE8-8583-11D1-B16A-00C0F0283628} 
-         NumButtons      =   10
+         NumButtons      =   11
          BeginProperty Button1 {66833FEA-8583-11D1-B16A-00C0F0283628} 
             Object.ToolTipText     =   "„·›‹‹‹‹‹‹‹«  «· —„Ì“"
             ImageIndex      =   61
@@ -510,16 +510,31 @@ Begin VB.MDIForm FrmMain
             EndProperty
          EndProperty
          BeginProperty Button7 {66833FEA-8583-11D1-B16A-00C0F0283628} 
-            Style           =   3
+            ImageIndex      =   55
+            Style           =   5
+            BeginProperty ButtonMenus {66833FEC-8583-11D1-B16A-00C0F0283628} 
+               NumButtonMenus  =   2
+               BeginProperty ButtonMenu1 {66833FEE-8583-11D1-B16A-00C0F0283628} 
+                  Object.Tag             =   "27"
+                  Text            =   " —ÕÌ· «·„Õ«›Ÿ«  ≈·Ï «·„Õ«”»Â «·⁄«„Â ··’«·« "
+               EndProperty
+               BeginProperty ButtonMenu2 {66833FEE-8583-11D1-B16A-00C0F0283628} 
+                  Object.Tag             =   "28"
+                  Text            =   "„ﬁ«—‰Â „” Êœ⁄ «·„Õ«›Ÿ«   »«‘⁄«—«  «·«” ·«„"
+               EndProperty
+            EndProperty
          EndProperty
          BeginProperty Button8 {66833FEA-8583-11D1-B16A-00C0F0283628} 
+            Style           =   3
+         EndProperty
+         BeginProperty Button9 {66833FEA-8583-11D1-B16A-00C0F0283628} 
             Object.Tag             =   "22"
             ImageIndex      =   43
          EndProperty
-         BeginProperty Button9 {66833FEA-8583-11D1-B16A-00C0F0283628} 
+         BeginProperty Button10 {66833FEA-8583-11D1-B16A-00C0F0283628} 
             Style           =   3
          EndProperty
-         BeginProperty Button10 {66833FEA-8583-11D1-B16A-00C0F0283628} 
+         BeginProperty Button11 {66833FEA-8583-11D1-B16A-00C0F0283628} 
             Object.ToolTipText     =   "Œ—ÊÃ „‰ «·»—‰«„Ã"
             ImageIndex      =   74
          EndProperty
@@ -713,7 +728,7 @@ Begin VB.MDIForm FrmMain
          Index           =   0
       End
       Begin VB.Menu mnu5 
-         Caption         =   "„ﬁ«—‰Â „” Êœ⁄ «·„Õ«›Ÿ«   »«‘€«—«  «·«” ·«„"
+         Caption         =   "„ﬁ«—‰Â „” Êœ⁄ «·„Õ«›Ÿ«   »«‘⁄«—«  «·«” ·«„"
          HelpContextID   =   28
          Index           =   1
       End
@@ -788,7 +803,7 @@ Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 Function Gettag(empNo As Integer, TagId As Integer) As Boolean
-On Error GoTo errorhandler
+On Error GoTo ErrorHandler
 Dim rs As New ADODB.Recordset
     sqlText = "Select * from comaintpermission Where empno = " & empNo & " and TagId=" & TagId
     Set rs = de.con.Execute(sqlText)
@@ -798,12 +813,12 @@ Dim rs As New ADODB.Recordset
         Gettag = False
     End If
 Exit Function
-errorhandler:
+ErrorHandler:
 Gettag = False
 End Function
 
 Sub GetPermision()
-On Error GoTo errorhandler
+On Error GoTo ErrorHandler
 Dim rs As New ADODB.Recordset
     Dim Count As Integer
     Count = 0
@@ -954,7 +969,7 @@ Next
 
 
 Exit Sub
-errorhandler:
+ErrorHandler:
 MsgBox Err.Description
 
 End Sub
@@ -1167,9 +1182,9 @@ End Sub
 
 Private Sub Toolbar1_ButtonClick(ByVal Button As MSComctlLib.Button)
 Select Case Button.Index
-    Case 8
+    Case 9
         FrmMaintCallManager.Show
-    Case 10
+    Case 11
         Unload Me
 End Select
 End Sub
@@ -1226,6 +1241,11 @@ Select Case ButtonMenu.Tag
         FrmDuplicateCalls.Show
     Case 24
         FrmMaintCost.Show
+    Case 27
+        FrmTransferProvinces.Show
+    Case 28
+        FrmProvinceStock.Show
+    
     Case 29
         FrmCustomerCareMeasuring.Show
     Case 30

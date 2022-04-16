@@ -157,6 +157,7 @@ Type MvMaintPaymentRecTypeDetails
     Price As Double
     DestinationStoreId As Double
     Class As Integer
+    OperationType As Integer
 End Type
 
 Type MvWshopType

@@ -2248,7 +2248,7 @@ With reparationViewModelInfo_
     txtVoltBefor.Text = .VoltBefor
     txtVoltAfter.Text = .VoltAfter
     txtNotes.Text = .Notes
-    TxtDescription.Text = .Description
+    txtDescription.Text = .Description
     txtRepPrice.Text = .RepPrice
     DcboPayMethod.BoundText = .Cash
     TxtProductName.Tag = .AdhamProductViewModel.ProdFamNo
@@ -2361,7 +2361,7 @@ DcboReparationStatus.BoundText = -1
 txtVoltBefor.Text = ""
 txtVoltAfter.Text = ""
 txtNotes.Text = ""
-TxtDescription.Text = ""
+txtDescription.Text = ""
 txtRepPrice.Text = ""
 DcboPayMethod.BoundText = -1
 
@@ -2454,8 +2454,8 @@ If Flag Then
             txtNotes.Tag = .TextMatrix(.Row, ColNo)
             txtNotes.Text = .TextMatrix(.Row, ColName)
         Case 2
-            TxtDescription.Tag = .TextMatrix(.Row, ColNo)
-            TxtDescription.Text = .TextMatrix(.Row, ColName)
+            txtDescription.Tag = .TextMatrix(.Row, ColNo)
+            txtDescription.Text = .TextMatrix(.Row, ColName)
         Case 3
             TxtModelName.Tag = .TextMatrix(.Row, ColNo)
             TxtModelName.Text = .TextMatrix(.Row, ColName)
@@ -2549,7 +2549,7 @@ End Sub
 
 
 Private Sub txtDescription_Change()
-Search TxtDescription, 1, "adhamreparation", "RepName", "repnum", True
+Search txtDescription, 1, "adhamreparation", "RepName", "repnum", True
 End Sub
 
 Private Sub txtDescription_GotFocus()
@@ -2565,11 +2565,11 @@ Private Sub txtDescription_KeyPress(KeyAscii As Integer)
 If KeyAscii = 13 Then
         If Grid.Visible Then
             Ok = False
-            TxtDescription.Tag = IIf(Grid.SelectedRows = 0, Grid.TextMatrix(1, ColNo), Grid.TextMatrix(Grid.Row, ColNo))
-            TxtDescription.Text = IIf(Grid.SelectedRows = 0, Grid.TextMatrix(1, ColName), Grid.TextMatrix(Grid.Row, ColName))
+            txtDescription.Tag = IIf(Grid.SelectedRows = 0, Grid.TextMatrix(1, ColNo), Grid.TextMatrix(Grid.Row, ColNo))
+            txtDescription.Text = IIf(Grid.SelectedRows = 0, Grid.TextMatrix(1, ColName), Grid.TextMatrix(Grid.Row, ColName))
             Ok = True
             Grid.Visible = False
-            TxtDescription.SetFocus
+            txtDescription.SetFocus
             SendKeys "{End}"
         Else
             TxtProductName.SetFocus
@@ -2579,7 +2579,7 @@ End If
 End Sub
 
 Private Sub txtDescription_LostFocus()
-    reparationViewModelInfo_.Description = TxtDescription.Text
+    reparationViewModelInfo_.Description = txtDescription.Text
 End Sub
 
 Private Sub TxtEngineBarcode_KeyPress(KeyAscii As Integer)
@@ -2769,7 +2769,7 @@ If KeyAscii = 13 Then
             txtNotes.SetFocus
             SendKeys "{End}"
         Else
-            TxtDescription.SetFocus
+            txtDescription.SetFocus
             SendKeys "{Home}+{End}"
         End If
 End If
@@ -2964,7 +2964,7 @@ If KeyAscii = 13 Then
             TxtStkName.Text = IIf(Grid.SelectedRows = 0, Grid.TextMatrix(1, ColNo), Grid.TextMatrix(Grid.Row, ColNo))
             Ok = True
             Grid.Visible = False
-            TxtEngineBarcode.SetFocus
+            TxtStkQty.SetFocus
             SendKeys "{End}"
         ElseIf TxtStkName.Text <> "" Then
             ClearProductItems

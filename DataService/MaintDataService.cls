@@ -44,6 +44,31 @@ de.con.RollbackTrans
 MsgBox Err.Description
 End Sub
 
+Function InsertNewFees(vFeesName As String) As Long
+On Error GoTo ErrorHandler
+Dim rsFees As New ADODB.Recordset
+Dim sqlText As String
+sqlText = "Insert into CoMaintFees(FeesName)Values('" & LTrim(RTrim(vFeesName)) & "')"
+de.con.Execute (sqlText)
+sqlText = "Select @@Identity as FeesId"
+Set rsFees = de.con.Execute(sqlText)
+InsertNewFees = rsFees!FeesId
+Exit Function
+ErrorHandler:
+InsertNewFees = -1
+MsgBox Err.Description
+End Function
+
+Sub ChangeTheFeesName(FeesName As String, fessPrice As Double, FeesId As Long)
+On Error GoTo ErrorHandler
+    sqlText = "Update CoMaintFees Set feesname='" & FeesName & "',CliPriceafterdiscount=" & fessPrice & " where feesId =" & FeesId
+    de.con.Execute (sqlText)
+Exit Sub
+ErrorHandler:
+
+MsgBox Err.Description
+End Sub
+
 Public Function IsKeyExsist(ByVal Vcol As FiledColumns, ByVal vKey As Variant) As Boolean
 On Error GoTo ErrorHandler
     Dim o As fieldColumn

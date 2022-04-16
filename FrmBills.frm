@@ -21,8 +21,8 @@ Begin VB.Form FrmBills
    Begin VSFlex8Ctl.VSFlexGrid Grid 
       Height          =   2085
       Left            =   6540
-      TabIndex        =   53
-      Top             =   4020
+      TabIndex        =   0
+      Top             =   4050
       Visible         =   0   'False
       Width           =   2385
       _cx             =   4207
@@ -118,7 +118,7 @@ Begin VB.Form FrmBills
    End
    Begin Crystal.CrystalReport cr1 
       Left            =   4950
-      Top             =   2400
+      Top             =   2430
       _ExtentX        =   741
       _ExtentY        =   741
       _Version        =   348160
@@ -127,34 +127,53 @@ Begin VB.Form FrmBills
    Begin Threed.SSFrame SSFrame2 
       Height          =   2745
       Left            =   30
-      TabIndex        =   44
-      Top             =   3180
+      TabIndex        =   1
+      Top             =   3210
       Width           =   11685
       _ExtentX        =   20611
       _ExtentY        =   4842
       _Version        =   131074
-      Begin VB.TextBox TxtitemName 
-         Alignment       =   1  'Right Justify
-         Height          =   345
-         Left            =   9120
+      Begin VB.ComboBox ComboDiscount 
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   9.75
+            Charset         =   178
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   360
+         ItemData        =   "FrmBills.frx":0000
+         Left            =   1650
+         List            =   "FrmBills.frx":0002
          RightToLeft     =   -1  'True
-         TabIndex        =   18
+         TabIndex        =   5
          Top             =   270
-         Width           =   2505
+         Width           =   1515
       End
       Begin VB.TextBox TxtQty 
          Alignment       =   1  'Right Justify
          Height          =   345
          Left            =   3720
          RightToLeft     =   -1  'True
-         TabIndex        =   19
+         TabIndex        =   3
          Top             =   270
          Width           =   855
+      End
+      Begin VB.TextBox TxtitemName 
+         Alignment       =   1  'Right Justify
+         Height          =   345
+         Left            =   9120
+         RightToLeft     =   -1  'True
+         TabIndex        =   2
+         Top             =   270
+         Width           =   2505
       End
       Begin VSFlex8Ctl.VSFlexGrid flexGrid 
          Height          =   1965
          Left            =   90
-         TabIndex        =   21
+         TabIndex        =   4
          Top             =   720
          Width           =   11565
          _cx             =   20399
@@ -248,132 +267,17 @@ Begin VB.Form FrmBills
          AccessibleValue =   ""
          AccessibleRole  =   24
       End
-      Begin VB.ComboBox ComboDiscount 
-         BeginProperty Font 
-            Name            =   "MS Sans Serif"
-            Size            =   9.75
-            Charset         =   178
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   360
-         ItemData        =   "FrmBills.frx":0000
-         Left            =   1650
-         List            =   "FrmBills.frx":0002
-         RightToLeft     =   -1  'True
-         TabIndex        =   84
-         Top             =   270
-         Width           =   1515
-      End
-      Begin VB.Label LDiscount 
-         Alignment       =   1  'Right Justify
-         BackColor       =   &H00FFFFFF&
-         BeginProperty Font 
-            Name            =   "MS Sans Serif"
-            Size            =   12
-            Charset         =   178
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         ForeColor       =   &H00000000&
-         Height          =   315
-         Left            =   3210
-         TabIndex        =   83
-         Top             =   300
-         Width           =   495
-      End
       Begin VB.Label Label6 
          Alignment       =   1  'Right Justify
          AutoSize        =   -1  'True
-         Caption         =   "«·Õ”„"
+         Caption         =   "”⁄— «·„” Â·ﬂ"
          ForeColor       =   &H00000000&
          Height          =   195
-         Index           =   23
-         Left            =   3330
-         TabIndex        =   82
+         Index           =   2
+         Left            =   660
+         TabIndex        =   15
          Top             =   30
-         Width           =   405
-      End
-      Begin VB.Label Label6 
-         Alignment       =   1  'Right Justify
-         AutoSize        =   -1  'True
-         Caption         =   "«·—ﬁ„ «·„Œ“‰Ì"
-         ForeColor       =   &H00000000&
-         Height          =   195
-         Index           =   8
-         Left            =   10665
-         TabIndex        =   52
-         Top             =   30
-         Width           =   930
-      End
-      Begin VB.Label Label6 
-         Alignment       =   1  'Right Justify
-         AutoSize        =   -1  'True
-         Caption         =   "«·—’Ìœ"
-         ForeColor       =   &H00000000&
-         Height          =   195
-         Index           =   9
-         Left            =   4620
-         TabIndex        =   51
-         Top             =   30
-         Width           =   435
-      End
-      Begin VB.Label Label6 
-         Alignment       =   1  'Right Justify
-         AutoSize        =   -1  'True
-         Caption         =   "«·‘—Õ"
-         ForeColor       =   &H00000000&
-         Height          =   195
-         Index           =   10
-         Left            =   8670
-         TabIndex        =   50
-         Top             =   30
-         Width           =   420
-      End
-      Begin VB.Label Label6 
-         Alignment       =   1  'Right Justify
-         AutoSize        =   -1  'True
-         Caption         =   "«·ﬂ„Ì…"
-         ForeColor       =   &H00000000&
-         Height          =   195
-         Index           =   11
-         Left            =   4140
-         TabIndex        =   49
-         Top             =   30
-         Width           =   405
-      End
-      Begin VB.Label LItemName 
-         Alignment       =   1  'Right Justify
-         BackColor       =   &H00FFFFFF&
-         ForeColor       =   &H00000000&
-         Height          =   315
-         Left            =   5310
-         TabIndex        =   48
-         Top             =   270
-         Width           =   3765
-      End
-      Begin VB.Label LBalance 
-         Alignment       =   1  'Right Justify
-         BackColor       =   &H00FFFFFF&
-         BeginProperty Font 
-            Name            =   "MS Sans Serif"
-            Size            =   12
-            Charset         =   178
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         ForeColor       =   &H000000FF&
-         Height          =   315
-         Left            =   4590
-         TabIndex        =   47
-         Top             =   270
-         Width           =   705
+         Width           =   960
       End
       Begin VB.Label LPrice 
          Alignment       =   1  'Right Justify
@@ -390,108 +294,215 @@ Begin VB.Form FrmBills
          ForeColor       =   &H00000000&
          Height          =   315
          Left            =   120
-         TabIndex        =   46
+         TabIndex        =   14
          Top             =   300
          Width           =   1515
+      End
+      Begin VB.Label LBalance 
+         Alignment       =   1  'Right Justify
+         BackColor       =   &H00FFFFFF&
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   12
+            Charset         =   178
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   &H000000FF&
+         Height          =   315
+         Left            =   4590
+         TabIndex        =   13
+         Top             =   270
+         Width           =   705
+      End
+      Begin VB.Label LItemName 
+         Alignment       =   1  'Right Justify
+         BackColor       =   &H00FFFFFF&
+         ForeColor       =   &H00000000&
+         Height          =   315
+         Left            =   5310
+         TabIndex        =   12
+         Top             =   270
+         Width           =   3765
       End
       Begin VB.Label Label6 
          Alignment       =   1  'Right Justify
          AutoSize        =   -1  'True
-         Caption         =   "”⁄— «·„” Â·ﬂ"
+         Caption         =   "«·ﬂ„Ì…"
          ForeColor       =   &H00000000&
          Height          =   195
-         Index           =   2
-         Left            =   660
-         TabIndex        =   45
+         Index           =   11
+         Left            =   4140
+         TabIndex        =   11
          Top             =   30
-         Width           =   960
+         Width           =   405
+      End
+      Begin VB.Label Label6 
+         Alignment       =   1  'Right Justify
+         AutoSize        =   -1  'True
+         Caption         =   "«·‘—Õ"
+         ForeColor       =   &H00000000&
+         Height          =   195
+         Index           =   10
+         Left            =   8670
+         TabIndex        =   10
+         Top             =   30
+         Width           =   420
+      End
+      Begin VB.Label Label6 
+         Alignment       =   1  'Right Justify
+         AutoSize        =   -1  'True
+         Caption         =   "«·—’Ìœ"
+         ForeColor       =   &H00000000&
+         Height          =   195
+         Index           =   9
+         Left            =   4620
+         TabIndex        =   9
+         Top             =   30
+         Width           =   435
+      End
+      Begin VB.Label Label6 
+         Alignment       =   1  'Right Justify
+         AutoSize        =   -1  'True
+         Caption         =   "«·—ﬁ„ «·„Œ“‰Ì"
+         ForeColor       =   &H00000000&
+         Height          =   195
+         Index           =   8
+         Left            =   10665
+         TabIndex        =   8
+         Top             =   30
+         Width           =   930
+      End
+      Begin VB.Label Label6 
+         Alignment       =   1  'Right Justify
+         AutoSize        =   -1  'True
+         Caption         =   "«·Õ”„"
+         ForeColor       =   &H00000000&
+         Height          =   195
+         Index           =   23
+         Left            =   3330
+         TabIndex        =   7
+         Top             =   30
+         Width           =   405
+      End
+      Begin VB.Label LDiscount 
+         Alignment       =   1  'Right Justify
+         BackColor       =   &H00FFFFFF&
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   12
+            Charset         =   178
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   &H00000000&
+         Height          =   315
+         Left            =   3210
+         TabIndex        =   6
+         Top             =   300
+         Width           =   495
       End
    End
    Begin Threed.SSFrame SSFrame1 
       Height          =   3165
       Left            =   0
-      TabIndex        =   34
-      Top             =   -30
+      TabIndex        =   16
+      Top             =   0
       Width           =   11685
       _ExtentX        =   20611
       _ExtentY        =   5583
       _Version        =   131074
-      Begin VB.TextBox TxtFeesAmount 
+      Begin VB.TextBox TxtModelName 
          Alignment       =   1  'Right Justify
          Height          =   345
-         Left            =   5160
+         Left            =   4830
          RightToLeft     =   -1  'True
-         TabIndex        =   12
-         Top             =   1560
-         Width           =   1395
+         TabIndex        =   26
+         Top             =   960
+         Width           =   6705
       End
-      Begin VB.TextBox TxtDollar 
+      Begin VB.TextBox TxtClientName 
          Alignment       =   1  'Right Justify
          Height          =   345
-         Left            =   10770
+         Left            =   1890
          RightToLeft     =   -1  'True
-         TabIndex        =   81
-         Top             =   990
-         Width           =   765
+         TabIndex        =   25
+         Top             =   270
+         Width           =   2925
       End
-      Begin VB.TextBox TxtOthersFeesQty 
+      Begin VB.CheckBox ChkBill 
          Alignment       =   1  'Right Justify
-         Height          =   345
-         Left            =   1860
+         Caption         =   "›« Ê—… „ƒﬁ Â"
+         Height          =   375
+         Left            =   3360
          RightToLeft     =   -1  'True
-         TabIndex        =   16
-         Top             =   2730
-         Width           =   465
+         Style           =   1  'Graphical
+         TabIndex        =   24
+         Top             =   1590
+         Width           =   1755
       End
-      Begin VB.TextBox TxtFeesDescription 
+      Begin VB.TextBox txtModelQty 
          Alignment       =   1  'Right Justify
          Height          =   345
-         Left            =   2340
+         Left            =   60
          RightToLeft     =   -1  'True
-         TabIndex        =   15
-         Top             =   2730
-         Width           =   1815
-      End
-      Begin VB.TextBox TxtOtherFeesPrice 
-         Alignment       =   1  'Right Justify
-         Height          =   345
-         Left            =   1200
-         RightToLeft     =   -1  'True
-         TabIndex        =   17
-         Top             =   2730
-         Width           =   615
-      End
-      Begin VB.TextBox TxtFeesQty 
-         Alignment       =   1  'Right Justify
-         Height          =   345
-         Left            =   8010
-         RightToLeft     =   -1  'True
-         TabIndex        =   11
-         Top             =   1560
-         Width           =   855
+         TabIndex        =   22
+         Top             =   960
+         Width           =   675
       End
       Begin VB.CommandButton CmdNewCustomer 
          Caption         =   "“»‹‹‹‹‹‹«∆‰"
          Height          =   345
          Left            =   30
          RightToLeft     =   -1  'True
-         TabIndex        =   6
+         TabIndex        =   21
          Top             =   270
          Width           =   1185
       End
-      Begin VB.TextBox txtModelQty 
+      Begin VB.TextBox TxtFeesQty 
+         Alignment       =   1  'Right Justify
+         Height          =   405
+         Left            =   6750
+         RightToLeft     =   -1  'True
+         TabIndex        =   20
+         Top             =   1530
+         Width           =   855
+      End
+      Begin VB.TextBox TxtOtherFeesPrice 
          Alignment       =   1  'Right Justify
          Height          =   345
-         Left            =   1380
+         Left            =   1200
          RightToLeft     =   -1  'True
-         TabIndex        =   8
-         Top             =   960
-         Width           =   765
+         TabIndex        =   19
+         Top             =   2730
+         Width           =   615
+      End
+      Begin VB.TextBox TxtFeesDescription 
+         Alignment       =   1  'Right Justify
+         Height          =   345
+         Left            =   2340
+         RightToLeft     =   -1  'True
+         TabIndex        =   18
+         Top             =   2730
+         Width           =   1815
+      End
+      Begin VB.TextBox TxtOthersFeesQty 
+         Alignment       =   1  'Right Justify
+         Height          =   345
+         Left            =   1860
+         RightToLeft     =   -1  'True
+         TabIndex        =   17
+         Top             =   2730
+         Width           =   465
       End
       Begin MSMask.MaskEdBox TxtDate 
          Height          =   345
          Left            =   9420
-         TabIndex        =   1
+         TabIndex        =   23
          Top             =   270
          Width           =   1125
          _ExtentX        =   1984
@@ -501,53 +512,13 @@ Begin VB.Form FrmBills
          Mask            =   "99/99/9999"
          PromptChar      =   "_"
       End
-      Begin VB.CheckBox ChkBill 
-         Alignment       =   1  'Right Justify
-         Caption         =   "›« Ê—… „ƒﬁ Â"
-         Height          =   375
-         Left            =   3360
-         RightToLeft     =   -1  'True
-         Style           =   1  'Graphical
-         TabIndex        =   13
-         Top             =   1590
-         Width           =   1755
-      End
-      Begin VB.TextBox TxtClientName 
-         Alignment       =   1  'Right Justify
-         Height          =   345
-         Left            =   1890
-         RightToLeft     =   -1  'True
-         TabIndex        =   5
-         Top             =   270
-         Width           =   2265
-      End
-      Begin VB.TextBox TxtModelName 
-         Alignment       =   1  'Right Justify
-         Height          =   345
-         Left            =   5130
-         RightToLeft     =   -1  'True
-         TabIndex        =   7
-         Top             =   990
-         Width           =   5595
-      End
-      Begin VB.CommandButton CmdItems 
-         Caption         =   "«·„Ê«œ"
-         Enabled         =   0   'False
-         Height          =   345
-         Left            =   30
-         RightToLeft     =   -1  'True
-         TabIndex        =   9
-         TabStop         =   0   'False
-         Top             =   960
-         Width           =   1185
-      End
       Begin MSDataListLib.DataCombo ComboType 
          Height          =   360
-         Left            =   6870
-         TabIndex        =   2
+         Left            =   6390
+         TabIndex        =   27
          Top             =   270
-         Width           =   1335
-         _ExtentX        =   2355
+         Width           =   1485
+         _ExtentX        =   2619
          _ExtentY        =   635
          _Version        =   393216
          Text            =   ""
@@ -565,7 +536,7 @@ Begin VB.Form FrmBills
       Begin MSDataListLib.DataCombo ComboFees 
          Height          =   360
          Left            =   8880
-         TabIndex        =   10
+         TabIndex        =   28
          Top             =   1560
          Width           =   2655
          _ExtentX        =   4683
@@ -585,11 +556,11 @@ Begin VB.Form FrmBills
       End
       Begin MSDataListLib.DataCombo ComboOperationType 
          Height          =   360
-         Left            =   8250
-         TabIndex        =   55
+         Left            =   7920
+         TabIndex        =   29
          Top             =   270
-         Width           =   1155
-         _ExtentX        =   2037
+         Width           =   1485
+         _ExtentX        =   2619
          _ExtentY        =   635
          _Version        =   393216
          Text            =   ""
@@ -606,11 +577,11 @@ Begin VB.Form FrmBills
       End
       Begin MSDataListLib.DataCombo ComboPayment 
          Height          =   360
-         Left            =   5460
-         TabIndex        =   3
+         Left            =   4860
+         TabIndex        =   30
          Top             =   270
-         Width           =   1395
-         _ExtentX        =   2461
+         Width           =   1485
+         _ExtentX        =   2619
          _ExtentY        =   635
          _Version        =   393216
          Text            =   ""
@@ -628,7 +599,7 @@ Begin VB.Form FrmBills
       Begin MSMask.MaskEdBox TxtFixBillDate 
          Height          =   345
          Left            =   2220
-         TabIndex        =   14
+         TabIndex        =   31
          Top             =   1590
          Visible         =   0   'False
          Width           =   1125
@@ -642,7 +613,7 @@ Begin VB.Form FrmBills
       Begin VSFlex8Ctl.VSFlexGrid FlexFees 
          Height          =   1155
          Left            =   5160
-         TabIndex        =   64
+         TabIndex        =   32
          Top             =   1950
          Width           =   6495
          _cx             =   11456
@@ -736,328 +707,17 @@ Begin VB.Form FrmBills
          AccessibleValue =   ""
          AccessibleRole  =   24
       End
-      Begin MSDataListLib.DataCombo ComboDestination 
-         Height          =   360
-         Left            =   4170
-         TabIndex        =   4
-         Top             =   270
-         Width           =   1275
-         _ExtentX        =   2249
-         _ExtentY        =   635
-         _Version        =   393216
-         Text            =   ""
-         RightToLeft     =   -1  'True
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "MS Sans Serif"
-            Size            =   9.75
-            Charset         =   178
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-      End
       Begin VB.Label Label6 
          Alignment       =   1  'Right Justify
          AutoSize        =   -1  'True
-         Caption         =   "”⁄— «·œÊ·«—"
+         Caption         =   "«·√ÃÊ—"
          ForeColor       =   &H00000000&
          Height          =   195
-         Index           =   21
-         Left            =   10770
-         TabIndex        =   80
-         Top             =   720
-         Width           =   765
-      End
-      Begin VB.Label Label6 
-         Alignment       =   1  'Right Justify
-         AutoSize        =   -1  'True
-         Caption         =   "≈Ã„«·Ì «·”⁄—"
-         ForeColor       =   &H00000000&
-         Height          =   195
-         Index           =   22
-         Left            =   180
-         TabIndex        =   79
-         Top             =   2400
-         Width           =   930
-      End
-      Begin VB.Label LOthersFees 
-         Alignment       =   2  'Center
-         BackColor       =   &H00C0E0FF&
-         BeginProperty Font 
-            Name            =   "MS Sans Serif"
-            Size            =   9.75
-            Charset         =   178
-            Weight          =   700
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         ForeColor       =   &H00000000&
-         Height          =   315
-         Left            =   45
-         TabIndex        =   78
-         Top             =   2760
-         Width           =   1125
-      End
-      Begin VB.Label Label6 
-         Alignment       =   1  'Right Justify
-         AutoSize        =   -1  'True
-         Caption         =   "«·⁄œœ"
-         ForeColor       =   &H00000000&
-         Height          =   195
-         Index           =   20
-         Left            =   2010
-         TabIndex        =   77
-         Top             =   2400
-         Width           =   330
-      End
-      Begin VB.Label Label6 
-         Alignment       =   1  'Right Justify
-         AutoSize        =   -1  'True
-         Caption         =   "«·”⁄—"
-         ForeColor       =   &H00000000&
-         Height          =   195
-         Index           =   19
-         Left            =   1455
-         TabIndex        =   76
-         Top             =   2400
-         Width           =   390
-      End
-      Begin VB.Label Label6 
-         Alignment       =   1  'Right Justify
-         AutoSize        =   -1  'True
-         Caption         =   "«·‘‹‹‹‹‹‹‹—Õ"
-         ForeColor       =   &H00000000&
-         Height          =   195
-         Index           =   18
-         Left            =   3390
-         TabIndex        =   75
-         Top             =   2400
-         Width           =   735
-      End
-      Begin VB.Label Label6 
-         Alignment       =   1  'Right Justify
-         AutoSize        =   -1  'True
-         Caption         =   "√ÃÊ— „Œ ·›…"
-         ForeColor       =   &H00800000&
-         Height          =   195
-         Index           =   17
-         Left            =   4260
-         TabIndex        =   74
-         Top             =   2730
-         Width           =   825
-      End
-      Begin VB.Label Label6 
-         Alignment       =   1  'Right Justify
-         AutoSize        =   -1  'True
-         Caption         =   "«·⁄œœ"
-         ForeColor       =   &H00000000&
-         Height          =   195
-         Index           =   16
-         Left            =   8535
-         TabIndex        =   73
-         Top             =   1320
-         Width           =   330
-      End
-      Begin VB.Label LTransfered 
-         Alignment       =   2  'Center
-         BackColor       =   &H00FFFFFF&
-         BeginProperty Font 
-            Name            =   "MS Sans Serif"
-            Size            =   9.75
-            Charset         =   178
-            Weight          =   700
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         ForeColor       =   &H000000C0&
-         Height          =   345
-         Left            =   60
-         TabIndex        =   72
-         Top             =   1590
-         Width           =   2115
-      End
-      Begin VB.Label Label2 
-         Alignment       =   1  'Right Justify
-         AutoSize        =   -1  'True
-         Caption         =   "«·ÃÂ‹‹‹‹…"
-         ForeColor       =   &H000000C0&
-         Height          =   195
-         Index           =   1
-         Left            =   4860
-         RightToLeft     =   -1  'True
-         TabIndex        =   71
-         Top             =   30
-         Width           =   540
-      End
-      Begin VB.Label LClientPhoneNBR 
-         Alignment       =   1  'Right Justify
-         BackColor       =   &H00FFFFFF&
-         BeginProperty Font 
-            Name            =   "MS Sans Serif"
-            Size            =   9.75
-            Charset         =   178
-            Weight          =   700
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         ForeColor       =   &H00800000&
-         Height          =   255
-         Left            =   1890
-         TabIndex        =   63
-         Top             =   660
-         Width           =   2805
-      End
-      Begin VB.Label LFixBillDateCaption 
-         Alignment       =   1  'Right Justify
-         AutoSize        =   -1  'True
-         Caption         =   " «—ÌŒ «· À»Ì "
-         ForeColor       =   &H00000000&
-         Height          =   195
-         Left            =   2430
-         TabIndex        =   62
-         Top             =   1380
-         Visible         =   0   'False
-         Width           =   870
-      End
-      Begin VB.Label Label2 
-         Alignment       =   1  'Right Justify
-         AutoSize        =   -1  'True
-         Caption         =   "«·⁄œœ"
-         Height          =   195
-         Index           =   3
-         Left            =   2175
-         RightToLeft     =   -1  'True
-         TabIndex        =   61
-         Top             =   990
-         Width           =   330
-      End
-      Begin VB.Label Label6 
-         Alignment       =   1  'Right Justify
-         AutoSize        =   -1  'True
-         Caption         =   "ÿ—Ìﬁ… «·œ›⁄"
-         ForeColor       =   &H000000C0&
-         Height          =   195
-         Index           =   3
-         Left            =   6030
+         Index           =   13
+         Left            =   11130
          TabIndex        =   58
-         Top             =   30
-         Width           =   795
-      End
-      Begin VB.Label Label6 
-         Alignment       =   1  'Right Justify
-         AutoSize        =   -1  'True
-         Caption         =   "‰Ê⁄ «·⁄„·Ì…"
-         ForeColor       =   &H000000C0&
-         Height          =   195
-         Index           =   6
-         Left            =   8685
-         TabIndex        =   54
-         Top             =   30
-         Width           =   735
-      End
-      Begin VB.Label Label6 
-         Alignment       =   1  'Right Justify
-         AutoSize        =   -1  'True
-         Caption         =   "—ﬁ„ «·›« Ê—…"
-         ForeColor       =   &H00000000&
-         Height          =   195
-         Index           =   0
-         Left            =   10725
-         TabIndex        =   43
-         Top             =   30
-         Width           =   825
-      End
-      Begin VB.Label LBillNo 
-         Alignment       =   1  'Right Justify
-         BackColor       =   &H00FFFFFF&
-         BeginProperty Font 
-            Name            =   "MS Sans Serif"
-            Size            =   12
-            Charset         =   178
-            Weight          =   700
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         ForeColor       =   &H000000FF&
-         Height          =   315
-         Left            =   10530
-         TabIndex        =   42
-         Top             =   300
-         Width           =   1035
-      End
-      Begin VB.Label Label6 
-         Alignment       =   1  'Right Justify
-         AutoSize        =   -1  'True
-         Caption         =   " «—ÌŒ «·›« Ê—…"
-         ForeColor       =   &H000000C0&
-         Height          =   195
-         Index           =   1
-         Left            =   9570
-         TabIndex        =   41
-         Top             =   30
-         Width           =   960
-      End
-      Begin VB.Label Label6 
-         Alignment       =   1  'Right Justify
-         AutoSize        =   -1  'True
-         Caption         =   "‰Ê⁄ «·’Ì«‰…"
-         ForeColor       =   &H000000C0&
-         Height          =   195
-         Index           =   4
-         Left            =   7395
-         TabIndex        =   40
-         Top             =   30
-         Width           =   780
-      End
-      Begin VB.Label Label2 
-         Alignment       =   1  'Right Justify
-         AutoSize        =   -1  'True
-         Caption         =   "Â« › /  “»Ê‰"
-         ForeColor       =   &H000000C0&
-         Height          =   195
-         Index           =   0
-         Left            =   3270
-         RightToLeft     =   -1  'True
-         TabIndex        =   39
-         Top             =   30
-         Width           =   900
-      End
-      Begin VB.Label Label6 
-         Alignment       =   1  'Right Justify
-         AutoSize        =   -1  'True
-         Caption         =   "«·„ÊœÌ·"
-         ForeColor       =   &H00000000&
-         Height          =   195
-         Index           =   7
-         Left            =   9990
-         TabIndex        =   38
-         Top             =   720
-         Width           =   495
-      End
-      Begin VB.Label LSymbol 
-         Alignment       =   1  'Right Justify
-         BackColor       =   &H00FFFFFF&
-         BeginProperty Font 
-            Name            =   "MS Sans Serif"
-            Size            =   12
-            Charset         =   178
-            Weight          =   700
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         ForeColor       =   &H000000FF&
-         Height          =   315
-         Left            =   2490
-         RightToLeft     =   -1  'True
-         TabIndex        =   37
-         Top             =   990
-         Width           =   2505
+         Top             =   1320
+         Width           =   405
       End
       Begin VB.Label LClientType 
          Alignment       =   2  'Center
@@ -1074,106 +734,349 @@ Begin VB.Form FrmBills
          ForeColor       =   &H00800000&
          Height          =   345
          Left            =   1260
-         TabIndex        =   36
+         TabIndex        =   57
          Top             =   270
          Width           =   615
+      End
+      Begin VB.Label LSymbol 
+         Alignment       =   1  'Right Justify
+         BackColor       =   &H00FFFFFF&
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   12
+            Charset         =   178
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   &H000000FF&
+         Height          =   315
+         Left            =   1890
+         RightToLeft     =   -1  'True
+         TabIndex        =   56
+         Top             =   990
+         Width           =   2895
       End
       Begin VB.Label Label6 
          Alignment       =   1  'Right Justify
          AutoSize        =   -1  'True
-         Caption         =   "«·√ÃÊ—"
+         Caption         =   "«·„ÊœÌ·"
          ForeColor       =   &H00000000&
          Height          =   195
-         Index           =   13
-         Left            =   11130
+         Index           =   7
+         Left            =   10980
+         TabIndex        =   55
+         Top             =   720
+         Width           =   495
+      End
+      Begin VB.Label Label2 
+         Alignment       =   1  'Right Justify
+         AutoSize        =   -1  'True
+         Caption         =   "Â« › /  “»Ê‰"
+         ForeColor       =   &H000000C0&
+         Height          =   195
+         Index           =   0
+         Left            =   3810
+         RightToLeft     =   -1  'True
+         TabIndex        =   54
+         Top             =   30
+         Width           =   900
+      End
+      Begin VB.Label Label6 
+         Alignment       =   1  'Right Justify
+         AutoSize        =   -1  'True
+         Caption         =   "‰Ê⁄ «·’Ì«‰…"
+         ForeColor       =   &H000000C0&
+         Height          =   195
+         Index           =   4
+         Left            =   7035
+         TabIndex        =   53
+         Top             =   30
+         Width           =   780
+      End
+      Begin VB.Label Label6 
+         Alignment       =   1  'Right Justify
+         AutoSize        =   -1  'True
+         Caption         =   " «—ÌŒ «·›« Ê—…"
+         ForeColor       =   &H000000C0&
+         Height          =   195
+         Index           =   1
+         Left            =   9570
+         TabIndex        =   52
+         Top             =   30
+         Width           =   960
+      End
+      Begin VB.Label LBillNo 
+         Alignment       =   1  'Right Justify
+         BackColor       =   &H00FFFFFF&
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   12
+            Charset         =   178
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   &H000000FF&
+         Height          =   315
+         Left            =   10590
+         TabIndex        =   51
+         Top             =   300
+         Width           =   1005
+      End
+      Begin VB.Label Label6 
+         Alignment       =   1  'Right Justify
+         AutoSize        =   -1  'True
+         Caption         =   "—ﬁ„ «·›« Ê—…"
+         ForeColor       =   &H00000000&
+         Height          =   195
+         Index           =   0
+         Left            =   10725
+         TabIndex        =   50
+         Top             =   30
+         Width           =   825
+      End
+      Begin VB.Label Label6 
+         Alignment       =   1  'Right Justify
+         AutoSize        =   -1  'True
+         Caption         =   "‰Ê⁄ «·⁄„·Ì…"
+         ForeColor       =   &H000000C0&
+         Height          =   195
+         Index           =   6
+         Left            =   8685
+         TabIndex        =   49
+         Top             =   30
+         Width           =   735
+      End
+      Begin VB.Label Label6 
+         Alignment       =   1  'Right Justify
+         AutoSize        =   -1  'True
+         Caption         =   "ÿ—Ìﬁ… «·œ›⁄"
+         ForeColor       =   &H000000C0&
+         Height          =   195
+         Index           =   3
+         Left            =   5490
+         TabIndex        =   48
+         Top             =   30
+         Width           =   795
+      End
+      Begin VB.Label Label2 
+         Alignment       =   1  'Right Justify
+         AutoSize        =   -1  'True
+         Caption         =   "«·⁄œœ"
+         Height          =   195
+         Index           =   3
+         Left            =   825
+         RightToLeft     =   -1  'True
+         TabIndex        =   47
+         Top             =   960
+         Width           =   330
+      End
+      Begin VB.Label LFixBillDateCaption 
+         Alignment       =   1  'Right Justify
+         AutoSize        =   -1  'True
+         Caption         =   " «—ÌŒ «· À»Ì "
+         ForeColor       =   &H00000000&
+         Height          =   195
+         Left            =   2430
+         TabIndex        =   46
+         Top             =   1380
+         Visible         =   0   'False
+         Width           =   870
+      End
+      Begin VB.Label LClientPhoneNBR 
+         Alignment       =   1  'Right Justify
+         BackColor       =   &H00FFFFFF&
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   9.75
+            Charset         =   178
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   &H00800000&
+         Height          =   255
+         Left            =   1890
+         TabIndex        =   45
+         Top             =   660
+         Width           =   2895
+      End
+      Begin VB.Label LTransfered 
+         Alignment       =   2  'Center
+         BackColor       =   &H00FFFFFF&
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   9.75
+            Charset         =   178
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   &H000000C0&
+         Height          =   345
+         Left            =   60
+         TabIndex        =   44
+         Top             =   1590
+         Width           =   2115
+      End
+      Begin VB.Label Label6 
+         Alignment       =   1  'Right Justify
+         AutoSize        =   -1  'True
+         Caption         =   "«·⁄œœ"
+         ForeColor       =   &H00000000&
+         Height          =   195
+         Index           =   16
+         Left            =   7155
+         TabIndex        =   43
+         Top             =   1320
+         Width           =   330
+      End
+      Begin VB.Label Label6 
+         Alignment       =   1  'Right Justify
+         AutoSize        =   -1  'True
+         Caption         =   "√ÃÊ— „Œ ·›…"
+         ForeColor       =   &H00800000&
+         Height          =   195
+         Index           =   17
+         Left            =   4260
+         TabIndex        =   42
+         Top             =   2730
+         Width           =   825
+      End
+      Begin VB.Label Label6 
+         Alignment       =   1  'Right Justify
+         AutoSize        =   -1  'True
+         Caption         =   "«·‘‹‹‹‹‹‹‹—Õ"
+         ForeColor       =   &H00000000&
+         Height          =   195
+         Index           =   18
+         Left            =   3390
+         TabIndex        =   41
+         Top             =   2400
+         Width           =   735
+      End
+      Begin VB.Label Label6 
+         Alignment       =   1  'Right Justify
+         AutoSize        =   -1  'True
+         Caption         =   "«·”⁄—"
+         ForeColor       =   &H00000000&
+         Height          =   195
+         Index           =   19
+         Left            =   1455
+         TabIndex        =   40
+         Top             =   2400
+         Width           =   390
+      End
+      Begin VB.Label Label6 
+         Alignment       =   1  'Right Justify
+         AutoSize        =   -1  'True
+         Caption         =   "«·⁄œœ"
+         ForeColor       =   &H00000000&
+         Height          =   195
+         Index           =   20
+         Left            =   2010
+         TabIndex        =   39
+         Top             =   2400
+         Width           =   330
+      End
+      Begin VB.Label LOthersFees 
+         Alignment       =   2  'Center
+         BackColor       =   &H00C0E0FF&
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   9.75
+            Charset         =   178
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   &H00000000&
+         Height          =   315
+         Left            =   45
+         TabIndex        =   38
+         Top             =   2760
+         Width           =   1125
+      End
+      Begin VB.Label Label6 
+         Alignment       =   1  'Right Justify
+         AutoSize        =   -1  'True
+         Caption         =   "≈Ã„«·Ì «·”⁄—"
+         ForeColor       =   &H00000000&
+         Height          =   195
+         Index           =   22
+         Left            =   180
+         TabIndex        =   37
+         Top             =   2400
+         Width           =   930
+      End
+      Begin VB.Label LFeesAmount 
+         Alignment       =   1  'Right Justify
+         BackColor       =   &H00FFFFFF&
+         Height          =   345
+         Left            =   5160
+         RightToLeft     =   -1  'True
+         TabIndex        =   36
+         Top             =   1560
+         Width           =   1545
+      End
+      Begin VB.Label Label6 
+         Alignment       =   1  'Right Justify
+         AutoSize        =   -1  'True
+         Caption         =   "«·”⁄— «·«›—«œÌ"
+         ForeColor       =   &H00000000&
+         Height          =   195
+         Index           =   5
+         Left            =   7755
          TabIndex        =   35
          Top             =   1320
-         Width           =   405
+         Width           =   1005
+      End
+      Begin VB.Label LfeesClientPrice 
+         Alignment       =   1  'Right Justify
+         BackColor       =   &H00FFFFFF&
+         Height          =   345
+         Left            =   7650
+         RightToLeft     =   -1  'True
+         TabIndex        =   34
+         Top             =   1560
+         Width           =   1185
+      End
+      Begin VB.Label Label1 
+         Alignment       =   1  'Right Justify
+         Caption         =   "”⁄— «·„” Â·ﬂ"
+         Height          =   195
+         Left            =   5220
+         RightToLeft     =   -1  'True
+         TabIndex        =   33
+         Top             =   1320
+         Width           =   1455
       End
    End
    Begin Threed.SSFrame SSFrame4 
       Height          =   495
       Left            =   0
-      TabIndex        =   22
-      Top             =   5970
+      TabIndex        =   59
+      Top             =   6000
       Width           =   11715
       _ExtentX        =   20664
       _ExtentY        =   873
       _Version        =   131074
-      Begin Threed.SSCommand CmdPreview 
+      Begin Threed.SSCommand CmdSearch 
          Height          =   435
-         Left            =   3855
-         TabIndex        =   57
-         Top             =   30
-         Width           =   1125
-         _ExtentX        =   1984
-         _ExtentY        =   767
-         _Version        =   131074
-         ForeColor       =   8388608
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "MS Sans Serif"
-            Size            =   8.25
-            Charset         =   178
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Caption         =   "„⁄«Ì‰…"
-      End
-      Begin Threed.SSCommand CmdPrint 
-         Height          =   435
-         Left            =   2730
-         TabIndex        =   56
-         Top             =   30
-         Width           =   1125
-         _ExtentX        =   1984
-         _ExtentY        =   767
-         _Version        =   131074
-         ForeColor       =   8388608
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "MS Sans Serif"
-            Size            =   8.25
-            Charset         =   178
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Caption         =   "ÿ»«⁄…"
-      End
-      Begin Threed.SSCommand CmdExit 
-         Height          =   435
-         Left            =   60
-         TabIndex        =   27
-         Top             =   30
-         Width           =   1335
-         _ExtentX        =   2355
-         _ExtentY        =   767
-         _Version        =   131074
-         ForeColor       =   255
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "MS Sans Serif"
-            Size            =   8.25
-            Charset         =   178
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Caption         =   "Œ—ÊÃ"
-      End
-      Begin Threed.SSCommand cmdSave 
-         Height          =   435
-         Left            =   6315
-         TabIndex        =   20
+         Left            =   1395
+         TabIndex        =   68
          Top             =   30
          Width           =   1335
          _ExtentX        =   2355
          _ExtentY        =   767
          _Version        =   131074
          ForeColor       =   8388608
-         Enabled         =   0   'False
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
             Name            =   "MS Sans Serif"
             Size            =   8.25
@@ -1183,19 +1086,18 @@ Begin VB.Form FrmBills
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         Caption         =   "Õ›Ÿ"
+         Caption         =   "»ÕÀ"
       End
-      Begin Threed.SSCommand CmdEdit 
+      Begin Threed.SSCommand CmdAdd 
          Height          =   435
-         Left            =   8985
-         TabIndex        =   26
+         Left            =   10320
+         TabIndex        =   67
          Top             =   30
          Width           =   1335
          _ExtentX        =   2355
          _ExtentY        =   767
          _Version        =   131074
          ForeColor       =   8388608
-         PictureAnimationDelay=   66
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
             Name            =   "MS Sans Serif"
             Size            =   8.25
@@ -1205,12 +1107,33 @@ Begin VB.Form FrmBills
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         Caption         =   " ⁄œÌ·"
+         Caption         =   "ÃœÌœ"
+      End
+      Begin Threed.SSCommand CmdDelete 
+         Height          =   435
+         Left            =   7650
+         TabIndex        =   66
+         Top             =   30
+         Width           =   1335
+         _ExtentX        =   2355
+         _ExtentY        =   767
+         _Version        =   131074
+         ForeColor       =   8388608
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   178
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Caption         =   "Õ–›"
       End
       Begin Threed.SSCommand CmdCancel 
          Height          =   435
          Left            =   4980
-         TabIndex        =   25
+         TabIndex        =   65
          Top             =   30
          Width           =   1335
          _ExtentX        =   2355
@@ -1229,16 +1152,17 @@ Begin VB.Form FrmBills
          EndProperty
          Caption         =   " —«Ã⁄"
       End
-      Begin Threed.SSCommand CmdDelete 
+      Begin Threed.SSCommand CmdEdit 
          Height          =   435
-         Left            =   7650
-         TabIndex        =   24
+         Left            =   8985
+         TabIndex        =   64
          Top             =   30
          Width           =   1335
          _ExtentX        =   2355
          _ExtentY        =   767
          _Version        =   131074
          ForeColor       =   8388608
+         PictureAnimationDelay=   66
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
             Name            =   "MS Sans Serif"
             Size            =   8.25
@@ -1248,18 +1172,19 @@ Begin VB.Form FrmBills
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         Caption         =   "Õ–›"
+         Caption         =   " ⁄œÌ·"
       End
-      Begin Threed.SSCommand CmdAdd 
+      Begin Threed.SSCommand cmdSave 
          Height          =   435
-         Left            =   10320
-         TabIndex        =   0
+         Left            =   6315
+         TabIndex        =   63
          Top             =   30
          Width           =   1335
          _ExtentX        =   2355
          _ExtentY        =   767
          _Version        =   131074
          ForeColor       =   8388608
+         Enabled         =   0   'False
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
             Name            =   "MS Sans Serif"
             Size            =   8.25
@@ -1269,15 +1194,36 @@ Begin VB.Form FrmBills
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         Caption         =   "ÃœÌœ"
+         Caption         =   "Õ›Ÿ"
       End
-      Begin Threed.SSCommand CmdSearch 
+      Begin Threed.SSCommand CmdExit 
          Height          =   435
-         Left            =   1395
-         TabIndex        =   23
+         Left            =   60
+         TabIndex        =   62
          Top             =   30
          Width           =   1335
          _ExtentX        =   2355
+         _ExtentY        =   767
+         _Version        =   131074
+         ForeColor       =   255
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   178
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Caption         =   "Œ—ÊÃ"
+      End
+      Begin Threed.SSCommand CmdPrint 
+         Height          =   435
+         Left            =   2730
+         TabIndex        =   61
+         Top             =   30
+         Width           =   1125
+         _ExtentX        =   1984
          _ExtentY        =   767
          _Version        =   131074
          ForeColor       =   8388608
@@ -1290,59 +1236,80 @@ Begin VB.Form FrmBills
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         Caption         =   "»ÕÀ"
+         Caption         =   "ÿ»«⁄…"
+      End
+      Begin Threed.SSCommand CmdPreview 
+         Height          =   435
+         Left            =   3855
+         TabIndex        =   60
+         Top             =   30
+         Width           =   1125
+         _ExtentX        =   1984
+         _ExtentY        =   767
+         _Version        =   131074
+         ForeColor       =   8388608
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   178
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Caption         =   "„⁄«Ì‰…"
       End
    End
    Begin Threed.SSFrame SSFrame10 
       Height          =   375
       Left            =   9270
-      TabIndex        =   28
-      Top             =   6480
+      TabIndex        =   69
+      Top             =   6510
       Width           =   2475
       _ExtentX        =   4366
       _ExtentY        =   661
       _Version        =   131074
-      Begin VB.CommandButton CmdFirst 
+      Begin VB.CommandButton CmdLast 
          Height          =   285
-         Left            =   60
+         Left            =   2190
          Picture         =   "FrmBills.frx":0004
          Style           =   1  'Graphical
-         TabIndex        =   32
+         TabIndex        =   73
          TabStop         =   0   'False
-         ToolTipText     =   "First"
-         Top             =   60
-         Width           =   255
-      End
-      Begin VB.CommandButton CmdPrevious 
-         Height          =   285
-         Left            =   330
-         Picture         =   "FrmBills.frx":0536
-         Style           =   1  'Graphical
-         TabIndex        =   31
-         TabStop         =   0   'False
-         ToolTipText     =   "Previous"
+         ToolTipText     =   "Last"
          Top             =   60
          Width           =   255
       End
       Begin VB.CommandButton CmdNext 
          Height          =   285
          Left            =   1920
-         Picture         =   "FrmBills.frx":0630
+         Picture         =   "FrmBills.frx":0536
          Style           =   1  'Graphical
-         TabIndex        =   30
+         TabIndex        =   72
          TabStop         =   0   'False
          ToolTipText     =   "Next"
          Top             =   60
          Width           =   255
       End
-      Begin VB.CommandButton CmdLast 
+      Begin VB.CommandButton CmdPrevious 
          Height          =   285
-         Left            =   2190
+         Left            =   330
+         Picture         =   "FrmBills.frx":0630
+         Style           =   1  'Graphical
+         TabIndex        =   71
+         TabStop         =   0   'False
+         ToolTipText     =   "Previous"
+         Top             =   60
+         Width           =   255
+      End
+      Begin VB.CommandButton CmdFirst 
+         Height          =   285
+         Left            =   60
          Picture         =   "FrmBills.frx":072A
          Style           =   1  'Graphical
-         TabIndex        =   29
+         TabIndex        =   70
          TabStop         =   0   'False
-         ToolTipText     =   "Last"
+         ToolTipText     =   "First"
          Top             =   60
          Width           =   255
       End
@@ -1351,12 +1318,12 @@ Begin VB.Form FrmBills
          BackColor       =   &H00FFFFFF&
          Height          =   285
          Left            =   600
-         TabIndex        =   33
+         TabIndex        =   74
          Top             =   60
          Width           =   1305
       End
    End
-   Begin VB.Label LTotalItems 
+   Begin VB.Label LTotal 
       Alignment       =   2  'Center
       BackColor       =   &H00FFFFFF&
       BeginProperty Font 
@@ -1368,91 +1335,33 @@ Begin VB.Form FrmBills
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
-      ForeColor       =   &H00000000&
-      Height          =   315
-      Left            =   4740
-      TabIndex        =   70
-      Top             =   6480
-      Width           =   975
-   End
-   Begin VB.Label Label3 
-      Alignment       =   1  'Right Justify
-      AutoSize        =   -1  'True
-      Caption         =   "ﬁÌ„… «·„Ê«œ"
-      BeginProperty Font 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
-         Charset         =   178
-         Weight          =   700
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-      ForeColor       =   &H00800000&
-      Height          =   195
-      Left            =   5745
-      TabIndex        =   69
-      Top             =   6480
-      Width           =   885
-   End
-   Begin VB.Label Label4 
-      Alignment       =   1  'Right Justify
-      AutoSize        =   -1  'True
-      Caption         =   "«·√ÃÊ—"
-      BeginProperty Font 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
-         Charset         =   178
-         Weight          =   700
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-      ForeColor       =   &H00800000&
-      Height          =   195
-      Left            =   7590
-      TabIndex        =   68
-      Top             =   6480
-      Width           =   480
-   End
-   Begin VB.Label LTotalFees 
-      Alignment       =   2  'Center
-      BackColor       =   &H00FFFFFF&
-      BeginProperty Font 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
-         Charset         =   178
-         Weight          =   700
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-      ForeColor       =   &H00000000&
-      Height          =   315
-      Left            =   6690
-      TabIndex        =   67
-      Top             =   6480
-      Width           =   855
-   End
-   Begin VB.Label LCount 
-      Alignment       =   2  'Center
-      BackColor       =   &H00FFFFFF&
-      BeginProperty Font 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
-         Charset         =   178
-         Weight          =   700
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-      ForeColor       =   &H000000C0&
+      ForeColor       =   &H000000FF&
       Height          =   345
-      Left            =   8100
+      Left            =   120
       RightToLeft     =   -1  'True
-      TabIndex        =   66
-      Top             =   6480
-      Width           =   615
+      TabIndex        =   82
+      Top             =   6510
+      Width           =   1545
+   End
+   Begin VB.Label Label6 
+      Alignment       =   1  'Right Justify
+      Caption         =   "«·≈Ã„«·Ì"
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   178
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   &H00800000&
+      Height          =   435
+      Index           =   14
+      Left            =   1710
+      TabIndex        =   81
+      Top             =   6510
+      Width           =   825
    End
    Begin VB.Label Label6 
       Alignment       =   1  'Right Justify
@@ -1471,31 +1380,11 @@ Begin VB.Form FrmBills
       Height          =   195
       Index           =   15
       Left            =   8745
-      TabIndex        =   65
-      Top             =   6510
+      TabIndex        =   80
+      Top             =   6540
       Width           =   480
    End
-   Begin VB.Label Label6 
-      Alignment       =   1  'Right Justify
-      Caption         =   "«·≈Ã„«·Ì"
-      BeginProperty Font 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
-         Charset         =   178
-         Weight          =   700
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-      ForeColor       =   &H00800000&
-      Height          =   435
-      Index           =   14
-      Left            =   1710
-      TabIndex        =   60
-      Top             =   6480
-      Width           =   825
-   End
-   Begin VB.Label LTotal 
+   Begin VB.Label LCount 
       Alignment       =   2  'Center
       BackColor       =   &H00FFFFFF&
       BeginProperty Font 
@@ -1507,13 +1396,91 @@ Begin VB.Form FrmBills
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
-      ForeColor       =   &H000000FF&
+      ForeColor       =   &H000000C0&
       Height          =   345
-      Left            =   120
+      Left            =   8100
       RightToLeft     =   -1  'True
-      TabIndex        =   59
-      Top             =   6480
-      Width           =   1545
+      TabIndex        =   79
+      Top             =   6510
+      Width           =   615
+   End
+   Begin VB.Label LTotalFees 
+      Alignment       =   2  'Center
+      BackColor       =   &H00FFFFFF&
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   178
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   &H00000000&
+      Height          =   315
+      Left            =   6690
+      TabIndex        =   78
+      Top             =   6510
+      Width           =   855
+   End
+   Begin VB.Label Label4 
+      Alignment       =   1  'Right Justify
+      AutoSize        =   -1  'True
+      Caption         =   "«·√ÃÊ—"
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   178
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   &H00800000&
+      Height          =   195
+      Left            =   7590
+      TabIndex        =   77
+      Top             =   6510
+      Width           =   480
+   End
+   Begin VB.Label Label3 
+      Alignment       =   1  'Right Justify
+      AutoSize        =   -1  'True
+      Caption         =   "ﬁÌ„… «·„Ê«œ"
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   178
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   &H00800000&
+      Height          =   195
+      Left            =   5745
+      TabIndex        =   76
+      Top             =   6510
+      Width           =   885
+   End
+   Begin VB.Label LTotalItems 
+      Alignment       =   2  'Center
+      BackColor       =   &H00FFFFFF&
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   178
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   &H00000000&
+      Height          =   315
+      Left            =   4740
+      TabIndex        =   75
+      Top             =   6510
+      Width           =   975
    End
 End
 Attribute VB_Name = "FrmBills"
@@ -1601,20 +1568,37 @@ ErrorHandler:
 GetTotalPriceBeforDiscount = -1
 End Function
 
+Function ChkBalance(stkno As String) As Boolean
+On Error GoTo errohandler
+ChkBalance = False
+Dim rsStkNoTeamBalance  As New ADODB.Recordset
+        sqlText = "select isnull(sum(fnlqnt),0)fnlqnt from stkinf s1 where stkno='" & stkno & "' and strid=" & GetStrId(systemConfigration.MainStoreNo)
+        Set rsStkNoTeamBalance = de.con.Execute(sqlText)
+        If rsStkNoTeamBalance!fnlqnt >= 0 Then
+            ChkBalance = True
+        End If
+Exit Function
+errohandler:
+ChkBalance = False
+MsgBox Err.Description
+End Function
+
 Function DeleteRec(BillNo As Double) As Boolean
 On Error GoTo ErrorHandler
 de.con.BeginTrans
-'     ' Delete Details
-'     With flexGrid
-'        For i = 1 To .Rows - 1
-'            RemoveFromMvStock .TextMatrix(i, Colid)
-'        Next
-'     End With
-
-    sqlText = "Delete From MvMaintPayments Where BillNo=" & BillNo
-    de.con.Execute (sqlText)
-    
-    sqlText = "Delete From MvMaintPaymentsDetails Where BillNo=" & BillNo
+    With FlexGrid
+     For i = 1 To .Rows - 1
+          RemoveFromMvStock .TextMatrix(i, ColId)
+          If Not ChkBalance(.TextMatrix(i, ColStkNo)) Then
+             de.con.RollbackTrans
+             MsgBox "·«Ì„ﬂ‰ «·Õ–› ·«‰ «·—’Ìœ «·„” Êœ⁄ ·„ Ì⁄œ ﬂ«›Ì«", vbExclamation, "«·—’Ìœ ”«·»"
+             Exit Function
+          End If
+     Next
+    End With
+    sqlText = "Delete From MvMaintFees Where BillNo=" & BillNo
+    sqlText = sqlText & " Delete From MvMaintPaymentsDetails Where BillNo=" & BillNo
+    sqlText = sqlText & " Delete From MvMaintPayments Where BillNo=" & BillNo
     de.con.Execute (sqlText)
 de.con.CommitTrans
 DeleteRec = True
@@ -1668,8 +1652,8 @@ Ok = False
     TxtFeesDescription.Text = ""
     TxtOtherFeesPrice.Text = ""
     TxtOthersFeesQty.Text = ""
-    TxtitemName.Tag = "0"
-    TxtitemName.Text = ""
+    TxtItemName.Tag = "0"
+    TxtItemName.Text = ""
     LItemName.Caption = ""
     LBalance.Caption = ""
     TxtQty.Text = ""
@@ -1677,7 +1661,8 @@ Ok = False
     ComboFees.BoundText = ""
     'ComboFeesPriceType.BoundText = ""
     TxtFeesQty.Text = 1
-    TxtFeesAmount.Text = ""
+    LFeesAmount.Caption = ""
+    LfeesClientPrice.Caption = ""
     LPrice.Caption = ""
     LTotal.Caption = ""
     LDiscount.Caption = ""
@@ -1685,7 +1670,7 @@ Ok = False
     LTotalItems.Caption = ""
     LTotalFees.Caption = ""
     LTransfered.Caption = ""
-    flexGrid.Rows = 1
+    FlexGrid.Rows = 1
     FlexFees.Rows = 1
     
     
@@ -1699,10 +1684,10 @@ Ok = False
 Ok = True
 End Sub
 
-Sub MoveCursor(KeyCode As Integer, flexGrid As VSFlexGrid)
+Sub MoveCursor(KeyCode As Integer, FlexGrid As VSFlexGrid)
 On Error Resume Next
-If Not flexGrid.Visible Then Exit Sub
-With flexGrid
+If Not FlexGrid.Visible Then Exit Sub
+With FlexGrid
     If KeyCode = vbKeyDown Then
         .Row = .Row + 1
     ElseIf KeyCode = vbKeyUp Then
@@ -1746,17 +1731,17 @@ ElseIf i = 2 Then
 '    fs = fs + "|>" + "—ﬁ„ ‰Ê⁄ «·”⁄—"
 '    fs = fs + "|>" + "‰Ê⁄ «·”⁄—"
     fs = fs + "|>" + "‰”»… «·Õ”„"
-    With flexGrid
+    With FlexGrid
         .FormatString = fs
         .Cols = 7
         .ColWidth(ColId) = 0
-        SetColWidths ColStkNo, flexGrid
-        SetColWidths ColStkName, flexGrid
-        SetColWidths ColQty, flexGrid
-        SetColWidths ColPrice, flexGrid
+        SetColWidths ColStkNo, FlexGrid
+        SetColWidths ColStkName, FlexGrid
+        SetColWidths ColQty, FlexGrid
+        SetColWidths ColPrice, FlexGrid
 '        .ColWidth(colPriceTypeId) = 0
 '        SetColWidths ColPriceTypeName, FlexGrid
-        SetColWidths ColDiscount, flexGrid
+        SetColWidths ColDiscount, FlexGrid
 '        .ColWidth(ColPaymentTypeId) = 0
 '        SetColWidths ColPaymentTypeName, FlexGrid
     End With
@@ -1782,15 +1767,15 @@ ElseIf i = 3 Then
 End If
 End Sub
 
-Sub SetColWidths(ByVal ColNo As Integer, flexGrid As VSFlexGrid)
-    With flexGrid
+Sub SetColWidths(ByVal ColNo As Integer, FlexGrid As VSFlexGrid)
+    With FlexGrid
         .AutoSize (ColNo)
     End With
 End Sub
 
 Sub ChangeCursor(ByVal X As Integer)
 If X = 1 Then
-    With TxtClientName
+    With txtClientName
        Grid.top = SSFrame1.top + .top + .Height
        Grid.left = SSFrame1.left + .left
        Grid.Width = .Width
@@ -1802,7 +1787,7 @@ ElseIf X = 2 Then
        Grid.Width = .Width
 End With
 ElseIf X = 3 Then
-    With TxtitemName
+    With TxtItemName
        Grid.top = SSFrame2.top + .top + .Height
        Grid.left = SSFrame2.left + .left
        Grid.Width = .Width
@@ -1838,7 +1823,7 @@ ElseIf X = 8 Then
        Grid.Width = .Width
 End With
 ElseIf X = 9 Then
-    With TxtitemName
+    With TxtItemName
        Grid.top = .top + .Height
        Grid.left = .left
        Grid.Width = .Width
@@ -1852,7 +1837,7 @@ End With
 End If
 End Sub
 
-Sub EnableCmds(FAdd As Boolean, FEdit As Boolean, FDelete As Boolean, FSave As Boolean, FUndo As Boolean, FFirst As Boolean, FNext As Boolean, FPrevious As Boolean, FLast As Boolean, FPreviow As Boolean, Fprint As Boolean, FItems As Boolean)
+Sub EnableCmds(FAdd As Boolean, FEdit As Boolean, FDelete As Boolean, FSave As Boolean, FUndo As Boolean, FFirst As Boolean, FNext As Boolean, FPrevious As Boolean, FLast As Boolean, FPreviow As Boolean, Fprint As Boolean)
     CmdAdd.Enabled = FAdd
     CmdEdit.Enabled = FEdit
     CmdDelete.Enabled = FDelete
@@ -1863,14 +1848,14 @@ Sub EnableCmds(FAdd As Boolean, FEdit As Boolean, FDelete As Boolean, FSave As B
     CmdNext.Enabled = FNext
     CmdPrevious.Enabled = FPrevious
     CmdPreview.Enabled = FPreviow
-    CmdPrint.Enabled = Fprint
-    CmdItems.Enabled = FItems
+    cmdPrint.Enabled = Fprint
+    
 End Sub
 
 Sub EnableControls(FControl As Boolean)
 Dim ctrl As Control
 For Each ctrl In Me.Controls
-    If TypeOf ctrl Is TextBox Or TypeOf ctrl Is MaskEdBox Or TypeOf ctrl Is CheckBox Or TypeOf ctrl Is VSFlexGrid Or TypeOf ctrl Is DataCombo Then
+    If TypeOf ctrl Is TextBox Or TypeOf ctrl Is MaskEdBox Or TypeOf ctrl Is CheckBox Or TypeOf ctrl Is VSFlexGrid Or TypeOf ctrl Is DataCombo Or TypeOf ctrl Is ComboBox Then
         ctrl.Enabled = FControl
     End If
 Next
@@ -1903,12 +1888,12 @@ Sub FillCombos()
     ComboType.BoundColumn = "No"
     
     
-    Dim RsDestination As New ADODB.Recordset
-    sqlText = "Select Id , Destination From CoDestination"
-    Set RsDestination = de.con.Execute(sqlText)
-    Set ComboDestination.RowSource = RsDestination
-    ComboDestination.listField = "Destination"
-    ComboDestination.BoundColumn = "Id"
+'    Dim RsDestination As New ADODB.Recordset
+'    sqlText = "Select Id , Destination From CoDestination"
+'    Set RsDestination = de.con.Execute(sqlText)
+'    Set ComboDestination.RowSource = RsDestination
+'    ComboDestination.listField = "Destination"
+'    ComboDestination.BoundColumn = "Id"
     
     Dim rsFees As New ADODB.Recordset
     sqlText = "Select FeesId , FeesName  From  CoMaintFees Where isnull(CliPriceafterdiscount,0) <> 0 or isnull(DealPriceafterdiscount,0) <> 0 or isnull(DistPriceafterdiscount,0) <> 0  "
@@ -1930,7 +1915,7 @@ Sub FillCombos()
 End Sub
 Sub InitNavigator()
     If OperationEmpStr = "" Or PaymentEmpStr = "" Or MaintTYpeEmpStr = "" Then Exit Sub
-    sqlText = "Select   billno , billdate , isnull(FixBillDate,'') as FixBillDate, OperationTYpe   , mainttype , PaymentTYpeId , clientid , class , Roe , modno, modelQty , FeesDescription , OtherFeesQty  , OtherFeesPrice , OtherFeesAmount , IsFixed , IsTransfered , DestinationId from mvmaintpayments Where OperationTYpe in (" & OperationEmpStr & ") and  mainttype in(" & MaintTYpeEmpStr & ") order by billno"
+    sqlText = "Select   billno , billdate , isnull(FixBillDate,'') as FixBillDate, OperationTYpe   , mainttype , PaymentTYpeId , clientid , class , modno, modelQty , FeesDescription , OtherFeesQty  , OtherFeesPrice , OtherFeesAmount , IsFixed , IsTransfered  from mvmaintpayments Where OperationTYpe in (" & OperationEmpStr & ") and  mainttype in(" & MaintTYpeEmpStr & ") order by billno"
     Set RsNavigator = de.con.Execute(sqlText)
 End Sub
 Function GetModelName(ModNo As Integer) As String
@@ -1970,7 +1955,7 @@ On Error GoTo ErrorHandler
     Dim RsDetails As New ADODB.Recordset
     sqlText = "Select Id , StkNo , StkName , Qty , Price , Discount  From MvMaintPaymentsDetailsQry Where BillNo=" & BillNo
     Set RsDetails = de.con.Execute(sqlText)
-    Set flexGrid.DataSource = RsDetails
+    Set FlexGrid.DataSource = RsDetails
     FillFormating 2
 Exit Sub
 ErrorHandler:
@@ -1999,15 +1984,15 @@ With rs
     ComboOperationType.BoundText = rs!OperationType
     ComboType.BoundText = rs!MaintType
     ComboPayment.BoundText = IIf(IsNull(rs!PaymentTYpeId), -1, rs!PaymentTYpeId)
-    ComboDestination.BoundText = IIf(IsNull(rs!DestinationId), -1, rs!DestinationId)
+'    ComboDestination.BoundText = IIf(IsNull(rs!DestinationId), -1, rs!DestinationId)
     
-    TxtClientName.Tag = rs!clientId
-    TxtClientName.Text = GetClientName(rs!clientId, rs!Class)
+    txtClientName.Tag = rs!clientId
+    txtClientName.Text = GetClientName(rs!clientId, rs!Class)
     LClientPhoneNBR.Caption = GetPhoneNbr(rs!clientId, rs!Class)
     LClientType.Tag = rs!Class
     LClientType.Caption = GetClassName(rs!Class)
     
-    TxtDollar.Text = IIf(IsNull(rs!Roe), 0, rs!Roe)
+'    TxtDollar.text = IIf(IsNull(rs!Roe), 0, rs!Roe)
     TxtModelName.Tag = rs!ModNo
     TxtModelName.Text = GetModelName(rs!ModNo)
     LSymbol.Caption = GetSymbol(rs!ModNo)
@@ -2036,7 +2021,7 @@ With rs
     LTotalItems.Caption = GetTotalPrice(rs!BillNo, 0)
     LTotal.Caption = GetTotalPrice(rs!BillNo, 1)
     'LTotalBeforDiscount.Caption = GetTotalPriceBeforDiscount(Rs!BillNo, 1)
-    LCount.Caption = flexGrid.Rows - 1
+    LCount.Caption = FlexGrid.Rows - 1
     
     'TxtitemName.Tag = 0
     'TxtitemName.Text = ""
@@ -2106,7 +2091,7 @@ RecNum = 1
     Loop
 End With
 End Sub
-Sub FillCombosInGrid(flexGrid As VSFlexGrid, ByVal Col As Integer, Vindex As Integer)
+Sub FillCombosInGrid(FlexGrid As VSFlexGrid, ByVal Col As Integer, Vindex As Integer)
 Dim RsClass As New ADODB.Recordset
 Dim Lst As String
     Select Case Vindex
@@ -2114,12 +2099,12 @@ Dim Lst As String
             sqlText = "select PriceNo , PriceTYpe , col   from dbo.PriceTypes where PriceNo in (1,2,3)"
             Set RsClass = de.con.Execute(sqlText)
             If RsClass.RecordCount > 0 Then
-                With flexGrid
+                With FlexGrid
                     Lst = .BuildComboList(RsClass, "PriceTYpe", "PriceNo", vbYellow)
                     .ColComboList(Col) = Lst
                 End With
             Else
-                With flexGrid
+                With FlexGrid
                     .Rows = 1
                 End With
             End If
@@ -2127,12 +2112,12 @@ Dim Lst As String
             sqlText = "Select No , Name  From PayMethod"
             Set RsClass = de.con.Execute(sqlText)
             If RsClass.RecordCount > 0 Then
-                With flexGrid
+                With FlexGrid
                     Lst = .BuildComboList(RsClass, "Name", "No", vbYellow)
                     .ColComboList(Col) = Lst
                 End With
             Else
-                With flexGrid
+                With FlexGrid
                     .Rows = 1
                 End With
             End If
@@ -2140,12 +2125,12 @@ Dim Lst As String
         sqlText = "Select FeesId , FeesName  From  CoMaintFees Where isnull(CliPriceafterdiscount,0) <> 0 or isnull(DealPriceafterdiscount,0) <> 0 or isnull(DistPriceafterdiscount,0) <> 0  "
         Set RsClass = de.con.Execute(sqlText)
         If RsClass.RecordCount > 0 Then
-            With flexGrid
+            With FlexGrid
                 Lst = .BuildComboList(RsClass, "FeesName", "FeesId", vbYellow)
                 .ColComboList(Col) = Lst
             End With
         Else
-            With flexGrid
+            With FlexGrid
                 .Rows = 1
             End With
         End If
@@ -2158,7 +2143,7 @@ Sub init()
     InitNavigator
      EnableControls False
     Ok = True
-    flexGrid.Rows = 1
+    FlexGrid.Rows = 1
     FlexFees.Rows = 1
     
     If LoadForm Then
@@ -2168,11 +2153,11 @@ Sub init()
         MoveNavigator 4    'Move Last
     End If
     
-    FillCombosInGrid flexGrid, ColPriceTypeName, 1
-    FillCombosInGrid flexGrid, ColPaymentTypeName, 2
+    FillCombosInGrid FlexGrid, ColPriceTypeName, 1
+    FillCombosInGrid FlexGrid, ColPaymentTypeName, 2
     FillCombosInGrid FlexFees, ColFeesPriceName, 1
     FillCombosInGrid FlexFees, ColFeesTypeName, 3
-    flexGrid.Editable = flexEDKbdMouse
+    FlexGrid.Editable = flexEDKbdMouse
     FlexFees.Editable = flexEDKbdMouse
     FillFormating 2
     FillFormating 3
@@ -2205,7 +2190,7 @@ End Sub
 
 Private Sub CmdAdd_Click()
 TypeRec = True
-EnableCmds False, False, False, True, True, False, False, False, False, False, False, True
+EnableCmds False, False, False, True, True, False, False, False, False, False, False
 EnableControls True
 ClearControls
 TxtDate.SetFocus
@@ -2214,7 +2199,7 @@ End Sub
 
 Private Sub CmdCancel_Click()
 On Error GoTo ErrorHandler
-    EnableCmds True, True, True, False, False, True, True, True, True, True, True, False
+    EnableCmds True, True, True, False, False, True, True, True, True, True, True
     EnableControls False
     If RsNavigator!BillNo = Null Then
         MoveToRec Val(LBillNo.Tag)
@@ -2233,7 +2218,7 @@ If Not RsNavigator!IsTransfered Then
         If DeleteRec(RsNavigator!BillNo) Then
             InitNavigator
             MoveToRec MaxRec
-            EnableCmds True, True, True, False, False, True, True, True, True, True, True, False
+            EnableCmds True, True, True, False, False, True, True, True, True, True, True
         End If
     End If
 Else
@@ -2244,8 +2229,8 @@ ErrorHandler:
 MsgBox Err.Description
 End Sub
 Sub ClearItems()
-        TxtitemName.Tag = "0"
-        TxtitemName.Text = ""
+        TxtItemName.Tag = "0"
+        TxtItemName.Text = ""
         LItemName.Caption = ""
         LBalance.Caption = ""
         TxtQty.Text = ""
@@ -2256,7 +2241,7 @@ Private Sub CmdEdit_Click()
     If Not RsNavigator!IsTransfered Then
         ClearItems
         TypeRec = False
-        EnableCmds False, False, False, True, True, False, False, False, False, False, False, True
+        EnableCmds False, False, False, True, True, False, False, False, False, False, False
         EnableControls True
         ComboOperationType.Enabled = GetOperationTypeEnableValue
         CmdNewCustomer.Enabled = True
@@ -2271,15 +2256,15 @@ Function FillVariables(Vindex As Integer) As Boolean
 On errro GoTo ErrorHandler
 Select Case Vindex
     Case 1
-            If Not IsDate(TxtDate.Text) Or Val(ComboType.BoundText) = 0 Or Val(TxtClientName.Tag) = 0 Or Val(ComboOperationType.BoundText) = 0 Or ComboPayment.BoundText = "" Or Val(ComboDestination.BoundText) = 0 Then
+            If Not IsDate(TxtDate.Text) Or Val(ComboType.BoundText) = 0 Or Val(txtClientName.Tag) = 0 Or Val(ComboOperationType.BoundText) = 0 Or ComboPayment.BoundText = "" Then
                 FillVariables = False
                 Exit Function
             End If
     Case 2
-            If TxtitemName.Tag = "0" Or Val(TxtQty.Text) = 0 Then
+            If TxtItemName.Tag = "0" Or Val(TxtQty.Text) = 0 Then
                 FillVariables = False
                 Exit Function
-            ElseIf Not isOkQty(TxtitemName.Tag, Val(TxtQty.Text)) Then
+            ElseIf Not isOkQty(TxtItemName.Tag, Val(TxtQty.Text)) Then
                 FillVariables = False
             MsgBox "«·ﬂ„ÌÂ √ﬂ»— „‰ «·—’Ìœ", vbCritical, "«·—’Ìœ ·«Ì”„Õ"
                 Exit Function
@@ -2322,7 +2307,7 @@ End Function
 'errorhandler:
 'GetSerByYear = -1
 'End Function
-Function FillStructure(Vindex As Integer) As Boolean
+Function fillstructure(Vindex As Integer) As Boolean
 On Error GoTo ErrorHandler
     Select Case Vindex
         Case 1
@@ -2335,8 +2320,8 @@ On Error GoTo ErrorHandler
                 DoEvents
                 DoEvents
                 .PaymentTYpeId = IIf(ComboPayment.BoundText = "", -1, Val(ComboPayment.BoundText))
-                .DestinationId = ComboDestination.BoundText
-                .clientId = Val(TxtClientName.Tag)
+                '.DestinationId = ComboDestination.BoundText
+                .clientId = Val(txtClientName.Tag)
                 .Class = Val(LClientType.Tag)
                 .ModNo = Val(TxtModelName.Tag)
                 .ModelQty = Val(txtModelQty.Text)
@@ -2349,33 +2334,33 @@ On Error GoTo ErrorHandler
                 Else
                     .FixBillDate = ConvertControlDate(TxtDate.Text)
                 End If
-                .Roe = Val(TxtDollar.Text)
            End With
         Else
-            FillStructure = False
+            fillstructure = False
             Exit Function
          End If
         Case 2
             If FillVariables(2) Then
                 With MvMaintPaymentRecTypeDetailsRec
                     .BillNo = MvMaintPaymentRec.BillNo
-                    .stkno = TxtitemName.Tag
+                    .stkno = TxtItemName.Tag
                     .Qty = Val(TxtQty.Text)
                     .PriceTYpe = 3 ' CliPrice
                     .Price = Val(LPrice.Caption)
                     .discount = Val(LDiscount.Caption)
-                    .DestinationStoreId = TxtClientName.Tag
+                    .DestinationStoreId = txtClientName.Tag
                     .Class = LClientType.Tag
+                    .OperationType = Val(ComboOperationType.BoundText)
                 End With
             Else
-                FillStructure = False
+                fillstructure = False
                 Exit Function
             End If
     End Select
-FillStructure = True
+fillstructure = True
 Exit Function
 ErrorHandler:
-FillStructure = False
+fillstructure = False
 End Function
 
 Function InsertIntoMvStock(stkno As String, BillNo As Double, Qty As Double, OperationType As Integer, clientId As Double, Class As Integer) As Boolean
@@ -2383,46 +2368,28 @@ On Error GoTo ErrorHandler
 Dim rs As New ADODB.Recordset
 Dim QtyType As Integer
 
-sqlText = "Select Stkrelatedno  , Qty  From CoMaintitemrelated Where StkNo = '" & stkno & "'"
-Set rs = de.con.Execute(sqlText)
+'sqlText = "Select Stkrelatedno  , Qty  From CoMaintitemrelated Where StkNo = '" & stkno & "'"
+'Set rs = de.con.Execute(sqlText)
 If OperationType = 1 Then
     QtyType = 1
 Else
     QtyType = 0
 End If
 
-If rs.RecordCount > 0 Then
-    rs.MoveFirst
-    For i = 1 To rs.RecordCount
-        sqlText = "Insert Into Stmov(ByanId , StkId  , StrId , Movdate , DocType , DocNum ,  Qty , QtyType)Values("
-        sqlText = sqlText & NewRec & "," & GetStkId(rs!StkRelatedNo) & "," & GetStrId(systemConfigration.MainStoreNo) & ",Convert(varchar(10),getdate(),101)," & IIf(Class = 4, 30, 18) & "," & BillNo & "," & Qty * Val(rs!Qty) & "," & QtyType & ")"
-        If Class = 4 Then
+    sqlText = "Insert Into Stmov(ByanId , StkId  , StrId , Movdate , DocType , DocNum ,  Qty , QtyType)Values("
+    sqlText = sqlText & NewRec & "," & GetStkId(stkno) & "," & GetStrId(systemConfigration.MainStoreNo) & ",Convert(varchar(10),getdate(),101)," & IIf(Class = 4, 30, 18) & "," & BillNo & "," & Qty & "," & QtyType & ")"
+    de.con.Execute (sqlText)
+    
+   If Class = 4 Then
             sqlText = sqlText & " Insert Into Stmov(ByanId , StkId  , StrId , Movdate , DocType , DocNum ,  Qty , QtyType)Values("
             sqlText = sqlText & NewRec + 1 & "," & GetStkId(rs!StkRelatedNo) & "," & clientId & " ,Convert(varchar(10),getdate(),101),30," & BillNo & "," & Qty * Val(rs!Qty) & "," & IIf(QtyType = 1, 0, 1) & ")"
-        End If
-        de.con.Execute (sqlText)
-        If GetBalance(rs!StkRelatedNo, GetStrId(systemConfigration.MainStoreNo)) < 0 Or GetBalance(rs!StkRelatedNo, clientId) < 0 Then
-            InsertIntoMvStock = False
-            Exit Function
-        End If
-        rs.MoveNext
-    Next
-    InsertIntoMvStock = True
-Else
-    sqlText = "Insert Into Stmov(ByanId , StkId  , StrId , Movdate , DocType , DocNum ,  Qty , QtyType)Values("
-    sqlText = sqlText & NewRec & "," & GetStkId(stkno) & "," & GetStrId(systemConfigration.MainStoreNo) & ",Convert(varchar(10),getdate(),101),18," & BillNo & "," & Qty & "," & QtyType & ")"
-    If Class = 4 Then
-        sqlText = sqlText & " Insert Into Stmov(ByanId , StkId  , StrId , Movdate , DocType , DocNum ,  Qty , QtyType)Values("
-        sqlText = sqlText & NewRec + 1 & "," & GetStkId(stkno) & "," & clientId & " ,Convert(varchar(10),getdate(),101),30," & BillNo & "," & Qty & "," & IIf(QtyType = 1, 0, 1) & ")"
     End If
     
-    de.con.Execute (sqlText)
     If GetBalance(stkno, GetStrId(systemConfigration.MainStoreNo)) < 0 Or GetBalance(stkno, clientId) < 0 Then
         InsertIntoMvStock = False
     Else
         InsertIntoMvStock = True
     End If
-End If
 Exit Function
 ErrorHandler:
 InsertIntoMvStock = False
@@ -2435,16 +2402,15 @@ On Error GoTo ErrorHandler
             sqlText = "Insert Into MvMaintPaymentsDetails(BillNo, StkNo, discount , Qty, PriceTYpe, Price , Empno )Values( "
             sqlText = sqlText & .BillNo & ",'" & .stkno & "'," & .discount & "," & .Qty & "," & .PriceTYpe & "," & .Price & "," & empNo & ")"
             de.con.Execute (sqlText)
-            If InsertIntoMvStock(.stkno, .BillNo, .Qty, RsNavigator!OperationType, .DestinationStoreId, .Class) Then
+            If InsertIntoMvStock(.stkno, .BillNo, .Qty, .OperationType, .DestinationStoreId, .Class) Then
                 de.con.CommitTrans
-                
             Else
                 de.con.RollbackTrans
-                MsgBox "«·—’Ìœ ·«Ì”„Õ √Ê √‰ √Õœ „—›ﬁ«  «·„«œ… —’ÌœÂ« ·«Ì”„Ã" & Chr(13) & " Ì—ÃÏ „—«Ã⁄… «·„” Êœ⁄", vbInformation + vbExclamation, "«·—’Ì‹‹‹‹œ ·«Ì”‹‹‹„Õ"
+                MsgBox "«·—’Ìœ ·«Ì”„Õ" & Chr(13) & " Ì—ÃÏ «· «ﬂœ „‰ —’Ìœ «·„” Êœ⁄", vbInformation + vbExclamation, "«·—’Ì‹‹‹‹œ ·«Ì”‹‹‹„Õ"
                 Exit Sub
             End If
         .Id = GetMaxId
-        AddToGrid 1, flexGrid
+        AddToGrid 1, FlexGrid
     End With
 Exit Sub
 ErrorHandler:
@@ -2483,18 +2449,19 @@ End Sub
 Function SaveRec() As Boolean
 On Error GoTo ErrorHandler
 
+
 If TypeRec Then   ' New Rec
     If LBillNo.Tag = "" Then
-        If FillStructure(1) Then
+        If fillstructure(1) Then
             With MvMaintPaymentRec
                 de.con.BeginTrans
-                    sqlText = "Insert Into MvMaintPayments( Billdate, FixBillDate , OperationType , MaintType, PaymentTypeId , DestinationId ,  ClientId, Class , Roe , ModNo, ModelQty, FeesDescription ,   OtherFeesQty, OtherFeesPrice , IsFixed , EmpNo )Values("
-                    sqlText = sqlText & "'" & .Billdate & "','" & .FixBillDate & "'," & .OperationType & "," & .MaintType & "," & .PaymentTYpeId & "," & .DestinationId & "," & .clientId & "," & .Class & "," & .Roe & "," & .ModNo & "," & .ModelQty & ",'" & .FeesDescription & "'," & .OtherFeesQty & "," & .OtherFeesPrice & "," & .IsFixed & "," & empNo & ")"
+                    sqlText = "Insert Into MvMaintPayments( Billdate, FixBillDate , OperationType , MaintType, PaymentTypeId , ClientId, Class ,  ModNo, ModelQty, FeesDescription ,   OtherFeesQty, OtherFeesPrice , IsFixed , EmpNo )Values("
+                    sqlText = sqlText & "'" & .Billdate & "','" & .FixBillDate & "'," & .OperationType & "," & .MaintType & "," & .PaymentTYpeId & "," & .clientId & "," & .Class & "," & .ModNo & "," & .ModelQty & ",'" & .FeesDescription & "'," & .OtherFeesQty & "," & .OtherFeesPrice & "," & .IsFixed & "," & empNo & ")"
                     de.con.Execute (sqlText)
                     .BillNo = GetMaxBillNo
                     FillFeesDetails .BillNo
                 de.con.CommitTrans
-                If FillStructure(2) Then
+                If fillstructure(2) Then
                     FillDetails .BillNo
                 End If
             End With
@@ -2505,19 +2472,19 @@ If TypeRec Then   ' New Rec
         InitNavigator
         MoveToRec MvMaintPaymentRec.BillNo
     Else
-        If FillStructure(2) Then
+        If fillstructure(2) Then
             If Not foundStkNo(MvMaintPaymentRecTypeDetailsRec.stkno, MvMaintPaymentRecTypeDetailsRec.BillNo) Then
                 FillDetails MvMaintPaymentRecTypeDetailsRec.BillNo
             End If
         End If
     End If
 Else ' Update
-     If FillStructure(1) Then
+     If fillstructure(1) Then
         With MvMaintPaymentRec
 '            Sqltext = "Update MvMaintPayments Set Billdate='" & .Billdate & "',FixBillDate='" & .FixBillDate & "', OperationType=" & .OperationType & ",MaintType=" & .MaintType & ",PaymentTypeId=" & .PaymentTYpeId & ",ClientId= " & .ClientId & ", Class=" & .Class & ", ModNo=" & .ModNo & ",ModelQty=" & .ModelQty & ", FeesTYpeId=" & .FeesTYpeId & ",FeesQty=" & .FeesQty & ",FeesPriceType=" & .FeesPriceType & ", FeesAmount=" & .FeesAmount & ",IsFixed=" & .IsFixed & "  Where BillNo=" & RsNavigator!BillNo
 '            de.con.Execute (Sqltext)
             de.con.BeginTrans
-                sqlText = "Update MvMaintPayments Set Billdate='" & .Billdate & "',FixBillDate='" & .FixBillDate & "', OperationType=" & .OperationType & ",MaintType=" & .MaintType & ",PaymentTypeId=" & .PaymentTYpeId & ",DestinationId=" & .DestinationId & ",ClientId= " & .clientId & ", Class=" & .Class & ",Roe=" & .Roe & ",ModNo=" & .ModNo & ",ModelQty=" & .ModelQty & ",OtherFeesQty =" & .OtherFeesQty & ",OtherFeesPrice=" & .OtherFeesPrice & ",FeesDescription='" & .FeesDescription & "',IsFixed=" & .IsFixed & "  Where BillNo=" & RsNavigator!BillNo
+                sqlText = "Update MvMaintPayments Set Billdate='" & .Billdate & "',FixBillDate='" & .FixBillDate & "', OperationType=" & .OperationType & ",MaintType=" & .MaintType & ",PaymentTypeId=" & .PaymentTYpeId & ",ClientId= " & .clientId & ", Class=" & .Class & ",ModNo=" & .ModNo & ",ModelQty=" & .ModelQty & ",OtherFeesQty =" & .OtherFeesQty & ",OtherFeesPrice=" & .OtherFeesPrice & ",FeesDescription='" & .FeesDescription & "',IsFixed=" & .IsFixed & "  Where BillNo=" & RsNavigator!BillNo
                 de.con.Execute (sqlText)
                 FillFeesDetails RsNavigator!BillNo
             de.con.CommitTrans
@@ -2525,7 +2492,7 @@ Else ' Update
             InitNavigator
             MoveToRec IDBill
             MvMaintPaymentRec.BillNo = IDBill
-        If FillStructure(2) Then
+        If fillstructure(2) Then
             If Not foundStkNo(MvMaintPaymentRecTypeDetailsRec.stkno, IDBill) Then
                 FillDetails IDBill
             End If
@@ -2536,7 +2503,7 @@ Else ' Update
         Exit Function
      End If
 End If
-LCount.Caption = flexGrid.Rows - 1
+LCount.Caption = FlexGrid.Rows - 1
 LTotalItems.Caption = GetTotalPrice(Val(LBillNo.Tag), 0)
 LTotal.Caption = GetTotalPrice(Val(LBillNo.Tag), 1)
 'LTotalBeforDiscount.Caption = GetTotalPriceBeforDiscount(Val(LBillNo.Caption), 1)
@@ -2553,7 +2520,7 @@ Unload Me
 End Sub
 
 Private Sub cmdNewItem_Click()
-TxtitemName.SetFocus
+TxtItemName.SetFocus
 SendKeys "{Home}+{End}"
 End Sub
 Function showErrorPrices() As Boolean
@@ -2573,7 +2540,7 @@ MsgBox Err.Description
 End Function
 Sub PrintData(Vindex As Integer)
 On Error GoTo ErrorHandler
-    With cr1
+    With Cr1
         showErrorPrices
         .Connect = ConnectName("")
         .SQLQuery = "SELECT    billno, billdate , FixBillDate , MaintTYpe, ClientName, ClientPhoneNBr, Name, Symbol, stkno, stkname, qty, price, TotPrice   FROM    MvMaintPaymentsQry Where stat<>6 and  billno =" & Val(LBillNo.Tag) & " Order By Row , StkNo"
@@ -2627,30 +2594,30 @@ MsgBox Err.Description
 End Sub
 
 
-Private Sub CmdItems_Click()
-On Error GoTo ErrorHandler
-If ComboOperationType.BoundText <> 2 Then
-    If SaveRec Then
-        AddItemsFromModelList RsNavigator!BillNo
-    End If
-Else
-   MsgBox "·«Ì„ﬂ‰ ≈÷«€… „Ê«œ ·⁄„·Ì… «·„— Ã⁄", vbInformation + vbExclamation
-End If
-Exit Sub
-ErrorHandler:
-MsgBox Err.Description
-End Sub
+'Private Sub CmdItems_Click()
+'On Error GoTo ErrorHandler
+'If ComboOperationType.BoundText <> 2 Then
+'    If SaveRec Then
+'        AddItemsFromModelList RsNavigator!BillNo
+'    End If
+'Else
+'   MsgBox "·«Ì„ﬂ‰ ≈÷«€… „Ê«œ ·⁄„·Ì… «·„— Ã⁄", vbInformation + vbExclamation
+'End If
+'Exit Sub
+'ErrorHandler:
+'MsgBox Err.Description
+'End Sub
 
 Private Sub CmdNewCustomer_Click()
 On Error GoTo ErrorHandler
     If Val(LClientType.Tag) = 0 Then
-        clientId = Val(TxtClientName.Tag)
-        ClientName = TxtClientName.Text
+        clientId = Val(txtClientName.Tag)
+        ClientName = txtClientName.Text
         ClientPhoneNBr = LClientPhoneNBR.Caption
         frmNewCustomer.Show 1
         Ok = False
-        TxtClientName.Text = ClientName
-        TxtClientName.Tag = clientId
+        txtClientName.Text = ClientName
+        txtClientName.Tag = clientId
         LClientType.Tag = 2
         LClientPhoneNBR.Caption = ClientPhoneNBr
         
@@ -2674,7 +2641,7 @@ End Sub
 
 Private Sub CmdSave_Click()
 If SaveRec Then
-    EnableCmds True, True, True, False, False, True, True, True, True, True, True, False
+    EnableCmds True, True, True, False, False, True, True, True, True, True, True
     EnableControls False
     CmdAdd.SetFocus
     MsgBox " „ Õ›Ÿ «·›« Ê—… »‰Ã«Õ", vbInformation, "Õ›Ÿ «·›« Ê—…"
@@ -2720,7 +2687,7 @@ Dim rs As New ADODB.Recordset, RsPrice   As New ADODB.Recordset, Col As String
 
 Select Case Index
     Case 1
-        Col = "CliPriceafterdiscount"
+        Col = "CliPrice"
 
 '       Select Case VCurrency
 '        Case 1
@@ -2809,12 +2776,12 @@ End Sub
 'End If
 'End Sub
 
-Private Sub ComboDestination_KeyPress(KeyAscii As Integer)
-If KeyAscii = 13 Then
-    TxtClientName.SetFocus
-    SendKeys "{home}+{end}"
-End If
-End Sub
+'Private Sub ComboDestination_KeyPress(KeyAscii As Integer)
+'If KeyAscii = 13 Then
+'    TxtClientName.SetFocus
+'    Sendkeys "{home}+{end}"
+'End If
+'End Sub
 
 Function GetStkNoPrice(Price As Double, discount As Integer) As Double
 On Error GoTo ErrorHandler
@@ -2830,13 +2797,13 @@ End Function
 
 
 Private Sub ComboDiscount_GotFocus()
-ComboDiscount.ListIndex = 0
+'ComboDiscount.ListIndex = 0
 End Sub
 
 Private Sub ComboDiscount_KeyDown(KeyCode As Integer, Shift As Integer)
 On Error GoTo ErrorHandler
 Dim Price As Double, discount As Integer
-Price = GetPrice(TxtitemName.Tag, 2)
+Price = GetPrice(TxtItemName.Tag, 2)
 discount = Val(ComboDiscount.Text)
 LPrice.Caption = GetStkNoPrice(Price, discount)
 Exit Sub
@@ -2846,20 +2813,24 @@ End Sub
 
 Private Sub ComboDiscount_KeyPress(KeyAscii As Integer)
 If KeyAscii = 13 Then
-    If TxtitemName.Tag = "0" Then
+    If TxtItemName.Tag = "0" Then
         cmdSave.SetFocus
     Else
         If SaveRec Then
         End If
         ClearItems
-        TxtitemName.SetFocus
+        TxtItemName.SetFocus
         SendKeys "{home}+{end}"
     End If
 End If
 End Sub
 
 Private Sub ComboFees_Change()
-TxtFeesAmount.Text = GetFeesPrice(Val(ComboFees.BoundText))
+
+Dim feesClientPrint As Integer
+feesClientPrice = GetFeesPrice(Val(ComboFees.BoundText))
+LfeesClientPrice.Caption = feesClientPrice
+LFeesAmount.Caption = feesClientPrice * Val(TxtFeesQty.Text)
 LTotal.Caption = GetTotalPrice(Val(LBillNo.Tag), 1)
 End Sub
 
@@ -2872,7 +2843,7 @@ End If
 End Sub
 
 Function GetOperationTypeEnableValue() As Boolean
-If flexGrid.Rows > 1 Then
+If FlexGrid.Rows > 1 Then
 GetOperationTypeEnableValue = False
 Else
 GetOperationTypeEnableValue = True
@@ -2880,10 +2851,10 @@ End If
 End Function
 
 
-Sub AddToGrid(Vindex As Integer, flexGrid As VSFlexGrid)
+Sub AddToGrid(Vindex As Integer, FlexGrid As VSFlexGrid)
 Dim Vrow As Integer
 If Vindex = 1 Then
-    With flexGrid
+    With FlexGrid
         .AddItem ""
         Vrow = .Rows - 1
         .TextMatrix(Vrow, ColId) = MvMaintPaymentRecTypeDetailsRec.Id
@@ -2895,21 +2866,21 @@ If Vindex = 1 Then
         .TextMatrix(Vrow, ColPrice) = MvMaintPaymentRecTypeDetailsRec.Price
         .TextMatrix(Vrow, ColDiscount) = MvMaintPaymentRecTypeDetailsRec.discount
         ComboOperationType.Enabled = GetOperationTypeEnableValue
-        FillCombosInGrid flexGrid, ColPriceTypeName, 1
+        FillCombosInGrid FlexGrid, ColPriceTypeName, 1
         FillFormating 2
     End With
 ElseIf Vindex = 2 Then
-    With flexGrid
+    With FlexGrid
         .AddItem ""
         Vrow = .Rows - 1
         .TextMatrix(Vrow, ColFeesTypeName) = ComboFees.BoundText
 '        .TextMatrix(Vrow, ColFeesPriceName) = ComboFeesPriceType.BoundText
-        .TextMatrix(Vrow, ColFeesAmount) = TxtFeesAmount.Text
+        .TextMatrix(Vrow, ColFeesAmount) = LFeesAmount.Caption
         .TextMatrix(Vrow, ColFeesQty) = TxtFeesQty.Text
         FillCombosInGrid FlexFees, ColFeesPriceName, 1
         FillCombosInGrid FlexFees, ColFeesTypeName, 3
         FillFormating 3
-        LTotal.Caption = GetTotalPrice(Val(LBillNo.Tag), 1)
+        'LTotal.Caption = GetTotalPrice(Val(LBillNo.Tag), 1)
         LTotalFees.Caption = GetFeesAmount
     End With
     
@@ -2993,10 +2964,9 @@ End Sub
 
 Private Sub ComboPayment_KeyPress(KeyAscii As Integer)
 If KeyAscii = 13 Then
-    ComboDestination.SetFocus
+    txtClientName.SetFocus
+    SendKeys "{home}+{end}"
 End If
-
-
 End Sub
 
 Private Sub ComboType_KeyPress(KeyAscii As Integer)
@@ -3019,7 +2989,7 @@ With FlexFees
              End If
     End Select
     LTotalFees.Caption = GetFeesAmount
-    LTotal.Caption = GetTotalPrice(Val(LBillNo.Tag), 1)
+    'LTotal.Caption = GetTotalPrice(Val(LBillNo.Tag), 1)
 End With
 Exit Sub
 ErrorHandler:
@@ -3073,7 +3043,7 @@ Private Sub FlexGrid_AfterEdit(ByVal Row As Long, ByVal Col As Long)
 On Error GoTo ErrorHandler
 Dim Price As Double, discount As Integer
 Dim RsUpdate As New ADODB.Recordset
-With flexGrid
+With FlexGrid
     Select Case Col
         Case ColPriceTypeName
             Price = GetPrice(.TextMatrix(Row, ColStkNo), 2)
@@ -3115,7 +3085,7 @@ Private Sub flexGrid_ComboCloseUp(ByVal Row As Long, ByVal Col As Long, FinishEd
 On Error GoTo ErrorHandler
 Dim Price  As Double
     Dim RsUpdate As New ADODB.Recordset
-With flexGrid
+With FlexGrid
     Select Case Col
         Case ColPriceTypeName
             Price = GetPrice(.TextMatrix(Row, ColStkNo), 1)
@@ -3144,14 +3114,14 @@ ErrorHandler:
 MsgBox Err.Description
 End Sub
 Sub UpdateRecords(i As Integer)
-With flexGrid
+With FlexGrid
     sqlText = "Update MvMaintPayments Set StkNo='',"
 End With
 End Sub
 Sub ClearHeader()
 Ok = False
-TxtitemName.Tag = ""
-TxtitemName.Text = ""
+TxtItemName.Tag = ""
+TxtItemName.Text = ""
 LItemName.Caption = ""
 'ComboCurrencyType.BoundText = ""
 LBalance.Caption = ""
@@ -3161,8 +3131,8 @@ Ok = True
 End Sub
 Sub RemoveFromMvStock(Id As Double)
 On Error GoTo errorahndler
-With flexGrid
-    sqlText = "Sp_Delete_MvStock " & Id
+With FlexGrid
+    sqlText = "Sp_Delete_MvStock " & Id & "," & GetStrId(systemConfigration.MainStoreNo)
     de.con.Execute (sqlText)
 End With
 Exit Sub
@@ -3171,7 +3141,7 @@ MsgBox Err.Description
 End Sub
 Private Sub FlexGrid_KeyDown(KeyCode As Integer, Shift As Integer)
 Dim FirstRow As Integer, LastRow As Integer, Vrow As Integer
-With flexGrid
+With FlexGrid
 If KeyCode = vbKeyDelete Then
     If MsgBox("Â· √‰  „ √ﬂœ „‰ ⁄„·Ì… «·Õ–›", vbYesNo + vbDefaultButton2, "Õ–› «·”Ã·«  «·„Õœœ…") = vbYes Then
         If .Row >= .RowSel Then
@@ -3187,7 +3157,7 @@ If KeyCode = vbKeyDelete Then
                 'UpdateRecords i
             Else
                   RemoveFromMvStock .TextMatrix(i, ColId)
-                  If DeleteRow(flexGrid, Vrow, ColId, "MvMaintPaymentsDetails", "Id") Then
+                  If DeleteRow(FlexGrid, Vrow, ColId, "MvMaintPaymentsDetails", "Id") Then
                     ClearHeader
                     .RemoveItem Vrow
                     LCount.Caption = .Rows - 1
@@ -3218,18 +3188,18 @@ If Flag Then
     With Grid
        Select Case Pos
         Case 1
-            TxtClientName.Tag = .TextMatrix(.Row, ColNo)
-            TxtClientName.Text = .TextMatrix(.Row, ColName)
+            txtClientName.Tag = .TextMatrix(.Row, ColNo)
+            txtClientName.Text = .TextMatrix(.Row, ColName)
             LClientType.Caption = .TextMatrix(.Row, col3)
             LClientType.Tag = .TextMatrix(.Row, Col4)
-            LClientPhoneNBR.Caption = GetPhoneNbr(TxtClientName.Tag, LClientType.Tag)
+            LClientPhoneNBR.Caption = GetPhoneNbr(txtClientName.Tag, LClientType.Tag)
         Case 2
             TxtModelName.Tag = .TextMatrix(.Row, ColNo)
             TxtModelName.Text = .TextMatrix(.Row, col3)
             LSymbol.Caption = .TextMatrix(.Row, ColName)
         Case 3
-            TxtitemName.Tag = .TextMatrix(.Row, ColNo)
-            TxtitemName.Text = .TextMatrix(.Row, ColNo)
+            TxtItemName.Tag = .TextMatrix(.Row, ColNo)
+            TxtItemName.Text = .TextMatrix(.Row, ColNo)
             LItemName.Caption = .TextMatrix(.Row, ColName)
             LBalance.Caption = ""
             
@@ -3249,8 +3219,8 @@ If Flag Then
             TxtError.Tag = .TextMatrix(.Row, ColNo)
             TxtError.Text = .TextMatrix(.Row, ColName)
         Case 9
-            TxtitemName.Tag = .TextMatrix(.Row, ColNo)
-            TxtitemName.Text = .TextMatrix(.Row, ColName)
+            TxtItemName.Tag = .TextMatrix(.Row, ColNo)
+            TxtItemName.Text = .TextMatrix(.Row, ColName)
        End Select
     End With
     Ok = True
@@ -3274,9 +3244,9 @@ End Sub
 Private Sub txtClientPhoneNBR_KeyPress(KeyAscii As Integer)
 On Error GoTo ErrorHandler
 If KeyAscii = 13 Then
-    If txtClientPhoneNBR.Text <> "" And Val(TxtClientName.Tag) <> 0 Then
+    If txtClientPhoneNBR.Text <> "" And Val(txtClientName.Tag) <> 0 Then
         If Val(LClientType.Tag) = 2 Then ' “»Ê‰
-            sqlText = "Update CoClient Set ClientPhoneNBr='" & txtClientPhoneNBR.Text & "' Where ClientId=" & TxtClientName.Tag
+            sqlText = "Update CoClient Set ClientPhoneNBr='" & txtClientPhoneNBR.Text & "' Where ClientId=" & txtClientName.Tag
             de.con.Execute (sqlText)
         End If
     End If
@@ -3318,6 +3288,8 @@ End Sub
 'MsgBox Err.Description
 'End Sub
 
+
+
 'Private Sub mnu_Click(Index As Integer)
 'ChangePriceType Index
 'End Sub
@@ -3334,7 +3306,7 @@ End Sub
 
 Private Sub TxtEndDate_KeyPress(KeyAscii As Integer)
 If KeyAscii = 13 Then
-    TxtitemName.SetFocus
+    TxtItemName.SetFocus
     SendKeys "{home}+{end}"
 End If
 End Sub
@@ -3349,7 +3321,7 @@ End Sub
 
 Private Sub TxtFeesAmount_KeyPress(KeyAscii As Integer)
 If KeyAscii = 13 Then
-    If Val(ComboFees.BoundText) <> 0 And Val(TxtFeesAmount.Text) <> 0 Then
+    If Val(ComboFees.MatchedWithList) And Val(LFeesAmount.Caption) <> 0 Then
         AddToGrid 2, FlexFees
     End If
     ChkBill.SetFocus
@@ -3365,22 +3337,33 @@ End If
 End Sub
 
 Private Sub TxtFeesQty_Change()
+Dim feesClientPrint As Integer
+feesClientPrice = GetFeesPrice(Val(ComboFees.BoundText))
+LfeesClientPrice.Caption = feesClientPrice
+LFeesAmount.Caption = feesClientPrice * Val(TxtFeesQty.Text)
+
 If TypeRec Then
-    TxtFeesAmount.Text = 0
     LTotal.Caption = 0
-    
 Else
-    TxtFeesAmount.Text = GetFeesPrice(Val(ComboFees.BoundText))
     LTotal.Caption = GetTotalPrice(Val(LBillNo.Tag), 1)
 End If
 End Sub
 
 Private Sub TxtFeesQty_KeyPress(KeyAscii As Integer)
 If KeyAscii = 13 Then
-    TxtFeesAmount.SelStart = 0
-    TxtFeesAmount.SelLength = Len(TxtFeesAmount.Text)
-    TxtFeesAmount.SetFocus
+    If Val(ComboFees.BoundText) <> 0 And Val(LFeesAmount.Caption) <> 0 Then
+        AddToGrid 2, FlexFees
+    End If
+    ChkBill.SetFocus
 End If
+
+
+'If KeyAscii = 13 Then
+
+'    TxtFeesAmount.SelStart = 0
+'    TxtFeesAmount.SelLength = Len(TxtFeesAmount.text)
+'    TxtFeesAmount.SetFocus
+'End If
 End Sub
 
 Private Sub TxtFixBillDate_KeyPress(KeyAscii As Integer)
@@ -3394,8 +3377,8 @@ End Sub
 Private Sub TxtItemName_Change()
 On Error GoTo ErrorHandler
 Dim RsSearch As New ADODB.Recordset
-If TxtitemName.Text = "" Then
-    TxtitemName.Tag = "0"
+If TxtItemName.Text = "" Then
+    TxtItemName.Tag = "0"
     Grid.Visible = False
     Exit Sub
 End If
@@ -3403,7 +3386,7 @@ End If
 If Ok Then
     Flag = False
 '    Sqltext = "Select Top 10 c1.StkNo , StkName  , s1.FnlQnt from CoStock c1 inner join stkinfQry s1 on c1.id = s1.stkid  where StkName Like" & LikeExpression(TxtitemName.Text) & " or c1.StkNo like '" & TxtitemName.Text & "%'"
-    sqlText = "Select Top 10 c1.StkNo , StkName  from CoStock c1 where StkName Like" & LikeExpression(TxtitemName.Text) & " or c1.StkNo like '" & TxtitemName.Text & "%'"
+    sqlText = "Select Top 10 c1.StkNo , StkName  from CoStock c1 where StkName Like" & LikeExpression(TxtItemName.Text) & " or c1.StkNo like '" & TxtItemName.Text & "%'"
     Set RsSearch = de.con.Execute(sqlText)
     If RsSearch.RecordCount > 0 Then
         Set Grid.DataSource = RsSearch
@@ -3412,7 +3395,7 @@ If Ok Then
         ChangeCursor 3
         Grid.Visible = True
     Else
-        TxtitemName.Tag = "0"
+        TxtItemName.Tag = "0"
         Grid.Visible = False
     End If
     Flag = True
@@ -3471,29 +3454,29 @@ If KeyAscii = 13 Then
     End If
     If Grid.Visible And Balance > 0 Then
         Ok = False
-        TxtitemName.Tag = Grid.TextMatrix(IIf(Grid.Row = 0, 1, Grid.Row), ColNo)
-        TxtitemName.Text = Grid.TextMatrix(IIf(Grid.Row = 0, 1, Grid.Row), ColNo)
+        TxtItemName.Tag = Grid.TextMatrix(IIf(Grid.Row = 0, 1, Grid.Row), ColNo)
+        TxtItemName.Text = Grid.TextMatrix(IIf(Grid.Row = 0, 1, Grid.Row), ColNo)
         LItemName.Caption = Grid.TextMatrix(IIf(Grid.Row = 0, 1, Grid.Row), ColName)
         LBalance.Caption = Balance
-         LPrice.Caption = GetPrice(TxtitemName.Tag, 2)
+         LPrice.Caption = GetPrice(TxtItemName.Tag, 2)
         LDiscount.Caption = GetDiscount()
         fillcombodiscount (Val(LDiscount.Caption))
         Ok = True
     
-    ElseIf Grid.Visible = False And TxtitemName.Text <> "" And TxtitemName.Tag <> "0" Then
+    ElseIf Grid.Visible = False And TxtItemName.Text <> "" And TxtItemName.Tag <> "0" Then
         TxtQty.SetFocus
         TxtQty.SelStart = 0
         TxtQty.SelLength = Len(TxtQty.Text)
         Exit Sub
     Else
         Ok = False
-        TxtitemName.Tag = "0"
-        TxtitemName.Text = ""
+        TxtItemName.Tag = "0"
+        TxtItemName.Text = ""
         LItemName.Caption = ""
         LBalance.Caption = ""
         LDiscount.Caption = ""
         fillcombodiscount (Val(LDiscount.Caption))
-        TxtitemName.SetFocus
+        TxtItemName.SetFocus
         
         Ok = True
         Exit Sub
@@ -3580,14 +3563,14 @@ End Sub
 Private Sub txtClientName_Change()
 On Error GoTo ErrorHandler
 Dim RsSearch As New ADODB.Recordset
-If TxtClientName.Text = "" Then
-    TxtClientName.Tag = 0
+If txtClientName.Text = "" Then
+    txtClientName.Tag = 0
     Grid.Visible = False
     Exit Sub
 End If
 If Ok Then
     Flag = False
-    sqlText = "Select Top 10 [ClientId] , [ClientName]  , [ClientTypeName] , Class  From ClientQry Where ClientName like" & LikeExpression(TxtClientName.Text) & " or ClientPhoneNBr like " & LikeExpression(TxtClientName.Text)
+    sqlText = "Select Top 10 [ClientId] , [ClientName]  , [ClientTypeName] , Class  From ClientQry Where ClientName like" & LikeExpression(txtClientName.Text) & " or ClientPhoneNBr like " & LikeExpression(txtClientName.Text)
     Set RsSearch = de.con.Execute(sqlText)
     If RsSearch.RecordCount > 0 Then
         Set Grid.DataSource = RsSearch
@@ -3596,7 +3579,7 @@ If Ok Then
         ChangeCursor 1
         Grid.Visible = True
     Else
-        TxtClientName.Tag = 0
+        txtClientName.Tag = 0
         Grid.Visible = False
     End If
     Flag = True
@@ -3626,9 +3609,8 @@ Select Case Class
         GetClassName = "“»Ê‰"
     Case 3
         GetClassName = "„ÊŸ›"
-    Case 4
-        GetClassName = "’«·Â"
-        
+    Case Else
+        GetClassName = "€Ì— „⁄—Ê›"
 End Select
 End Function
 Function GetClientName(clientId As Double, Class As Integer) As String
@@ -3665,21 +3647,21 @@ Private Sub txtClientName_KeyPress(KeyAscii As Integer)
 If KeyAscii = 13 Then
     If Grid.Visible Then
         Ok = False
-        TxtClientName.Tag = Grid.TextMatrix(IIf(Grid.Row = 0, 1, Grid.Row), ColNo)
-        TxtClientName.Text = Grid.TextMatrix(IIf(Grid.Row = 0, 1, Grid.Row), ColName)
+        txtClientName.Tag = Grid.TextMatrix(IIf(Grid.Row = 0, 1, Grid.Row), ColNo)
+        txtClientName.Text = Grid.TextMatrix(IIf(Grid.Row = 0, 1, Grid.Row), ColName)
         LClientType.Caption = Grid.TextMatrix(IIf(Grid.Row = 0, 1, Grid.Row), col3)
         LClientType.Tag = Grid.TextMatrix(IIf(Grid.Row = 0, 1, Grid.Row), Col4)
-        LClientPhoneNBR.Caption = GetPhoneNbr(TxtClientName.Tag, LClientType.Tag)
+        LClientPhoneNBR.Caption = GetPhoneNbr(txtClientName.Tag, LClientType.Tag)
         Ok = True
-    ElseIf Grid.Visible = False And TxtClientName.Text <> "" And Val(TxtClientName.Tag) <> 0 Then
+    ElseIf Grid.Visible = False And txtClientName.Text <> "" And Val(txtClientName.Tag) <> 0 Then
         TxtModelName.SetFocus
         TxtModelName.SelStart = 0
         TxtModelName.SelLength = Len(TxtModelName.Text)
         Exit Sub
-    ElseIf Grid.Visible = False And TxtClientName.Text <> "" And Val(TxtClientName.Tag) = 0 Then
+    ElseIf Grid.Visible = False And txtClientName.Text <> "" And Val(txtClientName.Tag) = 0 Then
         Ok = False
         CmdNewCustomer.SetFocus
-        TxtClientName.Tag = 0
+        txtClientName.Tag = 0
         LClientType.Tag = 0
         LClientType.Caption = ""
         LClientPhoneNBR.Caption = ""
@@ -3687,14 +3669,14 @@ If KeyAscii = 13 Then
         Ok = True
     Else
         Ok = False
-        TxtClientName.Tag = 0
-        TxtClientName.Text = ""
+        txtClientName.Tag = 0
+        txtClientName.Text = ""
         Ok = True
     End If
     Grid.Visible = False
-    TxtDollar.SetFocus
-    TxtDollar.SelStart = 0
-    TxtDollar.SelLength = Len(TxtDollar.Text)
+    TxtModelName.SetFocus
+    TxtModelName.SelStart = 0
+    TxtModelName.SelLength = Len(TxtModelName.Text)
 End If
 End Sub
 
@@ -3707,9 +3689,9 @@ End Sub
 
 Private Sub TxtOtherFees_KeyPress(KeyAscii As Integer)
 If KeyAscii = 13 Then
-    TxtitemName.SetFocus
-    TxtitemName.SelStart = 0
-    TxtitemName.SelLength = Len(TxtitemName.Text)
+    TxtItemName.SetFocus
+    TxtItemName.SelStart = 0
+    TxtItemName.SelLength = Len(TxtItemName.Text)
 End If
 End Sub
 
@@ -3723,9 +3705,9 @@ End Sub
 
 Private Sub TxtOtherFeesPrice_KeyPress(KeyAscii As Integer)
 If KeyAscii = 13 Then
-    TxtitemName.SetFocus
-    TxtitemName.SelStart = 0
-    TxtitemName.SelLength = Len(TxtitemName.Text)
+    TxtItemName.SetFocus
+    TxtItemName.SelStart = 0
+    TxtItemName.SelLength = Len(TxtItemName.Text)
 End If
 End Sub
 
@@ -3745,10 +3727,11 @@ If KeyAscii = 13 Then
 End If
 
 End Sub
+
 Function isOkQty(ÚStkid As String, Qty As Integer) As Boolean
 On Error GoTo ErrorHandler
 Dim rs As New ADODB.Recordset
-sqlText = "Select FnlQnt from stkinfQry where Stkno='" & ÚStkid & "'"
+sqlText = "Select FnlQnt from Stkinf where Stkno='" & ÚStkid & "' and strid=" & GetStrId(systemConfigration.MainStoreNo)
 Set rs = de.con.Execute(sqlText)
 If rs.RecordCount <> 0 Then
     If Qty > rs!fnlqnt Then
@@ -3768,7 +3751,7 @@ End Function
 
 Private Sub TxtQty_Change()
 On Error GoTo ErrorHandler
-    LPrice.Caption = GetPrice(TxtitemName.Tag, 1)
+    LPrice.Caption = GetPrice(TxtItemName.Tag, 1)
     LDiscount.Caption = GetDiscount()
 Exit Sub
 ErrorHandler:
@@ -3781,3 +3764,4 @@ If KeyAscii = 13 Then
         SendKeys "{home}+{end}"
 End If
 End Sub
+
