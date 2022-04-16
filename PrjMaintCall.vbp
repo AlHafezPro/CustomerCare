@@ -102,6 +102,7 @@ Form=FrmMaintState.frm
 Class=Configration; Classes\Configration.cls
 Form=FrmBills.frm
 Form=FrmMaintCallNew.frm
+Form=..\..\HallsPrograms\_Hafez_Programs\2022\CustomerCare2022\FrmCoFeesPrices.frm
 Startup="FrmAbout"
 HelpFile=""
 ExeName32="PrjMaintCall.exe"

@@ -337,58 +337,38 @@ Begin VB.MDIForm FrmMain
       ImageList       =   "ImageList1"
       _Version        =   393216
       BeginProperty Buttons {66833FE8-8583-11D1-B16A-00C0F0283628} 
-         NumButtons      =   9
+         NumButtons      =   10
          BeginProperty Button1 {66833FEA-8583-11D1-B16A-00C0F0283628} 
             Object.ToolTipText     =   "„·›‹‹‹‹‹‹‹«  «· —„Ì“"
             ImageIndex      =   61
             Style           =   5
             BeginProperty ButtonMenus {66833FEC-8583-11D1-B16A-00C0F0283628} 
-               NumButtonMenus  =   12
+               NumButtonMenus  =   7
                BeginProperty ButtonMenu1 {66833FEE-8583-11D1-B16A-00C0F0283628} 
-                  Object.Tag             =   "1"
-                  Text            =   " —„Ì“ ﬁ«∆„… «·„ÊœÌ·« "
+                  Object.Tag             =   "6"
+                  Text            =   " ⁄œÌ· «”⁄«— «·„Ê«œ ·«Ê·ÌÂ"
                EndProperty
                BeginProperty ButtonMenu2 {66833FEE-8583-11D1-B16A-00C0F0283628} 
-                  Object.Tag             =   "2"
-                  Text            =   " —„Ì“  «»⁄Ì… «·„Ê«œ"
-               EndProperty
-               BeginProperty ButtonMenu3 {66833FEE-8583-11D1-B16A-00C0F0283628} 
-                  Object.Tag             =   "3"
-                  Text            =   "«—‘›… «·»Ì«‰« "
-               EndProperty
-               BeginProperty ButtonMenu4 {66833FEE-8583-11D1-B16A-00C0F0283628} 
-                  Object.Tag             =   "4"
-                  Text            =   "—»ÿ «·„ÊœÌ·« "
-               EndProperty
-               BeginProperty ButtonMenu5 {66833FEE-8583-11D1-B16A-00C0F0283628} 
-                  Object.Tag             =   "5"
-                  Text            =   "«·»«—ﬂÊœ"
-               EndProperty
-               BeginProperty ButtonMenu6 {66833FEE-8583-11D1-B16A-00C0F0283628} 
-                  Object.Tag             =   "6"
-                  Text            =   "—›⁄ «”⁄«— «·„Ê«œ «·«Ê·ÌÂ"
-               EndProperty
-               BeginProperty ButtonMenu7 {66833FEE-8583-11D1-B16A-00C0F0283628} 
                   Object.Tag             =   "7"
                   Text            =   " ’œÌ— «·„⁄·Ê„«  «·«”«”ÌÂ"
                EndProperty
-               BeginProperty ButtonMenu8 {66833FEE-8583-11D1-B16A-00C0F0283628} 
+               BeginProperty ButtonMenu3 {66833FEE-8583-11D1-B16A-00C0F0283628} 
                   Object.Tag             =   "30"
                   Text            =   " —„Ì“ «·Ê—‘ Ê „—«›ﬁÌÂ„"
                EndProperty
-               BeginProperty ButtonMenu9 {66833FEE-8583-11D1-B16A-00C0F0283628} 
-                  Object.Tag             =   "35"
-                  Text            =   " —„Ì“ «·⁄«∆·«  »Ì‰ «·„»Ì⁄«  ÊŒœ„Â «·„” Â·ﬂ"
-               EndProperty
-               BeginProperty ButtonMenu10 {66833FEE-8583-11D1-B16A-00C0F0283628} 
+               BeginProperty ButtonMenu4 {66833FEE-8583-11D1-B16A-00C0F0283628} 
                   Object.Tag             =   "40"
                   Text            =   " —„Ì“ «·„‰«ÿﬁ"
                EndProperty
-               BeginProperty ButtonMenu11 {66833FEE-8583-11D1-B16A-00C0F0283628} 
+               BeginProperty ButtonMenu5 {66833FEE-8583-11D1-B16A-00C0F0283628} 
+                  Object.Tag             =   "49"
+                  Text            =   " —„Ì“ «·«ÃÊ—"
+               EndProperty
+               BeginProperty ButtonMenu6 {66833FEE-8583-11D1-B16A-00C0F0283628} 
                   Object.Tag             =   "44"
                   Text            =   " œﬁÌﬁ «·„Ê«œ «·„Œ“‰ÌÂ"
                EndProperty
-               BeginProperty ButtonMenu12 {66833FEE-8583-11D1-B16A-00C0F0283628} 
+               BeginProperty ButtonMenu7 {66833FEE-8583-11D1-B16A-00C0F0283628} 
                   Object.Tag             =   "45"
                   Text            =   "„⁄·Ê„«  «·“»«∆‰"
                EndProperty
@@ -435,7 +415,7 @@ Begin VB.MDIForm FrmMain
             ImageIndex      =   28
             Style           =   5
             BeginProperty ButtonMenus {66833FEC-8583-11D1-B16A-00C0F0283628} 
-               NumButtonMenus  =   5
+               NumButtonMenus  =   4
                BeginProperty ButtonMenu1 {66833FEE-8583-11D1-B16A-00C0F0283628} 
                   Object.Tag             =   "9"
                   Text            =   "«·»ÕÀ ⁄‰ ›« Ê—…"
@@ -451,10 +431,6 @@ Begin VB.MDIForm FrmMain
                BeginProperty ButtonMenu4 {66833FEE-8583-11D1-B16A-00C0F0283628} 
                   Object.Tag             =   "12"
                   Text            =   "«Õ’«∆ÌÂ ⁄‰«ÊÌ‰ «·’Ì«‰Â «·Œ«—ÃÌÂ"
-               EndProperty
-               BeginProperty ButtonMenu5 {66833FEE-8583-11D1-B16A-00C0F0283628} 
-                  Object.Tag             =   "13"
-                  Text            =   "ﬂÊﬂ« ﬂÊ·«"
                EndProperty
             EndProperty
          EndProperty
@@ -523,113 +499,90 @@ Begin VB.MDIForm FrmMain
             EndProperty
          EndProperty
          BeginProperty Button6 {66833FEA-8583-11D1-B16A-00C0F0283628} 
-            Style           =   3
+            ImageIndex      =   70
+            Style           =   5
+            BeginProperty ButtonMenus {66833FEC-8583-11D1-B16A-00C0F0283628} 
+               NumButtonMenus  =   1
+               BeginProperty ButtonMenu1 {66833FEE-8583-11D1-B16A-00C0F0283628} 
+                  Object.Tag             =   "29"
+                  Text            =   "—÷Ï «·“»«∆‰"
+               EndProperty
+            EndProperty
          EndProperty
          BeginProperty Button7 {66833FEA-8583-11D1-B16A-00C0F0283628} 
+            Style           =   3
+         EndProperty
+         BeginProperty Button8 {66833FEA-8583-11D1-B16A-00C0F0283628} 
             Object.Tag             =   "22"
             ImageIndex      =   43
          EndProperty
-         BeginProperty Button8 {66833FEA-8583-11D1-B16A-00C0F0283628} 
+         BeginProperty Button9 {66833FEA-8583-11D1-B16A-00C0F0283628} 
             Style           =   3
          EndProperty
-         BeginProperty Button9 {66833FEA-8583-11D1-B16A-00C0F0283628} 
+         BeginProperty Button10 {66833FEA-8583-11D1-B16A-00C0F0283628} 
             Object.ToolTipText     =   "Œ—ÊÃ „‰ «·»—‰«„Ã"
             ImageIndex      =   74
          EndProperty
       EndProperty
-      Begin VB.Frame Frame1 
-         BorderStyle     =   0  'None
-         Height          =   435
-         Left            =   5940
-         RightToLeft     =   -1  'True
-         TabIndex        =   1
-         Top             =   90
-         Width           =   2835
-      End
    End
    Begin VB.Menu mnu 
       Caption         =   "„·›«  «· —„Ì“"
       Index           =   0
       Begin VB.Menu mnu2 
-         Caption         =   " —„Ì“ ﬁ«∆„… «·„ÊœÌ·« "
-         HelpContextID   =   1
-         Index           =   0
-      End
-      Begin VB.Menu mnu2 
-         Caption         =   " —„Ì“  «»⁄Ì… «·„ÊœÌ·« "
-         HelpContextID   =   2
-         Index           =   1
-      End
-      Begin VB.Menu mnu2 
-         Caption         =   "«—‘›… «·»Ì«‰« "
-         HelpContextID   =   3
-         Index           =   2
-      End
-      Begin VB.Menu mnu2 
-         Caption         =   "—»ÿ «·„ÊœÌ·« "
-         HelpContextID   =   4
-         Index           =   3
-      End
-      Begin VB.Menu mnu2 
-         Caption         =   "«·»«—ﬂÊœ"
-         HelpContextID   =   5
-         Index           =   4
-      End
-      Begin VB.Menu mnu2 
          Caption         =   " ⁄œÌ· «”⁄«— «·„Ê«œ ·«Ê·ÌÂ"
          HelpContextID   =   6
-         Index           =   5
+         Index           =   0
       End
       Begin VB.Menu mnu2 
          Caption         =   " ’œÌ— «·„⁄·Ê„«  «·«”«”Â "
          HelpContextID   =   7
-         Index           =   6
+         Index           =   1
       End
       Begin VB.Menu mnu2 
          Caption         =   " —„Ì“ «·Ê—‘ Ê „—«›ﬁÌÂ„"
          HelpContextID   =   30
-         Index           =   7
-      End
-      Begin VB.Menu mnu2 
-         Caption         =   " —„Ì“ «·⁄«∆·«  »Ì‰ «·„»Ì⁄«  ÊŒœ„Â «·„” Â·ﬂ"
-         HelpContextID   =   35
-         Index           =   8
+         Index           =   2
       End
       Begin VB.Menu mnu2 
          Caption         =   " —„Ì“ «·„‰«ÿﬁ"
          HelpContextID   =   40
-         Index           =   9
+         Index           =   3
+      End
+      Begin VB.Menu mnu2 
+         Caption         =   " —„Ì“ «·«ÃÊ—"
+         HelpContextID   =   49
+         Index           =   4
       End
       Begin VB.Menu mnu2 
          Caption         =   " œﬁÌﬁ «·„Ê«œ «·„Œ“‰ÌÂ"
          HelpContextID   =   44
-         Index           =   10
+         Index           =   5
       End
       Begin VB.Menu mnu2 
          Caption         =   "„⁄·Ê„«  «·“»«∆‰"
          HelpContextID   =   45
-         Index           =   11
+         Index           =   6
       End
       Begin VB.Menu mnu2 
          Caption         =   "-"
-         Index           =   12
+         Index           =   7
       End
       Begin VB.Menu mnu2 
          Caption         =   "≈œ«—… «·’·«ÕÌ« "
          HelpContextID   =   22
-         Index           =   13
+         Index           =   8
       End
       Begin VB.Menu mnu2 
          Caption         =   "-"
-         Index           =   14
+         Index           =   9
       End
       Begin VB.Menu mnu2 
          Caption         =   "«·Œ—ÊÃ „‰ «·»—‰«„Ã"
-         Index           =   15
+         Index           =   10
       End
       Begin VB.Menu mnu2 
          Caption         =   ""
-         Index           =   16
+         Index           =   11
       End
    End
    Begin VB.Menu mnu 
@@ -699,13 +652,8 @@ Begin VB.MDIForm FrmMain
          Index           =   3
       End
       Begin VB.Menu mnu3 
-         Caption         =   "ﬂÊﬂ« ﬂÊ·«"
-         HelpContextID   =   13
-         Index           =   4
-      End
-      Begin VB.Menu mnu3 
          Caption         =   ""
-         Index           =   5
+         Index           =   4
       End
    End
    Begin VB.Menu mnu 
@@ -840,7 +788,7 @@ Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 Function Gettag(empNo As Integer, TagId As Integer) As Boolean
-On Error GoTo ErrorHandler
+On Error GoTo errorhandler
 Dim rs As New ADODB.Recordset
     sqlText = "Select * from comaintpermission Where empno = " & empNo & " and TagId=" & TagId
     Set rs = de.con.Execute(sqlText)
@@ -850,12 +798,12 @@ Dim rs As New ADODB.Recordset
         Gettag = False
     End If
 Exit Function
-ErrorHandler:
+errorhandler:
 Gettag = False
 End Function
 
 Sub GetPermision()
-On Error GoTo ErrorHandler
+On Error GoTo errorhandler
 Dim rs As New ADODB.Recordset
     Dim Count As Integer
     Count = 0
@@ -1006,7 +954,7 @@ Next
 
 
 Exit Sub
-ErrorHandler:
+errorhandler:
 MsgBox Err.Description
 
 End Sub
@@ -1127,30 +1075,22 @@ Private Sub mnu2_Click(Index As Integer)
 
 Select Case Index
     Case 0
-        FrmCoModelList.Show
-    Case 1
-        FrmCoItemsRelated.Show
-    Case 2
-        FrmArchive.Show
-    Case 3
-        frmLinkmodels.Show
-    Case 4
-        frmBank.Show
-    Case 5
         FRmUpdatePrices.Show
-    Case 6
+    Case 1
         FrmTransferMaintToProvinces.Show
-    Case 7
+    Case 2
         frmMaintTeamReplacements.Show
-    Case 9
+    Case 3
         FrmCoZone.Show
-    Case 10
+    Case 4
+        FrmCoFeesPrices.Show
+    Case 5
         FrmCoItems.Show
-    Case 11
+    Case 6
         FrmCoClients.Show
-    Case 13
+    Case 8
         FrmMaintCallManager.Show
-    Case 15
+    Case 10
         Unload Me
 End Select
 
@@ -1227,19 +1167,41 @@ End Sub
 
 Private Sub Toolbar1_ButtonClick(ByVal Button As MSComctlLib.Button)
 Select Case Button.Index
-    Case 7
+    Case 8
         FrmMaintCallManager.Show
-    Case 9
+    Case 10
         Unload Me
 End Select
 End Sub
 
 Private Sub Toolbar1_ButtonMenuClick(ByVal ButtonMenu As MSComctlLib.ButtonMenu)
 Select Case ButtonMenu.Tag
-    Case 33
-         frmDailyTeamRep.Show
-    Case 36
-        frmExternalReparationRep.Show
+    Case 1
+        FrmCoModelList.Show
+    Case 2
+        FrmCoItemsRelated.Show
+    Case 3
+        FrmArchive.Show
+    Case 4
+        frmLinkmodels.Show
+    Case 5
+        frmBank.Show
+    Case 6
+        FRmUpdatePrices.Show
+    Case 7
+        FrmTransferMaintToProvinces.Show
+    Case 8
+        FrmBills.Show
+    Case 9
+         FrmSeatchBills.Show
+    Case 10
+        FrmDuplicateCalls.Show
+    Case 11
+        FrmErrors.Show
+    Case 12
+        FrmExternalMaint.Show
+    Case 13
+        FrmCocaCola.Show
     Case 14
         FrmCoStock.Show
     Case 15 '«·«œŒ«· Ê «·«Œ—«Ã'
@@ -1257,62 +1219,44 @@ Select Case ButtonMenu.Tag
         FrmPrintByans.Show
         FormOk = True
     Case 21
-    FrmMvStockTaking.Show
-    Case 8
-        FrmBills.Show
-    Case 31
-        FrmmntMoveSummary.Show
-    Case 32
-        FrmReparation1.Show
-    Case 34
-        FrmTransferMaintAttendance.Show
-    Case 39
-        FrmMaintCallNew.Show
-    Case 41
-        FrmMaintState.Show
-    Case 42
-        FrmClientReparation.Show
-    Case 43
-        frmTeamReparationRep.Show
-    Case 9
-         FrmSeatchBills.Show
-    Case 10
-        FrmDuplicateCalls.Show
-    Case 11
-        FrmErrors.Show
-    Case 12
-        FrmExternalMaint.Show
-    Case 13
-        FrmCocaCola.Show
-    Case 1
-        FrmCoModelList.Show
-    Case 2
-        FrmCoItemsRelated.Show
-    Case 3
-        FrmArchive.Show
-    Case 4
-        frmLinkmodels.Show
-    Case 5
-        frmBank.Show
-    Case 6
-        FRmUpdatePrices.Show
-    Case 7
-        FrmTransferMaintToProvinces.Show
-    Case 30
-        frmMaintTeamReplacements.Show
-    Case 40
-        FrmCoZone.Show
-    Case 44
-        FrmCoItems.Show
-    Case 45
-        FrmCoClients.Show
+        FrmMvStockTaking.Show
     Case 21
         FrmExpensiveProvinces.Show
     Case 22
         FrmDuplicateCalls.Show
     Case 24
         FrmMaintCost.Show
+    Case 29
+        FrmCustomerCareMeasuring.Show
+    Case 30
+        frmMaintTeamReplacements.Show
+    Case 31
+        FrmmntMoveSummary.Show
+    Case 32
+        FrmReparation1.Show
+    Case 33
+         frmDailyTeamRep.Show
+    Case 34
+        FrmTransferMaintAttendance.Show
+    Case 36
+        frmExternalReparationRep.Show
+    Case 39
+        FrmMaintCallNew.Show
+    Case 40
+        FrmCoZone.Show
+    Case 41
+        FrmMaintState.Show
+    Case 42
+        FrmClientReparation.Show
+    Case 43
+        frmTeamReparationRep.Show
+    Case 44
+        FrmCoItems.Show
+    Case 45
+        FrmCoClients.Show
     Case 48
         FrmViewMaintCallOrders.Show
+    Case 49
+        FrmCoFeesPrices.Show
 End Select
 End Sub
