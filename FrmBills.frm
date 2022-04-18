@@ -21,7 +21,7 @@ Begin VB.Form FrmBills
    Begin VSFlex8Ctl.VSFlexGrid Grid 
       Height          =   2085
       Left            =   6540
-      TabIndex        =   0
+      TabIndex        =   1
       Top             =   4050
       Visible         =   0   'False
       Width           =   2385
@@ -127,7 +127,7 @@ Begin VB.Form FrmBills
    Begin Threed.SSFrame SSFrame2 
       Height          =   2745
       Left            =   30
-      TabIndex        =   1
+      TabIndex        =   2
       Top             =   3210
       Width           =   11685
       _ExtentX        =   20611
@@ -148,7 +148,7 @@ Begin VB.Form FrmBills
          Left            =   1650
          List            =   "FrmBills.frx":0002
          RightToLeft     =   -1  'True
-         TabIndex        =   5
+         TabIndex        =   6
          Top             =   270
          Width           =   1515
       End
@@ -157,7 +157,7 @@ Begin VB.Form FrmBills
          Height          =   345
          Left            =   3720
          RightToLeft     =   -1  'True
-         TabIndex        =   3
+         TabIndex        =   4
          Top             =   270
          Width           =   855
       End
@@ -166,14 +166,14 @@ Begin VB.Form FrmBills
          Height          =   345
          Left            =   9120
          RightToLeft     =   -1  'True
-         TabIndex        =   2
+         TabIndex        =   3
          Top             =   270
          Width           =   2505
       End
       Begin VSFlex8Ctl.VSFlexGrid flexGrid 
          Height          =   1965
          Left            =   90
-         TabIndex        =   4
+         TabIndex        =   5
          Top             =   720
          Width           =   11565
          _cx             =   20399
@@ -275,7 +275,7 @@ Begin VB.Form FrmBills
          Height          =   195
          Index           =   2
          Left            =   660
-         TabIndex        =   15
+         TabIndex        =   16
          Top             =   30
          Width           =   960
       End
@@ -294,7 +294,7 @@ Begin VB.Form FrmBills
          ForeColor       =   &H00000000&
          Height          =   315
          Left            =   120
-         TabIndex        =   14
+         TabIndex        =   15
          Top             =   300
          Width           =   1515
       End
@@ -313,7 +313,7 @@ Begin VB.Form FrmBills
          ForeColor       =   &H000000FF&
          Height          =   315
          Left            =   4590
-         TabIndex        =   13
+         TabIndex        =   14
          Top             =   270
          Width           =   705
       End
@@ -323,7 +323,7 @@ Begin VB.Form FrmBills
          ForeColor       =   &H00000000&
          Height          =   315
          Left            =   5310
-         TabIndex        =   12
+         TabIndex        =   13
          Top             =   270
          Width           =   3765
       End
@@ -335,7 +335,7 @@ Begin VB.Form FrmBills
          Height          =   195
          Index           =   11
          Left            =   4140
-         TabIndex        =   11
+         TabIndex        =   12
          Top             =   30
          Width           =   405
       End
@@ -347,7 +347,7 @@ Begin VB.Form FrmBills
          Height          =   195
          Index           =   10
          Left            =   8670
-         TabIndex        =   10
+         TabIndex        =   11
          Top             =   30
          Width           =   420
       End
@@ -359,7 +359,7 @@ Begin VB.Form FrmBills
          Height          =   195
          Index           =   9
          Left            =   4620
-         TabIndex        =   9
+         TabIndex        =   10
          Top             =   30
          Width           =   435
       End
@@ -371,7 +371,7 @@ Begin VB.Form FrmBills
          Height          =   195
          Index           =   8
          Left            =   10665
-         TabIndex        =   8
+         TabIndex        =   9
          Top             =   30
          Width           =   930
       End
@@ -383,7 +383,7 @@ Begin VB.Form FrmBills
          Height          =   195
          Index           =   23
          Left            =   3330
-         TabIndex        =   7
+         TabIndex        =   8
          Top             =   30
          Width           =   405
       End
@@ -402,7 +402,7 @@ Begin VB.Form FrmBills
          ForeColor       =   &H00000000&
          Height          =   315
          Left            =   3210
-         TabIndex        =   6
+         TabIndex        =   7
          Top             =   300
          Width           =   495
       End
@@ -410,7 +410,7 @@ Begin VB.Form FrmBills
    Begin Threed.SSFrame SSFrame1 
       Height          =   3165
       Left            =   0
-      TabIndex        =   16
+      TabIndex        =   17
       Top             =   0
       Width           =   11685
       _ExtentX        =   20611
@@ -421,7 +421,7 @@ Begin VB.Form FrmBills
          Height          =   345
          Left            =   4830
          RightToLeft     =   -1  'True
-         TabIndex        =   26
+         TabIndex        =   27
          Top             =   960
          Width           =   6705
       End
@@ -430,7 +430,7 @@ Begin VB.Form FrmBills
          Height          =   345
          Left            =   1890
          RightToLeft     =   -1  'True
-         TabIndex        =   25
+         TabIndex        =   26
          Top             =   270
          Width           =   2925
       End
@@ -441,7 +441,7 @@ Begin VB.Form FrmBills
          Left            =   3360
          RightToLeft     =   -1  'True
          Style           =   1  'Graphical
-         TabIndex        =   24
+         TabIndex        =   25
          Top             =   1590
          Width           =   1755
       End
@@ -450,7 +450,7 @@ Begin VB.Form FrmBills
          Height          =   345
          Left            =   60
          RightToLeft     =   -1  'True
-         TabIndex        =   22
+         TabIndex        =   23
          Top             =   960
          Width           =   675
       End
@@ -459,7 +459,7 @@ Begin VB.Form FrmBills
          Height          =   345
          Left            =   30
          RightToLeft     =   -1  'True
-         TabIndex        =   21
+         TabIndex        =   22
          Top             =   270
          Width           =   1185
       End
@@ -468,7 +468,7 @@ Begin VB.Form FrmBills
          Height          =   405
          Left            =   6750
          RightToLeft     =   -1  'True
-         TabIndex        =   20
+         TabIndex        =   21
          Top             =   1530
          Width           =   855
       End
@@ -477,7 +477,7 @@ Begin VB.Form FrmBills
          Height          =   345
          Left            =   1200
          RightToLeft     =   -1  'True
-         TabIndex        =   19
+         TabIndex        =   20
          Top             =   2730
          Width           =   615
       End
@@ -486,7 +486,7 @@ Begin VB.Form FrmBills
          Height          =   345
          Left            =   2340
          RightToLeft     =   -1  'True
-         TabIndex        =   18
+         TabIndex        =   19
          Top             =   2730
          Width           =   1815
       End
@@ -495,14 +495,14 @@ Begin VB.Form FrmBills
          Height          =   345
          Left            =   1860
          RightToLeft     =   -1  'True
-         TabIndex        =   17
+         TabIndex        =   18
          Top             =   2730
          Width           =   465
       End
       Begin MSMask.MaskEdBox TxtDate 
          Height          =   345
          Left            =   9420
-         TabIndex        =   23
+         TabIndex        =   24
          Top             =   270
          Width           =   1125
          _ExtentX        =   1984
@@ -515,7 +515,7 @@ Begin VB.Form FrmBills
       Begin MSDataListLib.DataCombo ComboType 
          Height          =   360
          Left            =   6390
-         TabIndex        =   27
+         TabIndex        =   28
          Top             =   270
          Width           =   1485
          _ExtentX        =   2619
@@ -536,7 +536,7 @@ Begin VB.Form FrmBills
       Begin MSDataListLib.DataCombo ComboFees 
          Height          =   360
          Left            =   8880
-         TabIndex        =   28
+         TabIndex        =   29
          Top             =   1560
          Width           =   2655
          _ExtentX        =   4683
@@ -557,7 +557,7 @@ Begin VB.Form FrmBills
       Begin MSDataListLib.DataCombo ComboOperationType 
          Height          =   360
          Left            =   7920
-         TabIndex        =   29
+         TabIndex        =   30
          Top             =   270
          Width           =   1485
          _ExtentX        =   2619
@@ -578,7 +578,7 @@ Begin VB.Form FrmBills
       Begin MSDataListLib.DataCombo ComboPayment 
          Height          =   360
          Left            =   4860
-         TabIndex        =   30
+         TabIndex        =   31
          Top             =   270
          Width           =   1485
          _ExtentX        =   2619
@@ -599,7 +599,7 @@ Begin VB.Form FrmBills
       Begin MSMask.MaskEdBox TxtFixBillDate 
          Height          =   345
          Left            =   2220
-         TabIndex        =   31
+         TabIndex        =   32
          Top             =   1590
          Visible         =   0   'False
          Width           =   1125
@@ -613,7 +613,7 @@ Begin VB.Form FrmBills
       Begin VSFlex8Ctl.VSFlexGrid FlexFees 
          Height          =   1155
          Left            =   5160
-         TabIndex        =   32
+         TabIndex        =   33
          Top             =   1950
          Width           =   6495
          _cx             =   11456
@@ -715,7 +715,7 @@ Begin VB.Form FrmBills
          Height          =   195
          Index           =   13
          Left            =   11130
-         TabIndex        =   58
+         TabIndex        =   59
          Top             =   1320
          Width           =   405
       End
@@ -734,7 +734,7 @@ Begin VB.Form FrmBills
          ForeColor       =   &H00800000&
          Height          =   345
          Left            =   1260
-         TabIndex        =   57
+         TabIndex        =   58
          Top             =   270
          Width           =   615
       End
@@ -754,7 +754,7 @@ Begin VB.Form FrmBills
          Height          =   315
          Left            =   1890
          RightToLeft     =   -1  'True
-         TabIndex        =   56
+         TabIndex        =   57
          Top             =   990
          Width           =   2895
       End
@@ -766,7 +766,7 @@ Begin VB.Form FrmBills
          Height          =   195
          Index           =   7
          Left            =   10980
-         TabIndex        =   55
+         TabIndex        =   56
          Top             =   720
          Width           =   495
       End
@@ -779,7 +779,7 @@ Begin VB.Form FrmBills
          Index           =   0
          Left            =   3810
          RightToLeft     =   -1  'True
-         TabIndex        =   54
+         TabIndex        =   55
          Top             =   30
          Width           =   900
       End
@@ -791,7 +791,7 @@ Begin VB.Form FrmBills
          Height          =   195
          Index           =   4
          Left            =   7035
-         TabIndex        =   53
+         TabIndex        =   54
          Top             =   30
          Width           =   780
       End
@@ -803,7 +803,7 @@ Begin VB.Form FrmBills
          Height          =   195
          Index           =   1
          Left            =   9570
-         TabIndex        =   52
+         TabIndex        =   53
          Top             =   30
          Width           =   960
       End
@@ -822,7 +822,7 @@ Begin VB.Form FrmBills
          ForeColor       =   &H000000FF&
          Height          =   315
          Left            =   10590
-         TabIndex        =   51
+         TabIndex        =   52
          Top             =   300
          Width           =   1005
       End
@@ -834,7 +834,7 @@ Begin VB.Form FrmBills
          Height          =   195
          Index           =   0
          Left            =   10725
-         TabIndex        =   50
+         TabIndex        =   51
          Top             =   30
          Width           =   825
       End
@@ -846,7 +846,7 @@ Begin VB.Form FrmBills
          Height          =   195
          Index           =   6
          Left            =   8685
-         TabIndex        =   49
+         TabIndex        =   50
          Top             =   30
          Width           =   735
       End
@@ -858,7 +858,7 @@ Begin VB.Form FrmBills
          Height          =   195
          Index           =   3
          Left            =   5490
-         TabIndex        =   48
+         TabIndex        =   49
          Top             =   30
          Width           =   795
       End
@@ -870,7 +870,7 @@ Begin VB.Form FrmBills
          Index           =   3
          Left            =   825
          RightToLeft     =   -1  'True
-         TabIndex        =   47
+         TabIndex        =   48
          Top             =   960
          Width           =   330
       End
@@ -881,7 +881,7 @@ Begin VB.Form FrmBills
          ForeColor       =   &H00000000&
          Height          =   195
          Left            =   2430
-         TabIndex        =   46
+         TabIndex        =   47
          Top             =   1380
          Visible         =   0   'False
          Width           =   870
@@ -901,7 +901,7 @@ Begin VB.Form FrmBills
          ForeColor       =   &H00800000&
          Height          =   255
          Left            =   1890
-         TabIndex        =   45
+         TabIndex        =   46
          Top             =   660
          Width           =   2895
       End
@@ -920,7 +920,7 @@ Begin VB.Form FrmBills
          ForeColor       =   &H000000C0&
          Height          =   345
          Left            =   60
-         TabIndex        =   44
+         TabIndex        =   45
          Top             =   1590
          Width           =   2115
       End
@@ -932,7 +932,7 @@ Begin VB.Form FrmBills
          Height          =   195
          Index           =   16
          Left            =   7155
-         TabIndex        =   43
+         TabIndex        =   44
          Top             =   1320
          Width           =   330
       End
@@ -944,7 +944,7 @@ Begin VB.Form FrmBills
          Height          =   195
          Index           =   17
          Left            =   4260
-         TabIndex        =   42
+         TabIndex        =   43
          Top             =   2730
          Width           =   825
       End
@@ -956,7 +956,7 @@ Begin VB.Form FrmBills
          Height          =   195
          Index           =   18
          Left            =   3390
-         TabIndex        =   41
+         TabIndex        =   42
          Top             =   2400
          Width           =   735
       End
@@ -968,7 +968,7 @@ Begin VB.Form FrmBills
          Height          =   195
          Index           =   19
          Left            =   1455
-         TabIndex        =   40
+         TabIndex        =   41
          Top             =   2400
          Width           =   390
       End
@@ -980,7 +980,7 @@ Begin VB.Form FrmBills
          Height          =   195
          Index           =   20
          Left            =   2010
-         TabIndex        =   39
+         TabIndex        =   40
          Top             =   2400
          Width           =   330
       End
@@ -999,7 +999,7 @@ Begin VB.Form FrmBills
          ForeColor       =   &H00000000&
          Height          =   315
          Left            =   45
-         TabIndex        =   38
+         TabIndex        =   39
          Top             =   2760
          Width           =   1125
       End
@@ -1011,7 +1011,7 @@ Begin VB.Form FrmBills
          Height          =   195
          Index           =   22
          Left            =   180
-         TabIndex        =   37
+         TabIndex        =   38
          Top             =   2400
          Width           =   930
       End
@@ -1021,7 +1021,7 @@ Begin VB.Form FrmBills
          Height          =   345
          Left            =   5160
          RightToLeft     =   -1  'True
-         TabIndex        =   36
+         TabIndex        =   37
          Top             =   1560
          Width           =   1545
       End
@@ -1033,7 +1033,7 @@ Begin VB.Form FrmBills
          Height          =   195
          Index           =   5
          Left            =   7755
-         TabIndex        =   35
+         TabIndex        =   36
          Top             =   1320
          Width           =   1005
       End
@@ -1043,7 +1043,7 @@ Begin VB.Form FrmBills
          Height          =   345
          Left            =   7650
          RightToLeft     =   -1  'True
-         TabIndex        =   34
+         TabIndex        =   35
          Top             =   1560
          Width           =   1185
       End
@@ -1053,7 +1053,7 @@ Begin VB.Form FrmBills
          Height          =   195
          Left            =   5220
          RightToLeft     =   -1  'True
-         TabIndex        =   33
+         TabIndex        =   34
          Top             =   1320
          Width           =   1455
       End
@@ -1061,7 +1061,7 @@ Begin VB.Form FrmBills
    Begin Threed.SSFrame SSFrame4 
       Height          =   495
       Left            =   0
-      TabIndex        =   59
+      TabIndex        =   60
       Top             =   6000
       Width           =   11715
       _ExtentX        =   20664
@@ -1091,7 +1091,7 @@ Begin VB.Form FrmBills
       Begin Threed.SSCommand CmdAdd 
          Height          =   435
          Left            =   10320
-         TabIndex        =   67
+         TabIndex        =   0
          Top             =   30
          Width           =   1335
          _ExtentX        =   2355
@@ -1112,7 +1112,7 @@ Begin VB.Form FrmBills
       Begin Threed.SSCommand CmdDelete 
          Height          =   435
          Left            =   7650
-         TabIndex        =   66
+         TabIndex        =   67
          Top             =   30
          Width           =   1335
          _ExtentX        =   2355
@@ -1133,7 +1133,7 @@ Begin VB.Form FrmBills
       Begin Threed.SSCommand CmdCancel 
          Height          =   435
          Left            =   4980
-         TabIndex        =   65
+         TabIndex        =   66
          Top             =   30
          Width           =   1335
          _ExtentX        =   2355
@@ -1155,7 +1155,7 @@ Begin VB.Form FrmBills
       Begin Threed.SSCommand CmdEdit 
          Height          =   435
          Left            =   8985
-         TabIndex        =   64
+         TabIndex        =   65
          Top             =   30
          Width           =   1335
          _ExtentX        =   2355
@@ -1177,7 +1177,7 @@ Begin VB.Form FrmBills
       Begin Threed.SSCommand cmdSave 
          Height          =   435
          Left            =   6315
-         TabIndex        =   63
+         TabIndex        =   64
          Top             =   30
          Width           =   1335
          _ExtentX        =   2355
@@ -1199,7 +1199,7 @@ Begin VB.Form FrmBills
       Begin Threed.SSCommand CmdExit 
          Height          =   435
          Left            =   60
-         TabIndex        =   62
+         TabIndex        =   63
          Top             =   30
          Width           =   1335
          _ExtentX        =   2355
@@ -1220,7 +1220,7 @@ Begin VB.Form FrmBills
       Begin Threed.SSCommand CmdPrint 
          Height          =   435
          Left            =   2730
-         TabIndex        =   61
+         TabIndex        =   62
          Top             =   30
          Width           =   1125
          _ExtentX        =   1984
@@ -1241,7 +1241,7 @@ Begin VB.Form FrmBills
       Begin Threed.SSCommand CmdPreview 
          Height          =   435
          Left            =   3855
-         TabIndex        =   60
+         TabIndex        =   61
          Top             =   30
          Width           =   1125
          _ExtentX        =   1984
@@ -1524,7 +1524,7 @@ Dim MvMaintPaymentRec As MvMaintPaymentRecTYpe, MvMaintPaymentRecTypeDetailsRec 
 Dim BeforeOperationTYpeID As Integer, CurrentOperationTYpeID   As Integer
 
 Function GetFeesAmount() As Double
-On Error GoTo ErrorHandler
+On Error GoTo errorhandler
 Dim FeesAmount As Double
 FeesAmount = 0
 With FlexFees
@@ -1534,12 +1534,12 @@ With FlexFees
 End With
 GetFeesAmount = FeesAmount
 Exit Function
-ErrorHandler:
+errorhandler:
 GetFeesAmount = 0
 End Function
 
 Function GetTotalPrice(IDBill As Double, Vindex As Integer) As Double
-On Error GoTo ErrorHandler
+On Error GoTo errorhandler
 Dim rsTotalPrice As New ADODB.Recordset
 sqlText = "select sum(TotPrice) as TotPrice From MvMaintPaymentsQry Where Stat<>6 And billno = " & IDBill
 If Vindex = 0 Then
@@ -1549,12 +1549,12 @@ Set rsTotalPrice = de.con.Execute(sqlText)
 'GetTotalPrice = rsTotalPrice!TotPrice + IIf(vindex = 0, 0, GetFeesAmount)
 GetTotalPrice = rsTotalPrice!TotPrice
 Exit Function
-ErrorHandler:
+errorhandler:
 GetTotalPrice = -1
 End Function
 
 Function GetTotalPriceBeforDiscount(IDBill As Double, Vindex As Integer) As Double
-On Error GoTo ErrorHandler
+On Error GoTo errorhandler
 Dim rsTotalPrice As New ADODB.Recordset
 sqlText = "select isnull(sum(isnull(price,0) *isnull(qty,0)),0) as TotPrice From MvMaintPaymentsQry where Stat<>6 and billno = " & IDBill
 If Vindex = 0 Then
@@ -1564,7 +1564,7 @@ Set rsTotalPrice = de.con.Execute(sqlText)
 'GetTotalPrice = rsTotalPrice!TotPrice + IIf(vindex = 0, 0, GetFeesAmount)
 GetTotalPriceBeforDiscount = rsTotalPrice!TotPrice
 Exit Function
-ErrorHandler:
+errorhandler:
 GetTotalPriceBeforDiscount = -1
 End Function
 
@@ -1584,7 +1584,7 @@ MsgBox Err.Description
 End Function
 
 Function DeleteRec(BillNo As Double) As Boolean
-On Error GoTo ErrorHandler
+On Error GoTo errorhandler
 de.con.BeginTrans
     With FlexGrid
      For i = 1 To .Rows - 1
@@ -1603,7 +1603,7 @@ de.con.BeginTrans
 de.con.CommitTrans
 DeleteRec = True
 Exit Function
-ErrorHandler:
+errorhandler:
 DeleteRec = False
 MsgBox Err.Description
 de.con.RollbackTrans
@@ -1617,7 +1617,7 @@ Dim RsMax As New ADODB.Recordset
 End Function
 
 Function InsertNewClient(ClientName As String) As Double
-    On Error GoTo ErrorHandler
+    On Error GoTo errorhandler
     Dim RsMaxi As New ADODB.Recordset
     sqlText = "Insert Into Coclient (ClientName) Values('" & ClientName & "')"
     de.con.Execute (sqlText)
@@ -1625,7 +1625,7 @@ Function InsertNewClient(ClientName As String) As Double
     Set RsMaxi = de.con.Execute(sqlText)
     InsertNewClient = RsMaxi!MaxClientId
     Exit Function
-ErrorHandler:
+errorhandler:
     InsertNewClient = 0
     MsgBox Err.Description
 End Function
@@ -1919,7 +1919,7 @@ Sub InitNavigator()
     Set RsNavigator = de.con.Execute(sqlText)
 End Sub
 Function GetModelName(ModNo As Integer) As String
-On Error GoTo ErrorHandler
+On Error GoTo errorhandler
 Dim RsModelName As New ADODB.Recordset
 
 sqlText = "Select Name    from adhammodels  Where ModNo=" & ModNo
@@ -1930,12 +1930,12 @@ Else
     GetModelName = ""
 End If
 Exit Function
-ErrorHandler:
+errorhandler:
 GetModelName = ""
 End Function
 
 Function GetSymbol(ModNo As Integer) As String
-On Error GoTo ErrorHandler
+On Error GoTo errorhandler
 Dim RsSymbol As New ADODB.Recordset
 
 sqlText = "Select Symbol    from adhammodels   Where ModNo=" & ModNo
@@ -1946,19 +1946,19 @@ Else
     GetSymbol = ""
 End If
 Exit Function
-ErrorHandler:
+errorhandler:
 GetSymbol = ""
 End Function
 Sub FillGrid(BillNo As Double)
 
-On Error GoTo ErrorHandler
+On Error GoTo errorhandler
     Dim RsDetails As New ADODB.Recordset
     sqlText = "Select Id , StkNo , StkName , Qty , Price , Discount  From MvMaintPaymentsDetailsQry Where BillNo=" & BillNo
     Set RsDetails = de.con.Execute(sqlText)
     Set FlexGrid.DataSource = RsDetails
     FillFormating 2
 Exit Sub
-ErrorHandler:
+errorhandler:
 MsgBox Err.Description
 End Sub
 
@@ -2036,7 +2036,7 @@ End Sub
 
 Sub MoveNavigator(ByVal i As Integer)
 Dim RSTemp As New ADODB.Recordset
-On Error GoTo ErrorHandler
+On Error GoTo errorhandler
 If OperationEmpStr = "" Or PaymentEmpStr = "" Or MaintTYpeEmpStr = "" Then Exit Sub
 If RsNavigator.RecordCount = 0 Then Exit Sub
 Select Case i
@@ -2066,7 +2066,7 @@ End Select
 FillControlsFromSql RsNavigator
 LNavigator.Caption = LTrim(RTrim(Str(RecNum))) & "/" & LTrim(RTrim(Str(RsNavigator.RecordCount)))
 Exit Sub
-ErrorHandler:
+errorhandler:
 MsgBox "Error In Navigator"
 End Sub
 Sub MoveToRec(IDBill As Double)
@@ -2198,7 +2198,7 @@ SendKeys "{home}+{end}"
 End Sub
 
 Private Sub CmdCancel_Click()
-On Error GoTo ErrorHandler
+On Error GoTo errorhandler
     EnableCmds True, True, True, False, False, True, True, True, True, True, True
     EnableControls False
     If RsNavigator!BillNo = Null Then
@@ -2207,12 +2207,12 @@ On Error GoTo ErrorHandler
         MoveToRec Val(RsNavigator!BillNo)
     End If
 Exit Sub
-ErrorHandler:
+errorhandler:
 MsgBox Err.Description
 End Sub
 
 Private Sub CmdDelete_Click()
-On Error GoTo ErrorHandler
+On Error GoTo errorhandler
 If Not RsNavigator!IsTransfered Then
     If MsgBox("Â· √‰  „ √ﬂœ „‰ Õ–› «·›« Ê—…", vbYesNo + vbDefaultButton2, "Õ–›") = vbYes Then
         If DeleteRec(RsNavigator!BillNo) Then
@@ -2225,7 +2225,7 @@ Else
     MsgBox "«·›« Ê—… „—Õ·….... ·«Ì„ﬂ‰ﬂ Õ–› «·›« Ê—…", vbInformation, "«·›« Ê—… „—Õ·…"
 End If
 Exit Sub
-ErrorHandler:
+errorhandler:
 MsgBox Err.Description
 End Sub
 Sub ClearItems()
@@ -2253,7 +2253,7 @@ Private Sub CmdEdit_Click()
 End Sub
 
 Function FillVariables(Vindex As Integer) As Boolean
-On errro GoTo ErrorHandler
+On errro GoTo errorhandler
 Select Case Vindex
     Case 1
             If Not IsDate(TxtDate.Text) Or Val(ComboType.BoundText) = 0 Or Val(txtClientName.Tag) = 0 Or Val(ComboOperationType.BoundText) = 0 Or ComboPayment.BoundText = "" Then
@@ -2272,29 +2272,29 @@ Select Case Vindex
 End Select
 FillVariables = True
 Exit Function
-ErrorHandler:
+errorhandler:
 FillVariables = False
 End Function
 
 Function GetMaxId() As Double
-On Error GoTo ErrorHandler
+On Error GoTo errorhandler
     Dim RsMax As New ADODB.Recordset
     sqlText = "Select Max(Id) as MaxId From MvMaintPaymentsdetails"
     Set RsMax = de.con.Execute(sqlText)
     GetMaxId = RsMax!maxId
 Exit Function
-ErrorHandler:
+errorhandler:
 GetMaxId = -1
 End Function
 
 Function GetMaxBillNo() As Double
-On Error GoTo ErrorHandler
+On Error GoTo errorhandler
     Dim RsMax As New ADODB.Recordset
     sqlText = "Select Max(BillNo) as MaxBillNo From MvMaintPayments"
     Set RsMax = de.con.Execute(sqlText)
     GetMaxBillNo = RsMax!MaxBillNo
 Exit Function
-ErrorHandler:
+errorhandler:
 GetMaxBillNo = -1
 End Function
 'Function GetSerByYear(Vyear As Integer) As Integer
@@ -2307,8 +2307,8 @@ End Function
 'errorhandler:
 'GetSerByYear = -1
 'End Function
-Function fillstructure(Vindex As Integer) As Boolean
-On Error GoTo ErrorHandler
+Function FillStructure(Vindex As Integer) As Boolean
+On Error GoTo errorhandler
     Select Case Vindex
         Case 1
             If FillVariables(1) Then
@@ -2336,7 +2336,7 @@ On Error GoTo ErrorHandler
                 End If
            End With
         Else
-            fillstructure = False
+            FillStructure = False
             Exit Function
          End If
         Case 2
@@ -2353,18 +2353,18 @@ On Error GoTo ErrorHandler
                     .OperationType = Val(ComboOperationType.BoundText)
                 End With
             Else
-                fillstructure = False
+                FillStructure = False
                 Exit Function
             End If
     End Select
-fillstructure = True
+FillStructure = True
 Exit Function
-ErrorHandler:
-fillstructure = False
+errorhandler:
+FillStructure = False
 End Function
 
 Function InsertIntoMvStock(stkno As String, BillNo As Double, Qty As Double, OperationType As Integer, clientId As Double, Class As Integer) As Boolean
-On Error GoTo ErrorHandler
+On Error GoTo errorhandler
 Dim rs As New ADODB.Recordset
 Dim QtyType As Integer
 
@@ -2382,7 +2382,8 @@ End If
     
    If Class = 4 Then
             sqlText = sqlText & " Insert Into Stmov(ByanId , StkId  , StrId , Movdate , DocType , DocNum ,  Qty , QtyType)Values("
-            sqlText = sqlText & NewRec + 1 & "," & GetStkId(rs!StkRelatedNo) & "," & clientId & " ,Convert(varchar(10),getdate(),101),30," & BillNo & "," & Qty * Val(rs!Qty) & "," & IIf(QtyType = 1, 0, 1) & ")"
+            sqlText = sqlText & NewRec + 1 & "," & GetStkId(stkno) & "," & clientId & " ,Convert(varchar(10),getdate(),101),30," & BillNo & "," & Qty & "," & IIf(QtyType = 1, 0, 1) & ")"
+            de.con.Execute (sqlText)
     End If
     
     If GetBalance(stkno, GetStrId(systemConfigration.MainStoreNo)) < 0 Or GetBalance(stkno, clientId) < 0 Then
@@ -2391,12 +2392,12 @@ End If
         InsertIntoMvStock = True
     End If
 Exit Function
-ErrorHandler:
+errorhandler:
 InsertIntoMvStock = False
 End Function
 
 Sub FillDetails(BillId As Double)
-On Error GoTo ErrorHandler
+On Error GoTo errorhandler
     With MvMaintPaymentRecTypeDetailsRec
         de.con.BeginTrans
             sqlText = "Insert Into MvMaintPaymentsDetails(BillNo, StkNo, discount , Qty, PriceTYpe, Price , Empno )Values( "
@@ -2413,13 +2414,13 @@ On Error GoTo ErrorHandler
         AddToGrid 1, FlexGrid
     End With
 Exit Sub
-ErrorHandler:
+errorhandler:
 de.con.RollbackTrans
 MsgBox Err.Description
 End Sub
 
 Function foundStkNo(stkno As String, BillNo As Double) As Boolean
-On Error GoTo ErrorHandler
+On Error GoTo errorhandler
 Dim rs As New ADODB.Recordset
 sqlText = "Select Count(*) As CountRec From MvMaintPaymentsDetails Where Stkno='" & stkno & "' and billNo =" & BillNo
 Set rs = de.con.Execute(sqlText)
@@ -2429,7 +2430,7 @@ Else
     foundStkNo = False
 End If
 Exit Function
-ErrorHandler:
+errorhandler:
 foundStkNo = True
 MsgBox Err.Description
 End Function
@@ -2447,12 +2448,12 @@ End With
 End Sub
 
 Function SaveRec() As Boolean
-On Error GoTo ErrorHandler
+On Error GoTo errorhandler
 
 
 If TypeRec Then   ' New Rec
     If LBillNo.Tag = "" Then
-        If fillstructure(1) Then
+        If FillStructure(1) Then
             With MvMaintPaymentRec
                 de.con.BeginTrans
                     sqlText = "Insert Into MvMaintPayments( Billdate, FixBillDate , OperationType , MaintType, PaymentTypeId , ClientId, Class ,  ModNo, ModelQty, FeesDescription ,   OtherFeesQty, OtherFeesPrice , IsFixed , EmpNo )Values("
@@ -2461,7 +2462,7 @@ If TypeRec Then   ' New Rec
                     .BillNo = GetMaxBillNo
                     FillFeesDetails .BillNo
                 de.con.CommitTrans
-                If fillstructure(2) Then
+                If FillStructure(2) Then
                     FillDetails .BillNo
                 End If
             End With
@@ -2472,14 +2473,14 @@ If TypeRec Then   ' New Rec
         InitNavigator
         MoveToRec MvMaintPaymentRec.BillNo
     Else
-        If fillstructure(2) Then
+        If FillStructure(2) Then
             If Not foundStkNo(MvMaintPaymentRecTypeDetailsRec.stkno, MvMaintPaymentRecTypeDetailsRec.BillNo) Then
                 FillDetails MvMaintPaymentRecTypeDetailsRec.BillNo
             End If
         End If
     End If
 Else ' Update
-     If fillstructure(1) Then
+     If FillStructure(1) Then
         With MvMaintPaymentRec
 '            Sqltext = "Update MvMaintPayments Set Billdate='" & .Billdate & "',FixBillDate='" & .FixBillDate & "', OperationType=" & .OperationType & ",MaintType=" & .MaintType & ",PaymentTypeId=" & .PaymentTYpeId & ",ClientId= " & .ClientId & ", Class=" & .Class & ", ModNo=" & .ModNo & ",ModelQty=" & .ModelQty & ", FeesTYpeId=" & .FeesTYpeId & ",FeesQty=" & .FeesQty & ",FeesPriceType=" & .FeesPriceType & ", FeesAmount=" & .FeesAmount & ",IsFixed=" & .IsFixed & "  Where BillNo=" & RsNavigator!BillNo
 '            de.con.Execute (Sqltext)
@@ -2492,7 +2493,7 @@ Else ' Update
             InitNavigator
             MoveToRec IDBill
             MvMaintPaymentRec.BillNo = IDBill
-        If fillstructure(2) Then
+        If FillStructure(2) Then
             If Not foundStkNo(MvMaintPaymentRecTypeDetailsRec.stkno, IDBill) Then
                 FillDetails IDBill
             End If
@@ -2509,7 +2510,7 @@ LTotal.Caption = GetTotalPrice(Val(LBillNo.Tag), 1)
 'LTotalBeforDiscount.Caption = GetTotalPriceBeforDiscount(Val(LBillNo.Caption), 1)
 SaveRec = True
 Exit Function
-ErrorHandler:
+errorhandler:
 de.con.RollbackTrans
 SaveRec = False
 MsgBox Err.Description
@@ -2524,7 +2525,7 @@ TxtItemName.SetFocus
 SendKeys "{Home}+{End}"
 End Sub
 Function showErrorPrices() As Boolean
-On Error GoTo ErrorHandler
+On Error GoTo errorhandler
 Dim rs As New ADODB.Recordset
 sqlText = "SELECT  Count(*)CountRec  FROM    MvMaintPaymentsQry Where  Stat <> 6 and  billno =" & Val(LBillNo.Tag) & " and NativePrice <> Price "
 Set rs = de.con.Execute(sqlText)
@@ -2535,11 +2536,11 @@ Else
 End If
 '
 Exit Function
-ErrorHandler:
+errorhandler:
 MsgBox Err.Description
 End Function
 Sub PrintData(Vindex As Integer)
-On Error GoTo ErrorHandler
+On Error GoTo errorhandler
     With Cr1
         showErrorPrices
         .Connect = ConnectName("")
@@ -2568,28 +2569,28 @@ On Error GoTo ErrorHandler
         .Action = 1
     End With
 Exit Sub
-ErrorHandler:
+errorhandler:
 MsgBox Err.Description
 End Sub
 Function GetSerial(SerByyear As Integer) As Double
-On Error GoTo ErrorHandler
+On Error GoTo errorhandler
 Dim rs As New ADODB.Recordset
     sqlText = "Select billno from MvMaintPayments where SerByyear =" & SerByyear & " and year(billdate)=" & Year(Now)
     Set rs = de.con.Execute(sqlText)
     GetSerial = rs!BillNo
 Exit Function
-ErrorHandler:
+errorhandler:
 MsgBox Err.Description
 GetSerial = -1
 
 End Function
 Sub AddItemsFromModelList(BillNo As Double)
-On Error GoTo ErrorHandler
+On Error GoTo errorhandler
     sqlText = "Exec Sp_AddMaintItems " & BillNo & "," & empNo
     de.con.Execute (sqlText)
     MoveToRec BillNo
 Exit Sub
-ErrorHandler:
+errorhandler:
 MsgBox Err.Description
 End Sub
 
@@ -2609,7 +2610,7 @@ End Sub
 'End Sub
 
 Private Sub CmdNewCustomer_Click()
-On Error GoTo ErrorHandler
+On Error GoTo errorhandler
     If Val(LClientType.Tag) = 0 Then
         clientId = Val(txtClientName.Tag)
         ClientName = txtClientName.Text
@@ -2627,7 +2628,7 @@ On Error GoTo ErrorHandler
         Ok = True
     End If
 Exit Sub
-ErrorHandler:
+errorhandler:
 MsgBox Err.Description
 End Sub
 
@@ -2747,7 +2748,7 @@ End If
 End Function
 
 Function SearchRec() As Double
-On Error GoTo ErrorHandler
+On Error GoTo errorhandler
 Dim i As Double
 i = InputBox("√œŒ· —ﬁ„ «·›« Ê—…", "«·»ÕÀ ⁄‰ ›« Ê—…")
 If Val(i) <> 0 Then
@@ -2756,7 +2757,7 @@ Else
     SearchRec = -1
 End If
 Exit Function
-ErrorHandler:
+errorhandler:
 SearchRec = -1
 End Function
 Private Sub CmdSearch_Click()
@@ -2784,13 +2785,13 @@ End Sub
 'End Sub
 
 Function GetStkNoPrice(Price As Double, discount As Integer) As Double
-On Error GoTo ErrorHandler
+On Error GoTo errorhandler
 Dim rs As New ADODB.Recordset
 sqlText = "Select dbo.fn_GetStkNoPrice (" & discount & "," & Price & ") as Price "
 Set rs = de.con.Execute(sqlText)
 GetStkNoPrice = IIf(IsNull(rs!Price), Price, rs!Price)
 Exit Function
-ErrorHandler:
+errorhandler:
 GetStkNoPrice = Price
 MsgBox Err.Description
 End Function
@@ -2801,13 +2802,13 @@ Private Sub ComboDiscount_GotFocus()
 End Sub
 
 Private Sub ComboDiscount_KeyDown(KeyCode As Integer, Shift As Integer)
-On Error GoTo ErrorHandler
+On Error GoTo errorhandler
 Dim Price As Double, discount As Integer
 Price = GetPrice(TxtItemName.Tag, 2)
 discount = Val(ComboDiscount.Text)
 LPrice.Caption = GetStkNoPrice(Price, discount)
 Exit Sub
-ErrorHandler:
+errorhandler:
 MsgBox Err.Description
 End Sub
 
@@ -2914,11 +2915,11 @@ End Function
 'End If
 'End Sub
 Sub ChangeItmes(BillNo As Double)
-On Error GoTo ErrorHandler
+On Error GoTo errorhandler
     sqlText = "Sp_ChangeItemData " & BillNo & "," & empNo
     de.con.Execute sqlText
 Exit Sub
-ErrorHandler:
+errorhandler:
 MsgBox Err.Description
 End Sub
 Private Sub comboOperationTYpe_Change()
@@ -2977,7 +2978,7 @@ End If
 End Sub
 
 Private Sub FlexFees_AfterEdit(ByVal Row As Long, ByVal Col As Long)
-On Error GoTo ErrorHandler
+On Error GoTo errorhandler
 Dim RsUpdate As New ADODB.Recordset
 With FlexFees
     Select Case Col
@@ -2992,7 +2993,7 @@ With FlexFees
     'LTotal.Caption = GetTotalPrice(Val(LBillNo.Tag), 1)
 End With
 Exit Sub
-ErrorHandler:
+errorhandler:
 MsgBox Err.Description
 End Sub
 
@@ -3040,7 +3041,7 @@ End With
 End Sub
 
 Private Sub FlexGrid_AfterEdit(ByVal Row As Long, ByVal Col As Long)
-On Error GoTo ErrorHandler
+On Error GoTo errorhandler
 Dim Price As Double, discount As Integer
 Dim RsUpdate As New ADODB.Recordset
 With FlexGrid
@@ -3073,7 +3074,7 @@ LTotal.Caption = GetTotalPrice(Val(LBillNo.Tag), 1)
 
 End With
 Exit Sub
-ErrorHandler:
+errorhandler:
 MsgBox Err.Description
 End Sub
 
@@ -3082,7 +3083,7 @@ If Col = ColPrice Or Col = ColStkName Or Col = ColStkNo Or Col = ColQty Or Col =
 End Sub
 
 Private Sub flexGrid_ComboCloseUp(ByVal Row As Long, ByVal Col As Long, FinishEdit As Boolean)
-On Error GoTo ErrorHandler
+On Error GoTo errorhandler
 Dim Price  As Double
     Dim RsUpdate As New ADODB.Recordset
 With FlexGrid
@@ -3110,7 +3111,7 @@ With FlexGrid
     'LTotalBeforDiscount.Caption = GetTotalPriceBeforDiscount(Val(LBillNo.Caption), 1)
 End With
 Exit Sub
-ErrorHandler:
+errorhandler:
 MsgBox Err.Description
 End Sub
 Sub UpdateRecords(i As Integer)
@@ -3182,7 +3183,7 @@ End Sub
 'End Sub
 
 Private Sub Grid_RowColChange()
-On Error GoTo ErrorHandler
+On Error GoTo errorhandler
 If Flag Then
     Ok = False
     With Grid
@@ -3226,7 +3227,7 @@ If Flag Then
     Ok = True
 End If
 Exit Sub
-ErrorHandler:
+errorhandler:
 MsgBox Err.Description
 End Sub
 Private Sub Form_Load()
@@ -3242,7 +3243,7 @@ End If
 End Sub
 
 Private Sub txtClientPhoneNBR_KeyPress(KeyAscii As Integer)
-On Error GoTo ErrorHandler
+On Error GoTo errorhandler
 If KeyAscii = 13 Then
     If txtClientPhoneNBR.Text <> "" And Val(txtClientName.Tag) <> 0 Then
         If Val(LClientType.Tag) = 2 Then ' “»Ê‰
@@ -3254,7 +3255,7 @@ If KeyAscii = 13 Then
     SendKeys "{home}+{end}"
 End If
 Exit Sub
-ErrorHandler:
+errorhandler:
 MsgBox Err.Description
 End Sub
 'Sub ChangePriceType(Vindex As Integer)
@@ -3375,7 +3376,7 @@ End If
 End Sub
 
 Private Sub TxtItemName_Change()
-On Error GoTo ErrorHandler
+On Error GoTo errorhandler
 Dim RsSearch As New ADODB.Recordset
 If TxtItemName.Text = "" Then
     TxtItemName.Tag = "0"
@@ -3401,7 +3402,7 @@ If Ok Then
     Flag = True
 End If
 Exit Sub
-ErrorHandler:
+errorhandler:
 MsgBox Err.Description
 End Sub
 
@@ -3417,7 +3418,7 @@ Private Sub TxtitemName_KeyDown(KeyCode As Integer, Shift As Integer)
 
 End Sub
 Sub fillcombodiscount(discount As Integer)
-On Error GoTo ErrorHandler
+On Error GoTo errorhandler
 ComboDiscount.Clear
 If discount = 0 Then
     
@@ -3429,11 +3430,11 @@ Else
 End If
 ComboDiscount.ListIndex = 0
 Exit Sub
-ErrorHandler:
+errorhandler:
 MsgBox Err.Description
 End Sub
 Function GetBalance(stkno As String, Strid As Double)
-On Error GoTo ErrorHandler
+On Error GoTo errorhandler
 Dim rs As New ADODB.Recordset
 sqlText = "select fnlqnt from stkinf s1  where StkNo = '" & LTrim(RTrim(stkno)) & "' and StrId=" & Strid
 Set rs = de.con.Execute(sqlText)
@@ -3443,7 +3444,7 @@ Else
     GetBalance = 0
 End If
 Exit Function
-ErrorHandler:
+errorhandler:
 GetBalance = 0
 End Function
 Private Sub TxtitemName_KeyPress(KeyAscii As Integer)
@@ -3490,7 +3491,7 @@ End If
 End Sub
 
 Private Sub TxtModelName_Change()
-On Error GoTo ErrorHandler
+On Error GoTo errorhandler
 Dim RsSearch As New ADODB.Recordset
 If TxtModelName.Text = "" Then
     TxtModelName.Tag = 0
@@ -3514,7 +3515,7 @@ If Ok Then
     Flag = True
 End If
 Exit Sub
-ErrorHandler:
+errorhandler:
 MsgBox Err.Description
 End Sub
 
@@ -3561,7 +3562,7 @@ End Sub
 
 
 Private Sub txtClientName_Change()
-On Error GoTo ErrorHandler
+On Error GoTo errorhandler
 Dim RsSearch As New ADODB.Recordset
 If txtClientName.Text = "" Then
     txtClientName.Tag = 0
@@ -3585,7 +3586,7 @@ If Ok Then
     Flag = True
 End If
 Exit Sub
-ErrorHandler:
+errorhandler:
 MsgBox Err.Description
 End Sub
 
@@ -3609,12 +3610,14 @@ Select Case Class
         GetClassName = "“»Ê‰"
     Case 3
         GetClassName = "„ÊŸ›"
+    Case 4
+        GetClassName = "’«·Â"
     Case Else
         GetClassName = "€Ì— „⁄—Ê›"
 End Select
 End Function
 Function GetClientName(clientId As Double, Class As Integer) As String
-On Error GoTo ErrorHandler
+On Error GoTo errorhandler
 Dim RsClientName As New ADODB.Recordset
 sqlText = "Select ClientName From ClientQry Where ClientId=" & clientId & " and Class =" & Class
 Set RsClientName = de.con.Execute(sqlText)
@@ -3624,12 +3627,12 @@ Else
     GetClientName = ""
 End If
 Exit Function
-ErrorHandler:
+errorhandler:
 GetClientName = ""
 End Function
 
 Function GetPhoneNbr(clientId As Double, Class As Integer) As String
-On Error GoTo ErrorHandler
+On Error GoTo errorhandler
 Dim RsPhone As New ADODB.Recordset
 sqlText = "Select isnull(ClientPhonenbr,'') ClientPhonenbr From ClientQry Where ClientId=" & clientId & " and Class =" & Class
 Set RsPhone = de.con.Execute(sqlText)
@@ -3639,7 +3642,7 @@ Else
     GetPhoneNbr = ""
 End If
 Exit Function
-ErrorHandler:
+errorhandler:
 GetPhoneNbr = ""
 End Function
 
@@ -3696,10 +3699,10 @@ End If
 End Sub
 
 Private Sub TxtOtherFeesPrice_Change()
-On Error GoTo ErrorHandler
+On Error GoTo errorhandler
 LOthersFees.Caption = Val(TxtOtherFeesPrice.Text) * Val(TxtOthersFeesQty.Text)
 Exit Sub
-ErrorHandler:
+errorhandler:
 MsgBox Err.Description
 End Sub
 
@@ -3712,10 +3715,10 @@ End If
 End Sub
 
 Private Sub TxtOthersFeesQty_Change()
-On Error GoTo ErrorHandler
+On Error GoTo errorhandler
     LOthersFees.Caption = Val(TxtOtherFeesPrice.Text) * Val(TxtOthersFeesQty.Text)
 Exit Sub
-ErrorHandler:
+errorhandler:
 MsgBox Err.Description
 End Sub
 
@@ -3729,7 +3732,7 @@ End If
 End Sub
 
 Function isOkQty(ÚStkid As String, Qty As Integer) As Boolean
-On Error GoTo ErrorHandler
+On Error GoTo errorhandler
 Dim rs As New ADODB.Recordset
 sqlText = "Select FnlQnt from Stkinf where Stkno='" & ÚStkid & "' and strid=" & GetStrId(systemConfigration.MainStoreNo)
 Set rs = de.con.Execute(sqlText)
@@ -3744,17 +3747,17 @@ Else
 End If
 isOkQty = True
 Exit Function
-ErrorHandler:
+errorhandler:
 MsgBox Err.Description
 isOkQty = True
 End Function
 
 Private Sub TxtQty_Change()
-On Error GoTo ErrorHandler
+On Error GoTo errorhandler
     LPrice.Caption = GetPrice(TxtItemName.Tag, 1)
     LDiscount.Caption = GetDiscount()
 Exit Sub
-ErrorHandler:
+errorhandler:
 MsgBox Err.Description
 End Sub
 

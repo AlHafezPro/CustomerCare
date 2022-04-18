@@ -1,7 +1,7 @@
 de = 0, 0, 411, 361, C, 22, 22, 836, 721, C
 MyModule = 88, 116, 546, 568, 
 FrmAbout = 44, 58, 856, 510, C, 0, 0, 809, 617, C
-FrmMain = 63, 95, 875, 548, Z, 66, 87, 345, 539, C
+FrmMain = 63, 95, 875, 548, , 66, 87, 345, 539, C
 FrmMaintCallManager = 66, 87, 556, 455, C, 132, 174, 600, 600, C
 FrmUpdatePassword = 154, 203, 622, 629, C, 132, 174, 600, 600, C
 FrmWshopItems = 44, 58, 730, 374, C, 22, 29, 334, 345, C
@@ -82,4 +82,5 @@ ClientValidationResult = 220, 220, 804, 672, C
 FrmMaintState = 110, 110, 1166, 562, , 176, 176, 762, 628, C
 Configration = 22, 22, 446, 474, C
 FrmBills = 88, 88, 985, 542, , 66, 66, 490, 520, C
-FrmMaintCallNew = 0, 0, 976, 644, , 308, 308, 1284, 952, C
+FrmMaintCallNew = 0, 0, 976, 644, Z, 308, 308, 1284, 952, C
+FrmCoFeesPrices = 0, 0, 0, 0, C, 22, 22, 605, 474, C
