@@ -26,7 +26,7 @@ item: Global
   Dialogs Version=7
   Crystal Format=01111101101100000010001001001001
   Crystal Destination=00000000000000000000000000001011
-  Distribute Path=\\mainserver\Setup_Programs\Maint2022
+  Distribute Path=\\150.1.1.251\Setup_Programs\Maint2022
   Distribute Type=1
   Step View=&Visual Basic
   Variable Name1=_SYS_
@@ -924,14 +924,14 @@ item: Include Script
   Pathname=%_WISE_%\INCLUDE\uninstal.wse
 end
 item: Install File
-  Source=e:\Programs\2022\CustomerCare2022\PrjMaintCall.exe
-  Destination=%MAINDIR%\CustomerCare2022\PrjMaintCall.exe
-  Flags=0000000010000011
-end
-item: Install File
   Source=e:\Programs\2022\CustomerCare2022\init.xml
   Destination=%MAINDIR%\CustomerCare2022\init.xml
   Flags=0000000010000010
+end
+item: Install File
+  Source=e:\Programs\2022\CustomerCare2022\PrjMaintCall.exe
+  Destination=%MAINDIR%\CustomerCare2022\PrjMaintCall.exe
+  Flags=0000000010000011
 end
 item: Install File
   Source=e:\Programs\2022\CustomerCare2022\Reports\RepMaintCall.rpt

@@ -1,34 +1,41 @@
 Attribute VB_Name = "MdlMaint"
 Public ComNo As String
 Public Function Reserial() As Boolean
-On Error GoTo ErrorHandler
+On Error GoTo errorhandler
 sqlText = "Exec sp_SerByyear"
 de.con.Execute (sqlText)
 Reserial = True
 Exit Function
-ErrorHandler:
+errorhandler:
 Reserial = False
 MsgBox Err.Description
 
 End Function
 
-
-Public Sub flexColWidth(mshf As MSHFlexGrid, frm As Form)
-    Dim i As Integer
-    Dim J As Integer
-    Dim X As Integer
-    With mshf
-        For i = 0 To .Cols - 1
-            X = 0
-            For J = 0 To .Rows - 1
-               If frm.TextWidth(.TextMatrix(J, i)) + 200 > X Then
-                    X = frm.TextWidth(.TextMatrix(J, i)) + 200
-               End If
-            Next J
-            .ColWidth(i) = X
-        Next i
-    End With
+Public Sub Sendkeys(text As Variant, Optional wait As Boolean = False)
+   Dim WshShell As Object
+   Set WshShell = CreateObject("wscript.shell")
+   WshShell.Sendkeys CStr(text), wait
+   Set WshShell = Nothing
 End Sub
+
+
+'Public Sub flexColWidth(mshf As MSHFlexGrid, frm As Form)
+'    Dim i As Integer
+'    Dim J As Integer
+'    Dim X As Integer
+'    With mshf
+'        For i = 0 To .Cols - 1
+'            X = 0
+'            For J = 0 To .Rows - 1
+'               If frm.TextWidth(.TextMatrix(J, i)) + 200 > X Then
+'                    X = frm.TextWidth(.TextMatrix(J, i)) + 200
+'               End If
+'            Next J
+'            .ColWidth(i) = X
+'        Next i
+'    End With
+'End Sub
 Public Function TransDateToSql(mDate As String) As String
     If Not IsDate(mDate) Then Exit Function
    TransDateToSql = CStr(Month(mDate)) + "/" + CStr(Day(mDate)) + "/" + CStr(Year(mDate))
@@ -50,7 +57,7 @@ Function GetPass() As String
     Dim NumDay As Integer, NumMonth As Integer, NumHour As Integer
 
     
-    CnnPass.ConnectionString = "Provider=SQLOLEDB.1;Password=usertime;Persist Security Info=True;User ID=Usertime;Data Source=MAINSERVER;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=HUSAM;Use Encryption for Data=False;Tag with column collation when possible=False"
+    CnnPass.ConnectionString = "Provider=SQLOLEDB.1;Password=usertime;Persist Security Info=True;User ID=Usertime;Data Source=" & systemConfigration.ServerName & ";Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=HUSAM;Use Encryption for Data=False;Tag with column collation when possible=False"
     CnnPass.Open
     CmdTime.ActiveConnection = CnnPass
     CmdTime.CommandText = " Select GetDate() as CurrTime "
@@ -82,7 +89,7 @@ Function GetPass() As String
     CnnPass.Close
     On Error Resume Next
     If CnnTest.state <> adStateClosed Then CnnTest.Close
-    CnnTest.ConnectionString = "Provider=SQLOLEDB.1;Persist Security Info=True;Data Source=MAINSERVER;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=HUSAM;Use Encryption for Data=False;Tag with column collation when possible=False"
+    CnnTest.ConnectionString = "Provider=SQLOLEDB.1;Persist Security Info=True;Data Source=" & systemConfigration.ServerName & ";Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=HUSAM;Use Encryption for Data=False;Tag with column collation when possible=False"
     CnnTest.Open , "user1", StrHashPass
     CnnTest.Close
     GetPass = StrHashPass

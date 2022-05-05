@@ -747,21 +747,25 @@ ClearControls
 TxtStkName.SetFocus
 End Sub
 
-Private Sub CmdDelete_Click()
-On Error GoTo ErrorHandler
-If MsgBox("Â· √‰  „ √ﬂœ „‰ Õ–› «·ÿ·»ÌÂ", vbYesNo + vbDefaultButton2, "Õ–›") = vbYes Then
-    If demandInfo_.DemandNo <> 0 Then
-        SaveDemandChanges DemandState
-        'FillControlsFromSql RsNavigator
-        EnableCmds True, True, True, False, False, True
-        MsgBox " „ Õ–› «·ÿ·»ÌÂ »‰Ã«Õ", vbInformation, "Õ–› «·ÿ·»ÌÂ"
-    End If
-End If
+'Private Sub CmdDelete_Click()
+'On Error GoTo ErrorHandler
+'If MsgBox("Â· √‰  „ √ﬂœ „‰ Õ–› «·ÿ·»ÌÂ", vbYesNo + vbDefaultButton2, "Õ–›") = vbYes Then
+'    If demandInfo_.DemandNo <> 0 Then
+'        SaveDemandChanges DemandState
+'        'FillControlsFromSql RsNavigator
+'        EnableCmds True, True, True, False, False, True
+'        MsgBox " „ Õ–› «·ÿ·»ÌÂ »‰Ã«Õ", vbInformation, "Õ–› «·ÿ·»ÌÂ"
+'    End If
+'End If
+'
+'Exit Sub
+'ErrorHandler:
+'MsgBox Err.Description
+'End Sub
 
-Exit Sub
-ErrorHandler:
-MsgBox Err.Description
-End Sub
+Function GetTheLastFocusControl() As Control
+    Set GetTheLastFocusControl = Me.ActiveControl
+End Function
 
 Private Sub CmdEdit_Click()
     DemandState = EnumState.UpdateRecord
@@ -771,38 +775,40 @@ Private Sub CmdEdit_Click()
     Sendkeys "{home}+{end}"
 End Sub
 
-Private Sub cmdSave_Click()
-Dim result As DemandResult
-Set result = SaveDemandChanges(DemandState)
+'Private Sub CmdSave_Click()
+'Dim result As DemandResult
+'Set result = SaveDemandChanges(DemandState)
+'
+'If Not result.DemandResultStatus Then
+'    MsgBox result.DemandResultDescription, vbExclamation + vbMsgBoxRight, "Œÿ√ ›Ì «· Œ“Ì‰ «Ê «·Õ‹–› √Ê «·≈÷«›‹Â"
+'    Dim ctrl As Control
+'    Set ctrl = Me.GetTheLastFocusControl
+'    ctrl.SetFocus
+'    Sendkeys "{home}+{end}"
+'Else
+'    MsgBox " „ Õ›Ÿ «·ÿ·»ÌÂ »‰Ã«Õ", vbInformation, "Õ›Ÿ «·ÿ·»ÌÂ"
+'    EnableCmds True, True, True, False, False, True
+'    EnableControls False
+'    reparationViewModelInfo_.ReparationState = DefaultRecord
+'    FillControls
+'    CmdAdd.SetFocus
+'End If
+'End Sub
+Sub FillControls()
 
-If Not result.DemandResultStatus Then
-    MsgBox result.DemandResultDescription, vbExclamation + vbMsgBoxRight, "Œÿ√ ›Ì «· Œ“Ì‰ «Ê «·Õ‹–› √Ê «·≈÷«›‹Â"
-    Dim ctrl As Control
-    Set ctrl = Me.GetTheLastFocusControl
-    ctrl.SetFocus
-    Sendkeys "{home}+{end}"
-Else
-    MsgBox " „ Õ›Ÿ «·ÿ·»ÌÂ »‰Ã«Õ", vbInformation, "Õ›Ÿ «·ÿ·»ÌÂ"
-    EnableCmds True, True, True, False, False, True
-    EnableControls False
-    reparationViewModelInfo_.ReparationState = DefaultRecord
-    FillControls
-    CmdAdd.SetFocus
-End If
 End Sub
 
 
-
-Function SaveDemandChanges(vState) As ReparationResult
-    On Error GoTo ErrorHandler
-    Dim result As DemandResult
-
-    Set result = maintDataService_.SaveDemandChanges(demandInfo_, vState)
-    Set SaveDemandChanges = result
-    Exit Function
-ErrorHandler:
-    Set SaveDemandChanges = result
-End Function
+'Function SaveDemandChanges(vState) As ReparationResult
+'    On Error GoTo ErrorHandler
+'    Dim result As DemandResult
+'
+'    Set result = maintDataService_.SaveDemandChanges(demandInfo_, vState)
+'    Set SaveDemandChanges = result
+'    Exit Function
+'ErrorHandler:
+'    Set SaveDemandChanges = result
+'End Function
 
 Private Sub Form_Load()
 init

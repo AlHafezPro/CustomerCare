@@ -495,20 +495,20 @@ Const ColStkname_1 = 3
 
 Dim Stmov As MvStockType
 Dim PrevBalance As Double
-Sub ReturnOldData(ByVal vRow As Integer)
-With flexGrid
-    .TextMatrix(vRow, ColBalance) = PrevBalance
+Sub ReturnOldData(ByVal Vrow As Integer)
+With FlexGrid
+    .TextMatrix(Vrow, ColBalance) = PrevBalance
 End With
 End Sub
 
-Function SelectRow(Stkid As Double) As Boolean
-With flexGrid
-If Stkid = 0 Then
+Function SelectRow(stkId As Double) As Boolean
+With FlexGrid
+If stkId = 0 Then
     SelectRow = True
     Exit Function
 Else
     For i = 1 To .Rows - 1
-        If .TextMatrix(i, ColStkId) = Stkid Then
+        If .TextMatrix(i, ColStkId) = stkId Then
             .Row = i
             .TopRow = i
           '  .Row = i
@@ -522,36 +522,36 @@ End With
 End Function
 Function MaxRec() As Double
     Dim RsMax As New ADODB.Recordset
-    sqltext = "Select isnull(Max(ByanId),0) as MaxByanId From Stmov"
-    Set RsMax = de.con.Execute(sqltext)
-    If RsMax!MaxByanId = 0 Then
+    sqlText = "Select isnull(Max(ByanId),0) as MaxByanId From Stmov"
+    Set RsMax = de.con.Execute(sqlText)
+    If RsMax!maxByanId = 0 Then
         MaxRec = 1
     Else
-        MaxRec = RsMax!MaxByanId + 1
+        MaxRec = RsMax!maxByanId + 1
     End If
 End Function
-Sub FillRec(ByVal CurrentQty As Double, ByVal PrevQty As Double, ByVal Strid As Integer, ByVal Stkid As Double)
+Sub FillRec(ByVal CurrentQty As Double, ByVal PrevQty As Double, ByVal Strid As Integer, ByVal stkId As Double)
 With Stmov
     .ByanId = MaxRec()
     .MovDate = Format(Date, "mm/dd/yyyy")
     .Qty = IIf(PrevQty > CurrentQty, PrevQty - CurrentQty, CurrentQty - PrevQty)
     .QtyType = IIf(PrevQty > CurrentQty, 1, 0)
-    .Stkid = Stkid
+    .stkId = stkId
     .Strid = Strid
-    .DocType = 2 'Ã—œ
+    .Doctype = 2 'Ã—œ
 End With
 End Sub
 Sub FillActiveControl(List As VSFlexGrid)
     With List
-        If ActiveControl.Text <> "" Then
+        If ActiveControl.text <> "" Then
             If Not ActiveControl.DataChanged Then Exit Sub
             Flag = False
-            ActiveControl.Text = IIf(.Visible = False, "", .TextMatrix(.Row, ColStkno_1))
+            ActiveControl.text = IIf(.Visible = False, "", .TextMatrix(.Row, ColStkno_1))
             LStkName.Caption = IIf(.Visible = False, "", .TextMatrix(.Row, ColStkname_1))
             Flag = True
             ActiveControl.Tag = IIf(.Visible = False, "", .TextMatrix(.Row, ColStkId_1))
         Else
-            ActiveControl.Text = ""
+            ActiveControl.text = ""
             ActiveControl.Tag = ""
             LStkName.Caption = ""
         End If
@@ -560,17 +560,17 @@ Sub FillActiveControl(List As VSFlexGrid)
     End With
 End Sub
 
-Sub FillFormatVSFlex(flexGrid As VSFlexGrid)
+Sub FillFormatVSFlex(FlexGrid As VSFlexGrid)
 
-    Fs = "|ID"
-    Fs = Fs + "|<" + "«·—ﬁ„ «·„Œ“‰Ì"
-    Fs = Fs + "|<" + "«·≈”„"
-    With flexGrid
+    fs = "|ID"
+    fs = fs + "|<" + "«·—ﬁ„ «·„Œ“‰Ì"
+    fs = fs + "|<" + "«·≈”„"
+    With FlexGrid
         .Visible = False
-        .FormatString = Fs
+        .FormatString = fs
             .ColWidth(ColStkId_1) = 0
-            SetColWidths ColStkno_1, flexGrid
-            SetColWidths ColStkname_1, flexGrid
+            SetColWidths ColStkno_1, FlexGrid
+            SetColWidths ColStkname_1, FlexGrid
             .Visible = True
     End With
 
@@ -593,10 +593,10 @@ End If
 End With
 End Sub
 
-Sub FillList(sqltext As String, Field1 As String, Field2 As String, List As VSFlexGrid)
-    Set Rs = de.con.Execute(sqltext)
-    If Rs.RecordCount > 0 Then
-        Set List.DataSource = Rs
+Sub FillList(sqlText As String, Field1 As String, Field2 As String, List As VSFlexGrid)
+    Set rs = de.con.Execute(sqlText)
+    If rs.RecordCount > 0 Then
+        Set List.DataSource = rs
         FillFormatVSFlex List
         List.Row = 1
         List.Col = 1
@@ -604,82 +604,82 @@ Sub FillList(sqltext As String, Field1 As String, Field2 As String, List As VSFl
         List.Visible = True
         TxtStkNo.SetFocus
     Else
-        List.Text = ""
+        List.text = ""
         List.Visible = False
         TxtStkNo.SetFocus
     End If
 End Sub
-Function UpdateStmov(CurrentQty As Double, PrevQty As Double, Strid As Integer, Stkid As Double) As Boolean
-On Error GoTo errorhandler
+Function UpdateStmov(CurrentQty As Double, PrevQty As Double, Strid As Integer, stkId As Double) As Boolean
+On Error GoTo ErrorHandler
 With Stmov
-    FillRec CurrentQty, PrevQty, Strid, Stkid
-    sqltext = "Insert into Stmov(ByanId , StkId  ,  StrId , Movdate , DocType , Qty , QtyType,EmpNo)Values("
-    sqltext = sqltext & .ByanId & "," & .Stkid & "," & .Strid & ",'" & .MovDate & "'," & .DocType & "," & .Qty & "," & .QtyType & "," & EmpNo & ")"
-    de.con.Execute (sqltext)
+    FillRec CurrentQty, PrevQty, Strid, stkId
+    sqlText = "Insert into Stmov(ByanId , StkId  ,  StrId , Movdate , DocType , Qty , QtyType,EmpNo)Values("
+    sqlText = sqlText & .ByanId & "," & .stkId & "," & .Strid & ",'" & .MovDate & "'," & .Doctype & "," & .Qty & "," & .QtyType & "," & empNo & ")"
+    de.con.Execute (sqlText)
 End With
 UpdateStmov = True
 Exit Function
-errorhandler:
+ErrorHandler:
 UpdateStmov = False
 End Function
 Sub SearchRec(Strid As Integer)
 Dim RsBalance As New ADODB.Recordset
-    sqltext = "Select StrId , StrNo , StrName  , StkId  , StkNo , StkName , 0 ,0 , Qty   From BalanceQry Where Strid=" & Strid
-    Set RsBalance = de.con.Execute(sqltext)
-    Set flexGrid.DataSource = RsBalance
+    sqlText = "Select StrId , StrNo , StrName  , StkId  , StkNo , Ltrim(rtrim(StkName)) as StkName , 0 ,0 , Qty   From BalanceQry Where Strid=" & Strid
+    Set RsBalance = de.con.Execute(sqlText)
+    Set FlexGrid.DataSource = RsBalance
     FillFormatString
 End Sub
 
-Sub Init()
+Sub init()
     Dim RsSTr As New ADODB.Recordset
-    sqltext = "Select Id , StrNo , StrName From NameStr Order by StrNo"
-    Set RsSTr = de.con.Execute(sqltext)
+    sqlText = "Select Id , StrNo , StrName From NameStr Order by StrNo"
+    Set RsSTr = de.con.Execute(sqlText)
     Set ComboStr.RowSource = RsSTr
-    ComboStr.ListField = "StrName"
+    ComboStr.listField = "StrName"
     ComboStr.BoundColumn = "Id"
     If RsSTr.RecordCount > 0 Then
         RsSTr.MoveFirst
         RsSTr.MoveFirst
-        ComboStr.BoundText = RsSTr!ID
+        ComboStr.BoundText = RsSTr!Id
     End If
     FillFormatString
-    Top = 0
-    Left = 0
-    flexGrid.Editable = flexEDKbdMouse
-    flexGrid.Rows = 1
+    top = 0
+    left = 0
+    FlexGrid.Editable = flexEDKbdMouse
+    FlexGrid.Rows = 1
 End Sub
 Sub PrintData()
 
 End Sub
 
 Sub FillFormatString()
-    Fs = "|>" + "ÚStrId"
-    Fs = Fs + "|>" + "«·„” Êœ⁄"
-    Fs = Fs + "|>" + "«·≈”„"
-    Fs = Fs + "|>" + "StkId"
-    Fs = Fs + "|>" + "«·—ﬁ„ «·„Œ“‰Ì"
-    Fs = Fs + "|>" + "«·≈”„"
-    Fs = Fs + "|>" + "«·œ«Œ·"
-    Fs = Fs + "|>" + "«·Œ«—Ã"
-    Fs = Fs + "|>" + "«·—’Ìœ"
-    With flexGrid
-        .Cols = 11
-        .FormatString = Fs
+    fs = "|>" + "ÚStrId"
+    fs = fs + "|>" + "«·„” Êœ⁄"
+    fs = fs + "|>" + "«·≈”„"
+    fs = fs + "|>" + "StkId"
+    fs = fs + "|>" + "«·—ﬁ„ «·„Œ“‰Ì"
+    fs = fs + "|>" + "«·≈”„"
+    fs = fs + "|>" + "«·œ«Œ·"
+    fs = fs + "|>" + "«·Œ«—Ã"
+    fs = fs + "|>" + "«·—’Ìœ"
+    With FlexGrid
+        .Cols = 10
+        .FormatString = fs
         .ColWidth(ColStkId) = 0
         .ColWidth(ColStrid) = 0
         .ColWidth(ColStrNo) = 0
         .ColWidth(ColStrName) = 0
-        SetColWidths ColStkIn, flexGrid
-        SetColWidths ColStkOut, flexGrid
-        SetColWidths ColStkNo, flexGrid
-        SetColWidths ColStkName, flexGrid
-        SetColWidths ColBalance, flexGrid
+        SetColWidths ColStkIn, FlexGrid
+        SetColWidths ColStkOut, FlexGrid
+        SetColWidths ColStkNo, FlexGrid
+        SetColWidths ColStkName, FlexGrid
+        SetColWidths ColBalance, FlexGrid
    End With
 End Sub
 
-Sub SetColWidths(ColNo As Integer, flexGrid As VSFlexGrid)
+Sub SetColWidths(ColNo As Integer, FlexGrid As VSFlexGrid)
 
-    With flexGrid
+    With FlexGrid
          .AutoSize (ColNo)
     End With
 End Sub
@@ -687,8 +687,8 @@ End Sub
 
 
 Private Sub FlexGrid_AfterEdit(ByVal Row As Long, ByVal Col As Long)
-On Error GoTo errorhandler
-With flexGrid
+On Error GoTo ErrorHandler
+With FlexGrid
     If .TextMatrix(Row, ColBalance) < 0 Then
         MsgBox "«·—’Ìœ ·«Ì”„Õ ", vbExclamation, " ‰»ÌÂ"
         .TextMatrix(Row, ColBalance) = PrevBalance
@@ -701,36 +701,36 @@ With flexGrid
     End If
 End With
 Exit Sub
-errorhandler:
+ErrorHandler:
 MsgBox Err.Description
 ReturnOldData Row
 End Sub
 
-Private Sub FlexGrid_BeforeEdit(ByVal Row As Long, ByVal Col As Long, Cancel As Boolean)
-On Error GoTo errorhandler
-    With flexGrid
+Private Sub FlexGrid_BeforeEdit(ByVal Row As Long, ByVal Col As Long, cancel As Boolean)
+On Error GoTo ErrorHandler
+    With FlexGrid
         If Col <> ColBalance Then
-            Cancel = False
+            cancel = True
         Else
             PrevBalance = .TextMatrix(Row, ColBalance)
         End If
     End With
 Exit Sub
-errorhandler:
+ErrorHandler:
 MsgBox Err.Description
 End Sub
 
 Private Sub Form_KeyPress(KeyAscii As Integer)
 If KeyAscii = 13 Then
-    SendKeys "{tab}"
-    If ActiveControl.Name = "FlexGrid" Then
-        SendKeys "{home}+{end}"
+    Sendkeys "{tab}"
+    If ActiveControl.name = "FlexGrid" Then
+        Sendkeys "{home}+{end}"
     End If
 End If
 End Sub
 
 Private Sub Form_Load()
-    Init
+    init
 End Sub
 
 Private Sub Toolbar1_ButtonClick(ByVal Button As MSComctlLib.Button)
@@ -744,14 +744,14 @@ End Sub
 
 Private Sub TxtStkNo_Change()
 If Flag Then
-    Dim sqltext As String
-    If Trim(TxtStkNo.Text) = "" Then
+    Dim sqlText As String
+    If Trim(TxtStkNo.text) = "" Then
         TxtStkNo.Tag = ""
         Grid.Visible = False
         Exit Sub
     End If
-        sqltext = "Select top 15 Id , StkNo , StkName From CoStock  where StkNo like " & LikeExpression(TxtStkNo.Text) & " Or Stkname Like " & LikeExpression(TxtStkNo.Text)
-    FillList sqltext, "Id", "StkNo", Grid
+        sqlText = "Select top 15 Id , StkNo , ltrim(rtrim(StkName)) StkName From CoStock  where StkNo like " & LikeExpression(TxtStkNo.text) & " Or Stkname Like " & LikeExpression(TxtStkNo.text)
+    FillList sqlText, "Id", "StkNo", Grid
 End If
 End Sub
 
@@ -767,12 +767,13 @@ Private Sub txtStkNo_KeyPress(KeyAscii As Integer)
             If Not SelectRow(Val(TxtStkNo.Tag)) Then
                 MsgBox "«·„«œ… €Ì— „ÊÃÊœ…", vbQuestion, " ‰»ÌÂ"
                 TxtStkNo.SetFocus
-                SendKeys "{home}+{end}"
+                Sendkeys "{home}+{end}"
             Else
 '                FlexGrid.Col = FlexGrid.Cols - 1
-                flexGrid.Col = ColBalance
+                FlexGrid.Col = ColBalance
             End If
             'SendKeys "{home}+{end}"
     End If
 End Sub
+
 

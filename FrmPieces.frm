@@ -1,6 +1,5 @@
 VERSION 5.00
 Object = "{BEEECC20-4D5F-4F8B-BFDC-5D9B6FBDE09D}#1.0#0"; "vsflex8.ocx"
-Object = "{F0D2F211-CCB0-11D0-A316-00AA00688B10}#1.0#0"; "MSDATLST.OCX"
 Object = "{0BA686C6-F7D3-101A-993E-0000C0EF6F5E}#2.0#0"; "THREED20.OCX"
 Object = "{00025600-0000-0000-C000-000000000046}#5.2#0"; "Crystl32.OCX"
 Object = "{831FDD16-0C5C-11D2-A9FC-0000F8754DA1}#2.1#0"; "MSCOMCTL.OCX"
@@ -10,7 +9,7 @@ Begin VB.Form FrmPieces
    ClientHeight    =   7170
    ClientLeft      =   45
    ClientTop       =   330
-   ClientWidth     =   8625
+   ClientWidth     =   11685
    KeyPreview      =   -1  'True
    LinkTopic       =   "Form1"
    MaxButton       =   0   'False
@@ -18,51 +17,7 @@ Begin VB.Form FrmPieces
    MinButton       =   0   'False
    RightToLeft     =   -1  'True
    ScaleHeight     =   7170
-   ScaleWidth      =   8625
-   Begin Threed.SSFrame SSFrame7 
-      Height          =   375
-      Left            =   60
-      TabIndex        =   35
-      Top             =   2940
-      Width           =   5205
-      _ExtentX        =   9181
-      _ExtentY        =   661
-      _Version        =   131074
-      Begin VB.CommandButton CmdSave 
-         Caption         =   "Save"
-         Height          =   255
-         Left            =   30
-         RightToLeft     =   -1  'True
-         TabIndex        =   38
-         Top             =   60
-         Width           =   1995
-      End
-      Begin MSDataListLib.DataCombo ComboUnit 
-         Height          =   315
-         Left            =   2070
-         TabIndex        =   36
-         Top             =   0
-         Width           =   2565
-         _ExtentX        =   4524
-         _ExtentY        =   556
-         _Version        =   393216
-         Text            =   ""
-         RightToLeft     =   -1  'True
-      End
-      Begin VB.Label Label1 
-         Alignment       =   1  'Right Justify
-         AutoSize        =   -1  'True
-         Caption         =   "«·ÊÕœ…"
-         ForeColor       =   &H00000080&
-         Height          =   195
-         Index           =   2
-         Left            =   4740
-         RightToLeft     =   -1  'True
-         TabIndex        =   37
-         Top             =   30
-         Width           =   450
-      End
-   End
+   ScaleWidth      =   11685
    Begin Crystal.CrystalReport cr1 
       Left            =   3195
       Top             =   4335
@@ -78,21 +33,21 @@ Begin VB.Form FrmPieces
    End
    Begin Threed.SSFrame SSFrame4 
       Height          =   420
-      Left            =   5280
-      TabIndex        =   23
+      Left            =   30
+      TabIndex        =   0
       Top             =   2910
-      Width           =   3315
-      _ExtentX        =   5847
+      Width           =   11625
+      _ExtentX        =   20505
       _ExtentY        =   741
       _Version        =   131074
       Begin VB.TextBox TxtSearch 
          Alignment       =   1  'Right Justify
          Height          =   330
-         Left            =   30
+         Left            =   60
          RightToLeft     =   -1  'True
-         TabIndex        =   25
-         Top             =   60
-         Width           =   2400
+         TabIndex        =   1
+         Top             =   30
+         Width           =   10980
       End
       Begin VB.Label Label1 
          Alignment       =   1  'Right Justify
@@ -110,22 +65,35 @@ Begin VB.Form FrmPieces
          ForeColor       =   &H00000080&
          Height          =   195
          Index           =   1
-         Left            =   2640
+         Left            =   11190
          RightToLeft     =   -1  'True
-         TabIndex        =   24
-         Top             =   45
+         TabIndex        =   2
+         Top             =   120
          Width           =   330
       End
    End
    Begin Threed.SSFrame SSFrame5 
       Height          =   390
       Left            =   30
-      TabIndex        =   11
+      TabIndex        =   3
       Top             =   6780
-      Width           =   8565
-      _ExtentX        =   15108
+      Width           =   11625
+      _ExtentX        =   20505
       _ExtentY        =   688
       _Version        =   131074
+      Begin VB.Label Label1 
+         Alignment       =   1  'Right Justify
+         AutoSize        =   -1  'True
+         Caption         =   "⁄œœ «·„Ê«œ «·„Œ“‰Ì…"
+         ForeColor       =   &H00800000&
+         Height          =   195
+         Index           =   8
+         Left            =   10320
+         RightToLeft     =   -1  'True
+         TabIndex        =   5
+         Top             =   90
+         Width           =   1260
+      End
       Begin VB.Label LNum 
          Alignment       =   1  'Right Justify
          BackColor       =   &H00FFFFFF&
@@ -140,41 +108,90 @@ Begin VB.Form FrmPieces
          EndProperty
          ForeColor       =   &H00000080&
          Height          =   240
-         Left            =   5100
+         Left            =   8160
          RightToLeft     =   -1  'True
-         TabIndex        =   13
+         TabIndex        =   4
          Top             =   90
          Width           =   2115
-      End
-      Begin VB.Label Label1 
-         Alignment       =   1  'Right Justify
-         AutoSize        =   -1  'True
-         Caption         =   "⁄œœ «·„Ê«œ «·„Œ“‰Ì…"
-         ForeColor       =   &H00800000&
-         Height          =   195
-         Index           =   8
-         Left            =   7260
-         RightToLeft     =   -1  'True
-         TabIndex        =   12
-         Top             =   90
-         Width           =   1260
       End
    End
    Begin Threed.SSFrame SSFrame2 
       Height          =   2220
       Left            =   0
-      TabIndex        =   5
+      TabIndex        =   6
       Top             =   690
-      Width           =   8595
-      _ExtentX        =   15161
+      Width           =   11655
+      _ExtentX        =   20558
       _ExtentY        =   3916
       _Version        =   131074
+      Begin VB.TextBox TxtItemFrom 
+         Alignment       =   1  'Right Justify
+         Height          =   330
+         Left            =   7755
+         RightToLeft     =   -1  'True
+         TabIndex        =   24
+         Top             =   705
+         Width           =   1545
+      End
+      Begin VB.ComboBox ComboItemFrom 
+         Height          =   315
+         ItemData        =   "FrmPieces.frx":0000
+         Left            =   10275
+         List            =   "FrmPieces.frx":0016
+         RightToLeft     =   -1  'True
+         Style           =   2  'Dropdown List
+         TabIndex        =   23
+         TabStop         =   0   'False
+         Top             =   705
+         Width           =   825
+      End
+      Begin VB.ComboBox ComboItemTo 
+         Height          =   315
+         ItemData        =   "FrmPieces.frx":002F
+         Left            =   10275
+         List            =   "FrmPieces.frx":0045
+         RightToLeft     =   -1  'True
+         Style           =   2  'Dropdown List
+         TabIndex        =   22
+         TabStop         =   0   'False
+         Top             =   1065
+         Width           =   825
+      End
+      Begin VB.TextBox TxtItemTo 
+         Alignment       =   1  'Right Justify
+         Height          =   330
+         Left            =   7755
+         RightToLeft     =   -1  'True
+         TabIndex        =   21
+         Top             =   1065
+         Width           =   1545
+      End
+      Begin VB.TextBox TxtDescription 
+         Alignment       =   1  'Right Justify
+         Height          =   330
+         Left            =   4905
+         RightToLeft     =   -1  'True
+         TabIndex        =   20
+         Top             =   1815
+         Width           =   6195
+      End
+      Begin VB.TextBox TxtStrNo 
+         Alignment       =   1  'Right Justify
+         Height          =   330
+         Left            =   5955
+         Locked          =   -1  'True
+         RightToLeft     =   -1  'True
+         TabIndex        =   19
+         TabStop         =   0   'False
+         Top             =   345
+         Width           =   5655
+      End
       Begin VB.CheckBox ChkStore 
          Alignment       =   1  'Right Justify
          Height          =   285
-         Left            =   7590
+         Left            =   4920
          RightToLeft     =   -1  'True
-         TabIndex        =   31
+         TabIndex        =   7
          Top             =   30
          Value           =   1  'Checked
          Width           =   225
@@ -182,10 +199,10 @@ Begin VB.Form FrmPieces
       Begin Threed.SSFrame SSFrame6 
          Height          =   615
          Left            =   30
-         TabIndex        =   26
+         TabIndex        =   8
          Top             =   1560
-         Width           =   4635
-         _ExtentX        =   8176
+         Width           =   4815
+         _ExtentX        =   8493
          _ExtentY        =   1085
          _Version        =   131074
          ForeColor       =   8388608
@@ -193,10 +210,10 @@ Begin VB.Form FrmPieces
          Alignment       =   1
          Begin Threed.SSOption Chk 
             Height          =   240
-            Index           =   2
-            Left            =   60
-            TabIndex        =   34
-            Tag             =   "8"
+            Index           =   0
+            Left            =   3210
+            TabIndex        =   11
+            Tag             =   "6"
             Top             =   285
             Width           =   1395
             _ExtentX        =   2461
@@ -204,16 +221,17 @@ Begin VB.Form FrmPieces
             _Version        =   131074
             MarqueeDirection=   1
             ForeColor       =   8388608
-            Caption         =   "«·„”«ÊÌ… ··’›—"
+            Caption         =   "«·ﬂ·"
             Alignment       =   1
+            Value           =   -1
          End
          Begin Threed.SSOption Chk 
             Height          =   240
             Index           =   1
-            Left            =   1575
-            TabIndex        =   33
+            Left            =   1620
+            TabIndex        =   10
             Tag             =   "7"
-            Top             =   300
+            Top             =   285
             Width           =   1395
             _ExtentX        =   2461
             _ExtentY        =   423
@@ -225,55 +243,53 @@ Begin VB.Form FrmPieces
          End
          Begin Threed.SSOption Chk 
             Height          =   240
-            Index           =   0
-            Left            =   3090
-            TabIndex        =   32
-            Tag             =   "6"
-            Top             =   270
+            Index           =   2
+            Left            =   60
+            TabIndex        =   9
+            Tag             =   "8"
+            Top             =   285
             Width           =   1395
             _ExtentX        =   2461
             _ExtentY        =   423
             _Version        =   131074
             MarqueeDirection=   1
             ForeColor       =   8388608
-            Caption         =   "«·ﬂ·"
+            Caption         =   "«·„”«ÊÌ… ··’›—"
             Alignment       =   1
-            Value           =   -1
          End
       End
       Begin Threed.SSFrame SSFrame3 
          Height          =   915
          Left            =   30
-         TabIndex        =   19
+         TabIndex        =   12
          Top             =   630
-         Width           =   4650
-         _ExtentX        =   8202
+         Width           =   4830
+         _ExtentX        =   8520
          _ExtentY        =   1614
          _Version        =   131074
          Begin Threed.SSOption Option 
-            Height          =   240
-            Index           =   0
-            Left            =   2550
-            TabIndex        =   22
-            Tag             =   "3"
-            Top             =   90
-            Width           =   1995
-            _ExtentX        =   3519
-            _ExtentY        =   423
+            Height          =   330
+            Index           =   2
+            Left            =   2460
+            TabIndex        =   15
+            Tag             =   "5"
+            Top             =   510
+            Width           =   2265
+            _ExtentX        =   3995
+            _ExtentY        =   582
             _Version        =   131074
             MarqueeDirection=   1
             ForeColor       =   8388608
-            Caption         =   "ﬂ«›…  «·√—ﬁ«„ «·„Œ“‰Ì…"
+            Caption         =   "«·√—ﬁ«„ «·„Œ“‰Ì… «· Ì ·Â« ‘—Õ"
             Alignment       =   1
-            Value           =   -1
          End
          Begin Threed.SSOption Option 
             Height          =   330
             Index           =   1
-            Left            =   1980
-            TabIndex        =   21
+            Left            =   2145
+            TabIndex        =   14
             Tag             =   "4"
-            Top             =   270
+            Top             =   240
             Width           =   2580
             _ExtentX        =   4551
             _ExtentY        =   582
@@ -284,20 +300,21 @@ Begin VB.Form FrmPieces
             Alignment       =   1
          End
          Begin Threed.SSOption Option 
-            Height          =   330
-            Index           =   2
-            Left            =   2280
-            TabIndex        =   20
-            Tag             =   "5"
-            Top             =   540
-            Width           =   2265
-            _ExtentX        =   3995
-            _ExtentY        =   582
+            Height          =   240
+            Index           =   0
+            Left            =   2730
+            TabIndex        =   13
+            Tag             =   "3"
+            Top             =   60
+            Width           =   1995
+            _ExtentX        =   3519
+            _ExtentY        =   423
             _Version        =   131074
             MarqueeDirection=   1
             ForeColor       =   8388608
-            Caption         =   "«·√—ﬁ«„ «·„Œ“‰Ì… «· Ì ·Â« ‘—Õ"
+            Caption         =   "ﬂ«›…  «·√—ﬁ«„ «·„Œ“‰Ì…"
             Alignment       =   1
+            Value           =   -1
          End
       End
       Begin Threed.SSFrame SSFrame1 
@@ -305,15 +322,30 @@ Begin VB.Form FrmPieces
          Left            =   30
          TabIndex        =   16
          Top             =   45
-         Width           =   4650
-         _ExtentX        =   8202
+         Width           =   4830
+         _ExtentX        =   8520
          _ExtentY        =   1032
          _Version        =   131074
          Begin Threed.SSOption StockOption 
             Height          =   240
-            Index           =   0
-            Left            =   2220
+            Index           =   1
+            Left            =   2865
             TabIndex        =   18
+            Tag             =   "2"
+            Top             =   315
+            Width           =   1905
+            _ExtentX        =   3360
+            _ExtentY        =   423
+            _Version        =   131074
+            ForeColor       =   8388736
+            Caption         =   "«· Ã„Ì⁄ Õ”» «·„” Êœ⁄"
+            Alignment       =   1
+         End
+         Begin Threed.SSOption StockOption 
+            Height          =   240
+            Index           =   0
+            Left            =   2430
+            TabIndex        =   17
             Tag             =   "1"
             Top             =   45
             Width           =   2310
@@ -325,143 +357,45 @@ Begin VB.Form FrmPieces
             Alignment       =   1
             Value           =   -1
          End
-         Begin Threed.SSOption StockOption 
-            Height          =   240
-            Index           =   1
-            Left            =   2625
-            TabIndex        =   17
-            Tag             =   "2"
-            Top             =   315
-            Width           =   1905
-            _ExtentX        =   3360
-            _ExtentY        =   423
-            _Version        =   131074
-            ForeColor       =   8388736
-            Caption         =   "«· Ã„Ì⁄ Õ”» «·„” Êœ⁄"
-            Alignment       =   1
-         End
-      End
-      Begin VB.TextBox TxtStrNo 
-         Alignment       =   1  'Right Justify
-         Height          =   330
-         Left            =   5745
-         Locked          =   -1  'True
-         RightToLeft     =   -1  'True
-         TabIndex        =   15
-         TabStop         =   0   'False
-         Top             =   315
-         Width           =   2805
-      End
-      Begin VB.TextBox TxtDescription 
-         Alignment       =   1  'Right Justify
-         Height          =   330
-         Left            =   4695
-         RightToLeft     =   -1  'True
-         TabIndex        =   2
-         Top             =   1815
-         Width           =   3345
-      End
-      Begin VB.TextBox TxtItemTo 
-         Alignment       =   1  'Right Justify
-         Height          =   330
-         Left            =   4695
-         RightToLeft     =   -1  'True
-         TabIndex        =   1
-         Top             =   1065
-         Width           =   1545
-      End
-      Begin VB.ComboBox ComboItemTo 
-         Height          =   315
-         ItemData        =   "FrmPieces.frx":0000
-         Left            =   7215
-         List            =   "FrmPieces.frx":0016
-         RightToLeft     =   -1  'True
-         Style           =   2  'Dropdown List
-         TabIndex        =   4
-         TabStop         =   0   'False
-         Top             =   1065
-         Width           =   825
-      End
-      Begin VB.ComboBox ComboItemFrom 
-         Height          =   315
-         ItemData        =   "FrmPieces.frx":002F
-         Left            =   7215
-         List            =   "FrmPieces.frx":0045
-         RightToLeft     =   -1  'True
-         Style           =   2  'Dropdown List
-         TabIndex        =   3
-         TabStop         =   0   'False
-         Top             =   705
-         Width           =   825
-      End
-      Begin VB.TextBox TxtItemFrom 
-         Alignment       =   1  'Right Justify
-         Height          =   330
-         Left            =   4695
-         RightToLeft     =   -1  'True
-         TabIndex        =   0
-         Top             =   705
-         Width           =   1545
-      End
-      Begin Threed.SSCommand CmdSearch 
-         Height          =   345
-         Left            =   4710
-         TabIndex        =   28
-         Top             =   330
-         Width           =   1005
-         _ExtentX        =   1773
-         _ExtentY        =   609
-         _Version        =   131074
-         PictureFrames   =   1
-         Picture         =   "FrmPieces.frx":005E
-      End
-      Begin Threed.SSCheck chkChoose 
-         Height          =   315
-         Left            =   6900
-         TabIndex        =   27
-         Top             =   1440
-         Width           =   1635
-         _ExtentX        =   2884
-         _ExtentY        =   556
-         _Version        =   131074
-         ForeColor       =   8388608
-         Caption         =   " ÕœÌœ √—ﬁ«„ „Œ“‰Ì…"
-         Alignment       =   1
       End
       Begin VB.Label Label1 
          Alignment       =   1  'Right Justify
          AutoSize        =   -1  'True
-         Caption         =   "«·„” Êœ⁄"
+         Caption         =   "—ﬁ„ «·„«œ…"
          ForeColor       =   &H00800000&
          Height          =   195
-         Index           =   0
-         Left            =   7890
+         Index           =   3
+         Left            =   9330
          RightToLeft     =   -1  'True
-         TabIndex        =   14
-         Top             =   90
-         Width           =   630
+         TabIndex        =   32
+         Top             =   750
+         Width           =   675
       End
       Begin VB.Label Label1 
          Alignment       =   1  'Right Justify
          AutoSize        =   -1  'True
-         Caption         =   "≈·Ï"
-         BeginProperty Font 
-            Name            =   "MS Sans Serif"
-            Size            =   8.25
-            Charset         =   178
-            Weight          =   700
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         ForeColor       =   &H00000080&
+         Caption         =   "—ﬁ„ «·„«œ…"
+         ForeColor       =   &H00800000&
          Height          =   195
-         Index           =   7
-         Left            =   8220
+         Index           =   4
+         Left            =   9330
          RightToLeft     =   -1  'True
-         TabIndex        =   10
+         TabIndex        =   31
          Top             =   1110
-         Width           =   300
+         Width           =   675
+      End
+      Begin VB.Label Label1 
+         Alignment       =   1  'Right Justify
+         AutoSize        =   -1  'True
+         Caption         =   "«·‘—Õ"
+         ForeColor       =   &H00800000&
+         Height          =   195
+         Index           =   5
+         Left            =   11205
+         RightToLeft     =   -1  'True
+         TabIndex        =   30
+         Top             =   1920
+         Width           =   420
       End
       Begin VB.Label Label1 
          Alignment       =   1  'Right Justify
@@ -479,50 +413,71 @@ Begin VB.Form FrmPieces
          ForeColor       =   &H00000080&
          Height          =   195
          Index           =   6
-         Left            =   8310
+         Left            =   11370
          RightToLeft     =   -1  'True
-         TabIndex        =   9
+         TabIndex        =   29
          Top             =   750
          Width           =   210
       End
       Begin VB.Label Label1 
          Alignment       =   1  'Right Justify
          AutoSize        =   -1  'True
-         Caption         =   "«·‘—Õ"
-         ForeColor       =   &H00800000&
+         Caption         =   "≈·Ï"
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   178
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   &H00000080&
          Height          =   195
-         Index           =   5
-         Left            =   8145
+         Index           =   7
+         Left            =   11280
          RightToLeft     =   -1  'True
-         TabIndex        =   8
-         Top             =   1920
-         Width           =   420
-      End
-      Begin VB.Label Label1 
-         Alignment       =   1  'Right Justify
-         AutoSize        =   -1  'True
-         Caption         =   "—ﬁ„ «·„«œ…"
-         ForeColor       =   &H00800000&
-         Height          =   195
-         Index           =   4
-         Left            =   6270
-         RightToLeft     =   -1  'True
-         TabIndex        =   7
+         TabIndex        =   28
          Top             =   1110
-         Width           =   675
+         Width           =   300
       End
       Begin VB.Label Label1 
          Alignment       =   1  'Right Justify
          AutoSize        =   -1  'True
-         Caption         =   "—ﬁ„ «·„«œ…"
+         Caption         =   "«·„” Êœ⁄"
          ForeColor       =   &H00800000&
          Height          =   195
-         Index           =   3
-         Left            =   6270
+         Index           =   0
+         Left            =   10950
          RightToLeft     =   -1  'True
-         TabIndex        =   6
-         Top             =   750
-         Width           =   675
+         TabIndex        =   27
+         Top             =   90
+         Width           =   630
+      End
+      Begin Threed.SSCommand CmdSearch 
+         Height          =   345
+         Left            =   4920
+         TabIndex        =   26
+         Top             =   330
+         Width           =   1005
+         _ExtentX        =   1773
+         _ExtentY        =   609
+         _Version        =   131074
+         PictureFrames   =   1
+         Picture         =   "FrmPieces.frx":005E
+      End
+      Begin Threed.SSCheck chkChoose 
+         Height          =   315
+         Left            =   9960
+         TabIndex        =   25
+         Top             =   1470
+         Width           =   1635
+         _ExtentX        =   2884
+         _ExtentY        =   556
+         _Version        =   131074
+         ForeColor       =   8388608
+         Caption         =   " ÕœÌœ √—ﬁ«„ „Œ“‰Ì…"
+         Alignment       =   1
       End
    End
    Begin MSComctlLib.ImageList ImageList1 
@@ -695,10 +650,10 @@ Begin VB.Form FrmPieces
       Align           =   1  'Align Top
       Height          =   690
       Left            =   0
-      TabIndex        =   30
+      TabIndex        =   33
       Top             =   0
-      Width           =   8625
-      _ExtentX        =   15214
+      Width           =   11685
+      _ExtentX        =   20611
       _ExtentY        =   1217
       ButtonWidth     =   1191
       ButtonHeight    =   1164
@@ -741,10 +696,10 @@ Begin VB.Form FrmPieces
    Begin VSFlex8Ctl.VSFlexGrid MSHFlexGrid1 
       Height          =   3435
       Left            =   30
-      TabIndex        =   29
+      TabIndex        =   34
       Top             =   3300
-      Width           =   8595
-      _cx             =   15161
+      Width           =   11625
+      _cx             =   20505
       _cy             =   6059
       Appearance      =   1
       BorderStyle     =   1
@@ -834,19 +789,6 @@ Begin VB.Form FrmPieces
       AccessibleDescription=   ""
       AccessibleValue =   ""
       AccessibleRole  =   24
-      Begin MSComctlLib.ProgressBar ProgressBar1 
-         Height          =   225
-         Left            =   0
-         TabIndex        =   39
-         Top             =   0
-         Visible         =   0   'False
-         Width           =   8565
-         _ExtentX        =   15108
-         _ExtentY        =   397
-         _Version        =   393216
-         Appearance      =   0
-         Scrolling       =   1
-      End
    End
 End
 Attribute VB_Name = "FrmPieces"
@@ -861,8 +803,10 @@ Const ColPieceStockName = 2
 Const ColPieceUnitNo = 3
 Const ColPieceUnitName = 4
 Const ColStrNo = 5
-Const ColFnlQnt = 6
-Const ColShare = 7
+Const ColStrName = 6
+
+Const ColFnlQnt = 7
+Const ColShare = 8
 
 
 
@@ -900,14 +844,14 @@ With FrmChooseItems.FGrid
     Next
 End With
 If Str = "" Then
-    Fillitems = "''"
+    Fillitems = ""
 Else
     Fillitems = "" & Mid(Str, 2) & ""
     End If
 End Function
 Sub ClearGrid()
-    sqltext = "Select PieceStockNo, PieceName , UnitNo , UnitName , StrNo , Fnlqnt From TempPieces Where  PiecestockNo ='-1' Order By PiecestockNo"
-    Set rs = de.con.Execute(sqltext)
+    Sqltext = "Select PieceStockNo, PieceName , UnitNo , UnitName , StrNo , Fnlqnt From TempPieces Where  PiecestockNo ='-1' Order By PiecestockNo"
+    Set rs = de.con.Execute(Sqltext)
     Set MSHFlexGrid1.DataSource = rs
     FillFormatString (OshowIndex)
 End Sub
@@ -924,23 +868,24 @@ StrText = tt
 End Function
 
 Function CountRecord(WhereStr As String) As Recordset
-    sqltext = "Select Count(*) CountRec From TempPieces Where PieceStockNo <> '-1' "
+    Sqltext = "Select Count(*) CountRec From TempPieces Where PieceStockNo <> '-1' "
 '    Set Rs = Dstock.Con.Execute(sqltext)
-    Set CountRecord = de.con.Execute(sqltext)
+    Set CountRecord = de.con.Execute(Sqltext)
 
 End Function
 Sub FillFormatString(Index As Integer)
 Select Case Index
     Case 0
-        FS = "|>" + "—ﬁ„ «·„«œ…"
-        FS = FS + "|>" + "≈”„ «·„«œ…"
-        FS = FS + "|>" + "UnitNo"
-        FS = FS + "|>" + "«·ÊÕœ…"
-        FS = FS + "|>" + "—ﬁ„ «·„” Êœ⁄"
-        FS = FS + "|>" + "«·—’Ìœ «·‰Â«∆Ì"
-        FS = FS + "|>" + ""
+        Fs = "|>" + "—ﬁ„ «·„«œ…"
+        Fs = Fs + "|>" + "≈”„ «·„«œ…"
+        Fs = Fs + "|>" + "UnitNo"
+        Fs = Fs + "|>" + "«·ÊÕœ…"
+        Fs = Fs + "|>" + "—ﬁ„ «·„” Êœ⁄"
+        Fs = Fs + "|>" + "≈”„ «·„” Êœ⁄"
+        Fs = Fs + "|>" + "«·—’Ìœ «·‰Â«∆Ì"
+        Fs = Fs + "|>" + ""
         With MSHFlexGrid1
-            .FormatString = FS
+            .FormatString = Fs
             SetColWidths ColPieceStockNo
             SetColWidths ColPieceStockName
             .ColWidth(ColPieceUnitNo) = 0
@@ -949,35 +894,37 @@ Select Case Index
             .ColDataType(ColShare) = flexDTBoolean
             If StockOption1 = 0 Then
                 .ColWidth(ColStrNo) = 0
+                .ColWidth(ColStrName) = 0
             Else
                 SetColWidths ColStrNo
+                SetColWidths ColStrName
             End If
             SetColWidths ColFnlQnt
         End With
       Case 1
-        FS = "|>" + "—ﬁ„ «·„«œ…"
-        FS = FS + "|>" + "≈”„ «·„«œ…"
-        FS = FS + "|>" + "«·—’Ìœ «·‰Â«∆Ì"
-        FS = FS + "|>" + "1"
-        FS = FS + "|>" + "2"
-        FS = FS + "|>" + "3"
-        FS = FS + "|>" + "4"
-        FS = FS + "|>" + "5"
-        FS = FS + "|>" + "6"
-        FS = FS + "|>" + "7"
-        FS = FS + "|>" + "8"
-        FS = FS + "|>" + "9"
-        FS = FS + "|>" + "10"
-        FS = FS + "|>" + "11"
-        FS = FS + "|>" + "12"
-        FS = FS + "|>" + "13"
-        FS = FS + "|>" + "14"
-        FS = FS + "|>" + "15"
-        FS = FS + "|>" + "16"
-        FS = FS + "|>" + "17"
-        FS = FS + "|>" + "18"
+        Fs = "|>" + "—ﬁ„ «·„«œ…"
+        Fs = Fs + "|>" + "≈”„ «·„«œ…"
+        Fs = Fs + "|>" + "«·—’Ìœ «·‰Â«∆Ì"
+        Fs = Fs + "|>" + "1"
+        Fs = Fs + "|>" + "2"
+        Fs = Fs + "|>" + "3"
+        Fs = Fs + "|>" + "4"
+        Fs = Fs + "|>" + "5"
+        Fs = Fs + "|>" + "6"
+        Fs = Fs + "|>" + "7"
+        Fs = Fs + "|>" + "8"
+        Fs = Fs + "|>" + "9"
+        Fs = Fs + "|>" + "10"
+        Fs = Fs + "|>" + "11"
+        Fs = Fs + "|>" + "12"
+        Fs = Fs + "|>" + "13"
+        Fs = Fs + "|>" + "14"
+        Fs = Fs + "|>" + "15"
+        Fs = Fs + "|>" + "16"
+        Fs = Fs + "|>" + "17"
+        Fs = Fs + "|>" + "18"
         With MSHFlexGrid1
-            .FormatString = FS
+            .FormatString = Fs
             SetColWidths ColStkno_1
             SetColWidths ColStkname_1
             SetColWidths ColFnlqnt_1
@@ -1042,8 +989,8 @@ End Sub
 Sub AddRestitems()
 Dim RsRest As New ADODB.Recordset
 
-sqltext = "Select t1.PieceStockNo , t1.PieceName , t1.StrNo , t1.FnlQnt From TempPieces t1 Left outer Join CommonPiecesQry c1  on t1.PieceStockNo = c1.PieceStockNo Where c1.PieceStockNo is null"
-Set RsRest = de.con.Execute(sqltext)
+Sqltext = "Select t1.PieceStockNo , t1.PieceName , t1.StrNo , t1.FnlQnt From TempPieces t1 Left outer Join CommonPiecesQry c1  on t1.PieceStockNo = c1.PieceStockNo Where c1.PieceStockNo is null"
+Set RsRest = de.con.Execute(Sqltext)
 If RsRest.RecordCount > 0 Then
     With MSHFlexGrid1
     Do While Not RsRest.EOF
@@ -1054,7 +1001,7 @@ If RsRest.RecordCount > 0 Then
         .TextMatrix(.Rows - 1, ColFnlQnt) = RsRest!fnlqnt & ""
         For i = 1 To .Cols - 1
             .Row = .Rows - 1
-            .col = i
+            .Col = i
             .CellBackColor = vbWhite
         Next
         RsRest.MoveNext
@@ -1092,28 +1039,28 @@ Dim StrNo As String, OperationFrom As String, OperationTo As String, FromStkNo A
 If ChkStore.Value Then
     StrNo = ""
 Else
-    StrNo = Replace(TxtStrNo.Text, "-", ",")
+    StrNo = Replace(TxtStrNo.text, "-", ",")
 End If
-OperationFrom = ComboItemFrom.Text
-OperationTo = ComboItemTo.Text
-FromStkNo = TxtItemFrom.Text
-ToStkNo = TxtItemTo.Text
+OperationFrom = ComboItemFrom.text
+OperationTo = ComboItemTo.text
+FromStkNo = TxtItemFrom.text
+ToStkNo = TxtItemTo.text
 If chkChoose.Value Then
     SelectedStkNo = Fillitems
 Else
     SelectedStkNo = ""
 End If
-StkName = TxtDescription.Text
+StkName = txtDescription.text
 PrintType = FillPrintType
-sqltext = "Exec PFillData '" & StrNo & "','" & OperationFrom & "','" & OperationTo & "','" & FromStkNo & "','" & ToStkNo & "','" & SelectedStkNo & "','" & StkName & "'," & PrintType & ",'" & Strids & "'"
-FillVariables = sqltext
+Sqltext = "Exec PFillData '" & StrNo & "','" & OperationFrom & "','" & OperationTo & "','" & FromStkNo & "','" & ToStkNo & "','" & SelectedStkNo & "','" & StkName & "'," & PrintType & ",'" & Strids & "'"
+FillVariables = Sqltext
 End Function
 Private Sub SerachData()
 Screen.MousePointer = vbHourglass
-sqltext = FillVariables
-de.con.Execute (sqltext)
-sqltext = "Select PieceStockNo , PieceName , UnitNo , UnitName , StrNo , FnlQnt , Share from TempPieces"
-Set MSHFlexGrid1.DataSource = de.con.Execute(sqltext)
+Sqltext = FillVariables
+de.con.Execute (Sqltext)
+Sqltext = "Select PieceStockNo , PieceName , UnitNo , UnitName , StrNo , storename,  FnlQnt , Share from TempPieces"
+Set MSHFlexGrid1.DataSource = de.con.Execute(Sqltext)
 FillFormatString 0
 LNum.Caption = MSHFlexGrid1.Rows - 1
 If LNum.Caption = 0 Then MsgBox " √ﬂœ „‰ «·„⁄ÿÌ« ", vbExclamation, "≈‰ »«Â"
@@ -1122,7 +1069,7 @@ End Sub
 
  
 Private Sub PrintData()
-With cr1
+With Cr1
     .Connect = ConnectName("")
    ' .PrintFileName = "c:\nn.xls"
    ' .PrintFileType = crptExcel50
@@ -1139,8 +1086,8 @@ With cr1
 End With
 End Sub
 Sub SaveSelectedRows(FlexGrid As VSFlexGrid, UnitNo As Integer, UnitName As String)
-On Error GoTo errorHandler
-Dim FirstRow As Integer, LastRow As Integer, vRow As Integer
+On Error GoTo ErrorHandler
+Dim FirstRow As Integer, LastRow As Integer, Vrow As Integer
 If UnitNo = 0 Then
     MsgBox "·„ Ì „ ≈œŒ«· «·ÊÕœ…", vbExclamation, "«·ÊÕœ… €Ì— „œŒ·…"
     Exit Sub
@@ -1160,9 +1107,9 @@ With FlexGrid
        ProgressBar1.Value = 1
        ProgressBar1.Visible = True
         For i = FirstRow To LastRow Step -1
-            vRow = i
-            sqltext = "Update CoStock Set UnitNo=" & UnitNo & " Where StkNo='" & .TextMatrix(i, ColPieceStockNo) & "'"
-            de.con.Execute (sqltext)
+            Vrow = i
+            Sqltext = "Update CoStock Set UnitNo=" & UnitNo & " Where StkNo='" & .TextMatrix(i, ColPieceStockNo) & "'"
+            de.con.Execute (Sqltext)
             .TextMatrix(i, ColPieceUnitNo) = UnitNo
             .TextMatrix(i, ColPieceUnitName) = UnitName
             ProgressBar1.Value = ProgressBar1.Value + 1
@@ -1172,18 +1119,24 @@ With FlexGrid
     End If
 End With
 Exit Sub
-errorHandler:
+ErrorHandler:
 MsgBox Err.Description
 End Sub
 
-Private Sub CmdSave_Click()
-SaveSelectedRows MSHFlexGrid1, ComboUnit.BoundText, ComboUnit.Text
+'Private Sub CmdSave_Click()
+'SaveSelectedRows MSHFlexGrid1, ComboUnit.BoundText, ComboUnit.text
+'End Sub
+
+Private Sub chkChoose_Click(Value As Integer)
+If chkChoose.Value Then
+    FrmChooseItems.Show 1
+End If
 End Sub
 
 Private Sub CmdSearch_Click()
 FrmChoose.Show 1
 TxtStrNo = StrNo
-If TxtStrNo.Text <> "" Then
+If TxtStrNo.text <> "" Then
     ChkStore.Value = 0
 Else
     ChkStore.Value = 1
@@ -1191,31 +1144,31 @@ End If
 End Sub
 
 Private Sub ComboItemFrom_Change()
-    ComboItemTo.Text = ComboItemFrom.Text
+    ComboItemTo.text = ComboItemFrom.text
 End Sub
 
 Private Sub Form_KeyPress(KeyAscii As Integer)
     If KeyAscii = 13 Then
-        SendKeys "{tAB}"
-        SendKeys "{nUMLOCK}", True
-        SendKeys "{hOME}+{eND}", True
+        Sendkeys "{tAB}"
+        Sendkeys "{nUMLOCK}", True
+        Sendkeys "{hOME}+{eND}", True
     End If
 End Sub
-Sub FillCombos()
-Dim rs As New ADODB.Recordset
-sqltext = "Select UnitNo , UnitName From stock2015.dbo.CoUnit Order By UnitNo"
-Set rs = de.con.Execute(sqltext)
-Set ComboUnit.RowSource = rs
-ComboUnit.listField = "UnitName"
-ComboUnit.BoundColumn = "UnitNo"
-End Sub
+'Sub FillCombos()
+'Dim rs As New ADODB.Recordset
+'sqlText = "Select UnitNo , UnitName From CoUnit Order By UnitNo"
+'Set rs = de.con.Execute(sqlText)
+'Set ComboUnit.RowSource = rs
+'ComboUnit.listField = "UnitName"
+'ComboUnit.BoundColumn = "UnitNo"
+'End Sub
 
 Private Sub Form_Load()
 '    OShow(0).Value = True
 '    OshowIndex = 0
-    FillCombos
-    Dim rs As New ADODB.Recordset
-    If de.con.state <> adStateOpen Then de.con.Open
+    'FillCombos
+'    Dim rs As New ADODB.Recordset
+'    If de.con.state <> adStateOpen Then de.con.Open
 '    LNum.Caption = Format(CountRecord("")!CountRec, "###,###,###,###")
     ClearGrid
     ComboItemFrom.ListIndex = 0
@@ -1229,12 +1182,6 @@ Private Sub Option_Click(Index As Integer, Value As Integer)
 Optionindex = Index
 End Sub
 
-
-Private Sub chkChoose_Click(Value As Integer)
-If chkChoose.Value Then
-    FrmChooseItems.Show 1
-End If
-End Sub
 
 Private Sub StockOption_Click(Index As Integer, Value As Integer)
 StockOption1 = Index
@@ -1257,17 +1204,18 @@ End Sub
 
 
 Private Sub TxtItemFrom_Change()
-    TxtItemTo.Text = TxtItemFrom.Text
+    TxtItemTo.text = TxtItemFrom.text
 End Sub
 
 Private Sub TxtSearch_Change()
 
-    sqltext = "Select PieceStockNo, PieceName, UnitNo , UnitName , StrNo, FnlQnt, Share  From TempPieces Where PieceStockNo like '" & TxtSearch.Text & "%'"
-    sqltext = sqltext & " Or StrNo like '%" & TxtSearch.Text & "%'"
-    sqltext = sqltext & " Or PieceName like '%" & TxtSearch.Text & "%'"
-    sqltext = sqltext & " Or FnlQnt like '%" & TxtSearch.Text & "%'"
-    Set rs = de.con.Execute(sqltext)
+    Sqltext = "Select PieceStockNo, PieceName, UnitNo , UnitName , StrNo, Storename , FnlQnt, Share  From TempPieces Where PieceStockNo like '" & TxtSearch.text & "%'"
+    Sqltext = Sqltext & " Or StrNo like '%" & TxtSearch.text & "%'"
+    Sqltext = Sqltext & " Or PieceName like '%" & TxtSearch.text & "%'"
+    Sqltext = Sqltext & " Or FnlQnt like '%" & TxtSearch.text & "%'"
+    Set rs = de.con.Execute(Sqltext)
     Set MSHFlexGrid1.DataSource = rs
     FillFormatString (OshowIndex)
 
 End Sub
+

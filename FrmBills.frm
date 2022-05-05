@@ -21,7 +21,7 @@ Begin VB.Form FrmBills
    Begin VSFlex8Ctl.VSFlexGrid Grid 
       Height          =   2085
       Left            =   6540
-      TabIndex        =   1
+      TabIndex        =   18
       Top             =   4050
       Visible         =   0   'False
       Width           =   2385
@@ -127,7 +127,7 @@ Begin VB.Form FrmBills
    Begin Threed.SSFrame SSFrame2 
       Height          =   2745
       Left            =   30
-      TabIndex        =   2
+      TabIndex        =   19
       Top             =   3210
       Width           =   11685
       _ExtentX        =   20611
@@ -148,7 +148,7 @@ Begin VB.Form FrmBills
          Left            =   1650
          List            =   "FrmBills.frx":0002
          RightToLeft     =   -1  'True
-         TabIndex        =   6
+         TabIndex        =   16
          Top             =   270
          Width           =   1515
       End
@@ -157,7 +157,7 @@ Begin VB.Form FrmBills
          Height          =   345
          Left            =   3720
          RightToLeft     =   -1  'True
-         TabIndex        =   4
+         TabIndex        =   15
          Top             =   270
          Width           =   855
       End
@@ -166,14 +166,14 @@ Begin VB.Form FrmBills
          Height          =   345
          Left            =   9120
          RightToLeft     =   -1  'True
-         TabIndex        =   3
+         TabIndex        =   14
          Top             =   270
          Width           =   2505
       End
       Begin VSFlex8Ctl.VSFlexGrid flexGrid 
          Height          =   1965
          Left            =   90
-         TabIndex        =   5
+         TabIndex        =   20
          Top             =   720
          Width           =   11565
          _cx             =   20399
@@ -275,7 +275,7 @@ Begin VB.Form FrmBills
          Height          =   195
          Index           =   2
          Left            =   660
-         TabIndex        =   16
+         TabIndex        =   30
          Top             =   30
          Width           =   960
       End
@@ -294,7 +294,7 @@ Begin VB.Form FrmBills
          ForeColor       =   &H00000000&
          Height          =   315
          Left            =   120
-         TabIndex        =   15
+         TabIndex        =   29
          Top             =   300
          Width           =   1515
       End
@@ -313,7 +313,7 @@ Begin VB.Form FrmBills
          ForeColor       =   &H000000FF&
          Height          =   315
          Left            =   4590
-         TabIndex        =   14
+         TabIndex        =   28
          Top             =   270
          Width           =   705
       End
@@ -323,7 +323,7 @@ Begin VB.Form FrmBills
          ForeColor       =   &H00000000&
          Height          =   315
          Left            =   5310
-         TabIndex        =   13
+         TabIndex        =   27
          Top             =   270
          Width           =   3765
       End
@@ -335,7 +335,7 @@ Begin VB.Form FrmBills
          Height          =   195
          Index           =   11
          Left            =   4140
-         TabIndex        =   12
+         TabIndex        =   26
          Top             =   30
          Width           =   405
       End
@@ -347,7 +347,7 @@ Begin VB.Form FrmBills
          Height          =   195
          Index           =   10
          Left            =   8670
-         TabIndex        =   11
+         TabIndex        =   25
          Top             =   30
          Width           =   420
       End
@@ -359,7 +359,7 @@ Begin VB.Form FrmBills
          Height          =   195
          Index           =   9
          Left            =   4620
-         TabIndex        =   10
+         TabIndex        =   24
          Top             =   30
          Width           =   435
       End
@@ -371,7 +371,7 @@ Begin VB.Form FrmBills
          Height          =   195
          Index           =   8
          Left            =   10665
-         TabIndex        =   9
+         TabIndex        =   23
          Top             =   30
          Width           =   930
       End
@@ -383,7 +383,7 @@ Begin VB.Form FrmBills
          Height          =   195
          Index           =   23
          Left            =   3330
-         TabIndex        =   8
+         TabIndex        =   22
          Top             =   30
          Width           =   405
       End
@@ -402,7 +402,7 @@ Begin VB.Form FrmBills
          ForeColor       =   &H00000000&
          Height          =   315
          Left            =   3210
-         TabIndex        =   7
+         TabIndex        =   21
          Top             =   300
          Width           =   495
       End
@@ -410,7 +410,7 @@ Begin VB.Form FrmBills
    Begin Threed.SSFrame SSFrame1 
       Height          =   3165
       Left            =   0
-      TabIndex        =   17
+      TabIndex        =   31
       Top             =   0
       Width           =   11685
       _ExtentX        =   20611
@@ -421,16 +421,16 @@ Begin VB.Form FrmBills
          Height          =   345
          Left            =   4830
          RightToLeft     =   -1  'True
-         TabIndex        =   27
+         TabIndex        =   7
          Top             =   960
-         Width           =   6705
+         Width           =   6795
       End
       Begin VB.TextBox TxtClientName 
          Alignment       =   1  'Right Justify
          Height          =   345
          Left            =   1890
          RightToLeft     =   -1  'True
-         TabIndex        =   26
+         TabIndex        =   6
          Top             =   270
          Width           =   2925
       End
@@ -438,11 +438,11 @@ Begin VB.Form FrmBills
          Alignment       =   1  'Right Justify
          Caption         =   "›« Ê—… „ƒﬁ Â"
          Height          =   375
-         Left            =   3360
+         Left            =   3390
          RightToLeft     =   -1  'True
          Style           =   1  'Graphical
-         TabIndex        =   25
-         Top             =   1590
+         TabIndex        =   34
+         Top             =   1560
          Width           =   1755
       End
       Begin VB.TextBox txtModelQty 
@@ -450,7 +450,7 @@ Begin VB.Form FrmBills
          Height          =   345
          Left            =   60
          RightToLeft     =   -1  'True
-         TabIndex        =   23
+         TabIndex        =   33
          Top             =   960
          Width           =   675
       End
@@ -459,25 +459,25 @@ Begin VB.Form FrmBills
          Height          =   345
          Left            =   30
          RightToLeft     =   -1  'True
-         TabIndex        =   22
+         TabIndex        =   32
          Top             =   270
          Width           =   1185
       End
       Begin VB.TextBox TxtFeesQty 
-         Alignment       =   1  'Right Justify
+         Alignment       =   2  'Center
          Height          =   405
-         Left            =   6750
+         Left            =   6930
          RightToLeft     =   -1  'True
-         TabIndex        =   21
+         TabIndex        =   9
          Top             =   1530
-         Width           =   855
+         Width           =   885
       End
       Begin VB.TextBox TxtOtherFeesPrice 
          Alignment       =   1  'Right Justify
          Height          =   345
          Left            =   1200
          RightToLeft     =   -1  'True
-         TabIndex        =   20
+         TabIndex        =   13
          Top             =   2730
          Width           =   615
       End
@@ -486,7 +486,7 @@ Begin VB.Form FrmBills
          Height          =   345
          Left            =   2340
          RightToLeft     =   -1  'True
-         TabIndex        =   19
+         TabIndex        =   11
          Top             =   2730
          Width           =   1815
       End
@@ -495,14 +495,14 @@ Begin VB.Form FrmBills
          Height          =   345
          Left            =   1860
          RightToLeft     =   -1  'True
-         TabIndex        =   18
+         TabIndex        =   12
          Top             =   2730
          Width           =   465
       End
       Begin MSMask.MaskEdBox TxtDate 
          Height          =   345
-         Left            =   9420
-         TabIndex        =   24
+         Left            =   9630
+         TabIndex        =   1
          Top             =   270
          Width           =   1125
          _ExtentX        =   1984
@@ -514,11 +514,11 @@ Begin VB.Form FrmBills
       End
       Begin MSDataListLib.DataCombo ComboType 
          Height          =   360
-         Left            =   6390
-         TabIndex        =   28
+         Left            =   7290
+         TabIndex        =   3
          Top             =   270
-         Width           =   1485
-         _ExtentX        =   2619
+         Width           =   1305
+         _ExtentX        =   2302
          _ExtentY        =   635
          _Version        =   393216
          Text            =   ""
@@ -535,11 +535,11 @@ Begin VB.Form FrmBills
       End
       Begin MSDataListLib.DataCombo ComboFees 
          Height          =   360
-         Left            =   8880
-         TabIndex        =   29
+         Left            =   7830
+         TabIndex        =   8
          Top             =   1560
-         Width           =   2655
-         _ExtentX        =   4683
+         Width           =   3795
+         _ExtentX        =   6694
          _ExtentY        =   635
          _Version        =   393216
          Text            =   ""
@@ -556,11 +556,11 @@ Begin VB.Form FrmBills
       End
       Begin MSDataListLib.DataCombo ComboOperationType 
          Height          =   360
-         Left            =   7920
-         TabIndex        =   30
+         Left            =   8640
+         TabIndex        =   2
          Top             =   270
-         Width           =   1485
-         _ExtentX        =   2619
+         Width           =   975
+         _ExtentX        =   1720
          _ExtentY        =   635
          _Version        =   393216
          Text            =   ""
@@ -577,11 +577,11 @@ Begin VB.Form FrmBills
       End
       Begin MSDataListLib.DataCombo ComboPayment 
          Height          =   360
-         Left            =   4860
-         TabIndex        =   31
+         Left            =   5970
+         TabIndex        =   4
          Top             =   270
-         Width           =   1485
-         _ExtentX        =   2619
+         Width           =   1305
+         _ExtentX        =   2302
          _ExtentY        =   635
          _Version        =   393216
          Text            =   ""
@@ -599,7 +599,7 @@ Begin VB.Form FrmBills
       Begin MSMask.MaskEdBox TxtFixBillDate 
          Height          =   345
          Left            =   2220
-         TabIndex        =   32
+         TabIndex        =   10
          Top             =   1590
          Visible         =   0   'False
          Width           =   1125
@@ -613,7 +613,7 @@ Begin VB.Form FrmBills
       Begin VSFlex8Ctl.VSFlexGrid FlexFees 
          Height          =   1155
          Left            =   5160
-         TabIndex        =   33
+         TabIndex        =   35
          Top             =   1950
          Width           =   6495
          _cx             =   11456
@@ -707,6 +707,40 @@ Begin VB.Form FrmBills
          AccessibleValue =   ""
          AccessibleRole  =   24
       End
+      Begin MSDataListLib.DataCombo ComboDestination 
+         Height          =   360
+         Left            =   4830
+         TabIndex        =   5
+         Top             =   270
+         Width           =   1125
+         _ExtentX        =   1984
+         _ExtentY        =   635
+         _Version        =   393216
+         Text            =   ""
+         RightToLeft     =   -1  'True
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   9.75
+            Charset         =   178
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+      End
+      Begin VB.Label Label2 
+         Alignment       =   1  'Right Justify
+         AutoSize        =   -1  'True
+         Caption         =   "«·ÃÂ‹‹‹‹…"
+         ForeColor       =   &H000000C0&
+         Height          =   195
+         Index           =   1
+         Left            =   5340
+         RightToLeft     =   -1  'True
+         TabIndex        =   82
+         Top             =   30
+         Width           =   540
+      End
       Begin VB.Label Label6 
          Alignment       =   1  'Right Justify
          AutoSize        =   -1  'True
@@ -790,7 +824,7 @@ Begin VB.Form FrmBills
          ForeColor       =   &H000000C0&
          Height          =   195
          Index           =   4
-         Left            =   7035
+         Left            =   7815
          TabIndex        =   54
          Top             =   30
          Width           =   780
@@ -802,7 +836,7 @@ Begin VB.Form FrmBills
          ForeColor       =   &H000000C0&
          Height          =   195
          Index           =   1
-         Left            =   9570
+         Left            =   9780
          TabIndex        =   53
          Top             =   30
          Width           =   960
@@ -821,10 +855,10 @@ Begin VB.Form FrmBills
          EndProperty
          ForeColor       =   &H000000FF&
          Height          =   315
-         Left            =   10590
+         Left            =   10770
          TabIndex        =   52
          Top             =   300
-         Width           =   1005
+         Width           =   795
       End
       Begin VB.Label Label6 
          Alignment       =   1  'Right Justify
@@ -845,7 +879,7 @@ Begin VB.Form FrmBills
          ForeColor       =   &H000000C0&
          Height          =   195
          Index           =   6
-         Left            =   8685
+         Left            =   8865
          TabIndex        =   50
          Top             =   30
          Width           =   735
@@ -857,7 +891,7 @@ Begin VB.Form FrmBills
          ForeColor       =   &H000000C0&
          Height          =   195
          Index           =   3
-         Left            =   5490
+         Left            =   6450
          TabIndex        =   49
          Top             =   30
          Width           =   795
@@ -925,13 +959,13 @@ Begin VB.Form FrmBills
          Width           =   2115
       End
       Begin VB.Label Label6 
-         Alignment       =   1  'Right Justify
+         Alignment       =   2  'Center
          AutoSize        =   -1  'True
          Caption         =   "«·⁄œœ"
          ForeColor       =   &H00000000&
          Height          =   195
          Index           =   16
-         Left            =   7155
+         Left            =   7485
          TabIndex        =   44
          Top             =   1320
          Width           =   330
@@ -1016,46 +1050,25 @@ Begin VB.Form FrmBills
          Width           =   930
       End
       Begin VB.Label LFeesAmount 
-         Alignment       =   1  'Right Justify
+         Alignment       =   2  'Center
          BackColor       =   &H00FFFFFF&
          Height          =   345
          Left            =   5160
          RightToLeft     =   -1  'True
          TabIndex        =   37
          Top             =   1560
-         Width           =   1545
+         Width           =   1725
       End
       Begin VB.Label Label6 
-         Alignment       =   1  'Right Justify
          AutoSize        =   -1  'True
-         Caption         =   "«·”⁄— «·«›—«œÌ"
+         Caption         =   "«·”⁄— «·«›—«œÌ ··„” Â·ﬂ"
          ForeColor       =   &H00000000&
          Height          =   195
          Index           =   5
-         Left            =   7755
+         Left            =   5130
          TabIndex        =   36
          Top             =   1320
-         Width           =   1005
-      End
-      Begin VB.Label LfeesClientPrice 
-         Alignment       =   1  'Right Justify
-         BackColor       =   &H00FFFFFF&
-         Height          =   345
-         Left            =   7650
-         RightToLeft     =   -1  'True
-         TabIndex        =   35
-         Top             =   1560
-         Width           =   1185
-      End
-      Begin VB.Label Label1 
-         Alignment       =   1  'Right Justify
-         Caption         =   "”⁄— «·„” Â·ﬂ"
-         Height          =   195
-         Left            =   5220
-         RightToLeft     =   -1  'True
-         TabIndex        =   34
-         Top             =   1320
-         Width           =   1455
+         Width           =   1665
       End
    End
    Begin Threed.SSFrame SSFrame4 
@@ -1070,7 +1083,7 @@ Begin VB.Form FrmBills
       Begin Threed.SSCommand CmdSearch 
          Height          =   435
          Left            =   1395
-         TabIndex        =   68
+         TabIndex        =   67
          Top             =   30
          Width           =   1335
          _ExtentX        =   2355
@@ -1112,7 +1125,7 @@ Begin VB.Form FrmBills
       Begin Threed.SSCommand CmdDelete 
          Height          =   435
          Left            =   7650
-         TabIndex        =   67
+         TabIndex        =   66
          Top             =   30
          Width           =   1335
          _ExtentX        =   2355
@@ -1133,7 +1146,7 @@ Begin VB.Form FrmBills
       Begin Threed.SSCommand CmdCancel 
          Height          =   435
          Left            =   4980
-         TabIndex        =   66
+         TabIndex        =   65
          Top             =   30
          Width           =   1335
          _ExtentX        =   2355
@@ -1155,7 +1168,7 @@ Begin VB.Form FrmBills
       Begin Threed.SSCommand CmdEdit 
          Height          =   435
          Left            =   8985
-         TabIndex        =   65
+         TabIndex        =   64
          Top             =   30
          Width           =   1335
          _ExtentX        =   2355
@@ -1177,7 +1190,7 @@ Begin VB.Form FrmBills
       Begin Threed.SSCommand cmdSave 
          Height          =   435
          Left            =   6315
-         TabIndex        =   64
+         TabIndex        =   17
          Top             =   30
          Width           =   1335
          _ExtentX        =   2355
@@ -1263,7 +1276,7 @@ Begin VB.Form FrmBills
    Begin Threed.SSFrame SSFrame10 
       Height          =   375
       Left            =   9270
-      TabIndex        =   69
+      TabIndex        =   68
       Top             =   6510
       Width           =   2475
       _ExtentX        =   4366
@@ -1274,7 +1287,7 @@ Begin VB.Form FrmBills
          Left            =   2190
          Picture         =   "FrmBills.frx":0004
          Style           =   1  'Graphical
-         TabIndex        =   73
+         TabIndex        =   72
          TabStop         =   0   'False
          ToolTipText     =   "Last"
          Top             =   60
@@ -1285,7 +1298,7 @@ Begin VB.Form FrmBills
          Left            =   1920
          Picture         =   "FrmBills.frx":0536
          Style           =   1  'Graphical
-         TabIndex        =   72
+         TabIndex        =   71
          TabStop         =   0   'False
          ToolTipText     =   "Next"
          Top             =   60
@@ -1296,7 +1309,7 @@ Begin VB.Form FrmBills
          Left            =   330
          Picture         =   "FrmBills.frx":0630
          Style           =   1  'Graphical
-         TabIndex        =   71
+         TabIndex        =   70
          TabStop         =   0   'False
          ToolTipText     =   "Previous"
          Top             =   60
@@ -1307,7 +1320,7 @@ Begin VB.Form FrmBills
          Left            =   60
          Picture         =   "FrmBills.frx":072A
          Style           =   1  'Graphical
-         TabIndex        =   70
+         TabIndex        =   69
          TabStop         =   0   'False
          ToolTipText     =   "First"
          Top             =   60
@@ -1318,7 +1331,7 @@ Begin VB.Form FrmBills
          BackColor       =   &H00FFFFFF&
          Height          =   285
          Left            =   600
-         TabIndex        =   74
+         TabIndex        =   73
          Top             =   60
          Width           =   1305
       End
@@ -1339,7 +1352,7 @@ Begin VB.Form FrmBills
       Height          =   345
       Left            =   120
       RightToLeft     =   -1  'True
-      TabIndex        =   82
+      TabIndex        =   81
       Top             =   6510
       Width           =   1545
    End
@@ -1359,7 +1372,7 @@ Begin VB.Form FrmBills
       Height          =   435
       Index           =   14
       Left            =   1710
-      TabIndex        =   81
+      TabIndex        =   80
       Top             =   6510
       Width           =   825
    End
@@ -1380,7 +1393,7 @@ Begin VB.Form FrmBills
       Height          =   195
       Index           =   15
       Left            =   8745
-      TabIndex        =   80
+      TabIndex        =   79
       Top             =   6540
       Width           =   480
    End
@@ -1400,7 +1413,7 @@ Begin VB.Form FrmBills
       Height          =   345
       Left            =   8100
       RightToLeft     =   -1  'True
-      TabIndex        =   79
+      TabIndex        =   78
       Top             =   6510
       Width           =   615
    End
@@ -1419,7 +1432,7 @@ Begin VB.Form FrmBills
       ForeColor       =   &H00000000&
       Height          =   315
       Left            =   6690
-      TabIndex        =   78
+      TabIndex        =   77
       Top             =   6510
       Width           =   855
    End
@@ -1439,7 +1452,7 @@ Begin VB.Form FrmBills
       ForeColor       =   &H00800000&
       Height          =   195
       Left            =   7590
-      TabIndex        =   77
+      TabIndex        =   76
       Top             =   6510
       Width           =   480
    End
@@ -1459,7 +1472,7 @@ Begin VB.Form FrmBills
       ForeColor       =   &H00800000&
       Height          =   195
       Left            =   5745
-      TabIndex        =   76
+      TabIndex        =   75
       Top             =   6510
       Width           =   885
    End
@@ -1478,7 +1491,7 @@ Begin VB.Form FrmBills
       ForeColor       =   &H00000000&
       Height          =   315
       Left            =   4740
-      TabIndex        =   75
+      TabIndex        =   74
       Top             =   6510
       Width           =   975
    End
@@ -1514,7 +1527,7 @@ Const ColFeesSer = 1
 Const ColFeesBillNo = 2
 Const ColFeesTypeName = 3
 Const ColFeesQty = 4
-
+'Const ColFeesCliPrice = 5
 'Const ColFeesPriceName = 5
 Const ColFeesAmount = 5
 
@@ -1529,7 +1542,7 @@ Dim FeesAmount As Double
 FeesAmount = 0
 With FlexFees
     For i = 1 To .Rows - 1
-        FeesAmount = FeesAmount + Val(.TextMatrix(i, ColFeesAmount) * .TextMatrix(i, ColFeesQty))
+        FeesAmount = FeesAmount + Val(.TextMatrix(i, ColFeesAmount) * Val(.TextMatrix(i, ColFeesQty)))
     Next
 End With
 GetFeesAmount = FeesAmount
@@ -1662,7 +1675,7 @@ Ok = False
     'ComboFeesPriceType.BoundText = ""
     TxtFeesQty.Text = 1
     LFeesAmount.Caption = ""
-    LfeesClientPrice.Caption = ""
+    'LfeesClientPrice.Caption = ""
     LPrice.Caption = ""
     LTotal.Caption = ""
     LDiscount.Caption = ""
@@ -1888,12 +1901,12 @@ Sub FillCombos()
     ComboType.BoundColumn = "No"
     
     
-'    Dim RsDestination As New ADODB.Recordset
-'    sqlText = "Select Id , Destination From CoDestination"
-'    Set RsDestination = de.con.Execute(sqlText)
-'    Set ComboDestination.RowSource = RsDestination
-'    ComboDestination.listField = "Destination"
-'    ComboDestination.BoundColumn = "Id"
+    Dim RsDestination As New ADODB.Recordset
+    sqlText = "Select Id , Destination From CoDestination"
+    Set RsDestination = de.con.Execute(sqlText)
+    Set ComboDestination.RowSource = RsDestination
+    ComboDestination.listField = "Destination"
+    ComboDestination.BoundColumn = "Id"
     
     Dim rsFees As New ADODB.Recordset
     sqlText = "Select FeesId , FeesName  From  CoMaintFees Where isnull(CliPriceafterdiscount,0) <> 0 or isnull(DealPriceafterdiscount,0) <> 0 or isnull(DistPriceafterdiscount,0) <> 0  "
@@ -1915,7 +1928,7 @@ Sub FillCombos()
 End Sub
 Sub InitNavigator()
     If OperationEmpStr = "" Or PaymentEmpStr = "" Or MaintTYpeEmpStr = "" Then Exit Sub
-    sqlText = "Select   billno , billdate , isnull(FixBillDate,'') as FixBillDate, OperationTYpe   , mainttype , PaymentTYpeId , clientid , class , modno, modelQty , FeesDescription , OtherFeesQty  , OtherFeesPrice , OtherFeesAmount , IsFixed , IsTransfered  from mvmaintpayments Where OperationTYpe in (" & OperationEmpStr & ") and  mainttype in(" & MaintTYpeEmpStr & ") order by billno"
+    sqlText = "Select   billno , billdate , isnull(FixBillDate,'') as FixBillDate, OperationTYpe   , mainttype , PaymentTYpeId , DestinationId , clientid , class , modno, modelQty , FeesDescription , OtherFeesQty  , OtherFeesPrice , OtherFeesAmount , IsFixed , IsTransfered  from mvmaintpayments Where OperationTYpe in (" & OperationEmpStr & ") and  mainttype in(" & MaintTYpeEmpStr & ") order by billno"
     Set RsNavigator = de.con.Execute(sqlText)
 End Sub
 Function GetModelName(ModNo As Integer) As String
@@ -1984,7 +1997,7 @@ With rs
     ComboOperationType.BoundText = rs!OperationType
     ComboType.BoundText = rs!MaintType
     ComboPayment.BoundText = IIf(IsNull(rs!PaymentTYpeId), -1, rs!PaymentTYpeId)
-'    ComboDestination.BoundText = IIf(IsNull(rs!DestinationId), -1, rs!DestinationId)
+    ComboDestination.BoundText = IIf(IsNull(rs!DestinationId), -1, rs!DestinationId)
     
     txtClientName.Tag = rs!clientId
     txtClientName.Text = GetClientName(rs!clientId, rs!Class)
@@ -2078,11 +2091,11 @@ If RsNavigator.RecordCount = 0 Then
     Exit Sub
 End If
 .MoveLast
-RecNum = 1
+RecNum = RsNavigator.RecordCount
     Do While Not .BOF
        If !BillNo <> IDBill Then
             .MovePrevious
-            RecNum = RecNum + 1
+            RecNum = RecNum - 1
         Else
             FillControlsFromSql RsNavigator
             LNavigator.Caption = LTrim(RTrim(Str(RecNum))) & "/" & LTrim(RTrim(Str(RsNavigator.RecordCount)))
@@ -2320,7 +2333,7 @@ On Error GoTo errorhandler
                 DoEvents
                 DoEvents
                 .PaymentTYpeId = IIf(ComboPayment.BoundText = "", -1, Val(ComboPayment.BoundText))
-                '.DestinationId = ComboDestination.BoundText
+                .DestinationId = ComboDestination.BoundText
                 .clientId = Val(txtClientName.Tag)
                 .Class = Val(LClientType.Tag)
                 .ModNo = Val(TxtModelName.Tag)
@@ -2381,7 +2394,7 @@ End If
     de.con.Execute (sqlText)
     
    If Class = 4 Then
-            sqlText = sqlText & " Insert Into Stmov(ByanId , StkId  , StrId , Movdate , DocType , DocNum ,  Qty , QtyType)Values("
+            sqlText = " Insert Into Stmov(ByanId , StkId  , StrId , Movdate , DocType , DocNum ,  Qty , QtyType)Values("
             sqlText = sqlText & NewRec + 1 & "," & GetStkId(stkno) & "," & clientId & " ,Convert(varchar(10),getdate(),101),30," & BillNo & "," & Qty & "," & IIf(QtyType = 1, 0, 1) & ")"
             de.con.Execute (sqlText)
     End If
@@ -2456,8 +2469,8 @@ If TypeRec Then   ' New Rec
         If FillStructure(1) Then
             With MvMaintPaymentRec
                 de.con.BeginTrans
-                    sqlText = "Insert Into MvMaintPayments( Billdate, FixBillDate , OperationType , MaintType, PaymentTypeId , ClientId, Class ,  ModNo, ModelQty, FeesDescription ,   OtherFeesQty, OtherFeesPrice , IsFixed , EmpNo )Values("
-                    sqlText = sqlText & "'" & .Billdate & "','" & .FixBillDate & "'," & .OperationType & "," & .MaintType & "," & .PaymentTYpeId & "," & .clientId & "," & .Class & "," & .ModNo & "," & .ModelQty & ",'" & .FeesDescription & "'," & .OtherFeesQty & "," & .OtherFeesPrice & "," & .IsFixed & "," & empNo & ")"
+                    sqlText = "Insert Into MvMaintPayments( Billdate, FixBillDate , OperationType , MaintType, PaymentTypeId , DestinationId , ClientId, Class ,  ModNo, ModelQty, FeesDescription ,   OtherFeesQty, OtherFeesPrice , IsFixed , EmpNo )Values("
+                    sqlText = sqlText & "'" & .Billdate & "','" & .FixBillDate & "'," & .OperationType & "," & .MaintType & "," & .PaymentTYpeId & "," & .DestinationId & "," & .clientId & "," & .Class & "," & .ModNo & "," & .ModelQty & ",'" & .FeesDescription & "'," & .OtherFeesQty & "," & .OtherFeesPrice & "," & .IsFixed & "," & empNo & ")"
                     de.con.Execute (sqlText)
                     .BillNo = GetMaxBillNo
                     FillFeesDetails .BillNo
@@ -2485,7 +2498,7 @@ Else ' Update
 '            Sqltext = "Update MvMaintPayments Set Billdate='" & .Billdate & "',FixBillDate='" & .FixBillDate & "', OperationType=" & .OperationType & ",MaintType=" & .MaintType & ",PaymentTypeId=" & .PaymentTYpeId & ",ClientId= " & .ClientId & ", Class=" & .Class & ", ModNo=" & .ModNo & ",ModelQty=" & .ModelQty & ", FeesTYpeId=" & .FeesTYpeId & ",FeesQty=" & .FeesQty & ",FeesPriceType=" & .FeesPriceType & ", FeesAmount=" & .FeesAmount & ",IsFixed=" & .IsFixed & "  Where BillNo=" & RsNavigator!BillNo
 '            de.con.Execute (Sqltext)
             de.con.BeginTrans
-                sqlText = "Update MvMaintPayments Set Billdate='" & .Billdate & "',FixBillDate='" & .FixBillDate & "', OperationType=" & .OperationType & ",MaintType=" & .MaintType & ",PaymentTypeId=" & .PaymentTYpeId & ",ClientId= " & .clientId & ", Class=" & .Class & ",ModNo=" & .ModNo & ",ModelQty=" & .ModelQty & ",OtherFeesQty =" & .OtherFeesQty & ",OtherFeesPrice=" & .OtherFeesPrice & ",FeesDescription='" & .FeesDescription & "',IsFixed=" & .IsFixed & "  Where BillNo=" & RsNavigator!BillNo
+                sqlText = "Update MvMaintPayments Set Billdate='" & .Billdate & "',FixBillDate='" & .FixBillDate & "', OperationType=" & .OperationType & ",MaintType=" & .MaintType & ",PaymentTypeId=" & .PaymentTYpeId & ",DestinationId=" & .DestinationId & ",ClientId= " & .clientId & ", Class=" & .Class & ",ModNo=" & .ModNo & ",ModelQty=" & .ModelQty & ",OtherFeesQty =" & .OtherFeesQty & ",OtherFeesPrice=" & .OtherFeesPrice & ",FeesDescription='" & .FeesDescription & "',IsFixed=" & .IsFixed & "  Where BillNo=" & RsNavigator!BillNo
                 de.con.Execute (sqlText)
                 FillFeesDetails RsNavigator!BillNo
             de.con.CommitTrans
@@ -2797,6 +2810,16 @@ MsgBox Err.Description
 End Function
 
 
+
+
+Private Sub ComboDestination_KeyPress(KeyAscii As Integer)
+If KeyAscii = 13 Then
+    txtClientName.SetFocus
+    SendKeys "{home}+{end}"
+End If
+
+End Sub
+
 Private Sub ComboDiscount_GotFocus()
 'ComboDiscount.ListIndex = 0
 End Sub
@@ -2827,12 +2850,13 @@ End If
 End Sub
 
 Private Sub ComboFees_Change()
-
 Dim feesClientPrint As Integer
-feesClientPrice = GetFeesPrice(Val(ComboFees.BoundText))
-LfeesClientPrice.Caption = feesClientPrice
-LFeesAmount.Caption = feesClientPrice * Val(TxtFeesQty.Text)
-LTotal.Caption = GetTotalPrice(Val(LBillNo.Tag), 1)
+If Val(TxtFeesQty.Text) > 0 Then
+    feesClientPrice = GetFeesPrice(Val(ComboFees.BoundText))
+    'LfeesClientPrice.Caption = feesClientPrice
+    LFeesAmount.Caption = feesClientPrice
+    LTotal.Caption = GetTotalPrice(Val(LBillNo.Tag), 1)
+End If
 End Sub
 
 Private Sub ComboFees_KeyPress(KeyAscii As Integer)
@@ -2965,8 +2989,7 @@ End Sub
 
 Private Sub ComboPayment_KeyPress(KeyAscii As Integer)
 If KeyAscii = 13 Then
-    txtClientName.SetFocus
-    SendKeys "{home}+{end}"
+    ComboDestination.SetFocus
 End If
 End Sub
 
@@ -3339,9 +3362,10 @@ End Sub
 
 Private Sub TxtFeesQty_Change()
 Dim feesClientPrint As Integer
+
 feesClientPrice = GetFeesPrice(Val(ComboFees.BoundText))
-LfeesClientPrice.Caption = feesClientPrice
-LFeesAmount.Caption = feesClientPrice * Val(TxtFeesQty.Text)
+'LfeesClientPrice.Caption = feesClientPrice
+LFeesAmount.Caption = feesClientPrice
 
 If TypeRec Then
     LTotal.Caption = 0
